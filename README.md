@@ -14,7 +14,7 @@ Convert numbers to their written form.
 ## Usage
 ```javascript
 var writtenNumber = require('written-number');
-writtenNumber(1234); // => 'one thousand and thirty-three'
+writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 ```
 
 ## Install
