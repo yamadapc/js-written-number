@@ -26,7 +26,7 @@ describe('written-number', function() {
       writtenNumber(73).should.equal('seventy-three');
     });
 
-    it('correctly converts numbers < 1000', function() {
+    it('correctly converts numbers > 100', function() {
       writtenNumber(200).should.equal('two hundred');
       writtenNumber(1234).should.equal('one thousand two hundred and thirty-four');
       writtenNumber(4323).should.equal('four thousand three hundred and twenty-three');
