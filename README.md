@@ -27,7 +27,7 @@ writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 
 ```javascript
 var writtenNumber = require('written-number');
-writtenNumber(1234, { lang: 'es }); // => 'mil doscientos treinta y cuatro'
+writtenNumber(1234, { lang: 'es' }); // => 'mil doscientos treinta y cuatro'
 ```
 
 ```javascript
@@ -100,11 +100,11 @@ Sometimes grammar exceptions affect the base cardinal joined to the unit. You ca
 Spanish example:
 
 ```
-Without Exception (Wrong): 1232000 -> ```uno``` millón doscientos treinta y dos mil
+Without Exception (Wrong): 1232000 -> **uno** millón doscientos treinta y dos mil
 ```
 
 ```
-With Exception: 1232000 -> ```un``` millón doscientos treinta y dos mil
+With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 ```
 
 ###English configuration example
