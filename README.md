@@ -36,8 +36,12 @@ writtenNumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
-###Options and defaults
+###Defaults
 
+Property       | Value
+-------------- | -------------
+noAnd          | false
+lang           | 'en'
 
 ###Configure your own language
 Each language has it's own unique grammar exceptions.
@@ -92,9 +96,16 @@ In some languages like spanish, specific units like "mil" does not use the base 
 
 #####unitExceptions:
 Sometimes grammar exceptions affect the base cardinal joined to the unit. You can set specific exceptions to any base cardinal number.
+
 Spanish example:
+
+```
 Without Exception (Wrong): 1232000 -> ```uno``` millón doscientos treinta y dos mil
+```
+
+```
 With Exception: 1232000 -> ```un``` millón doscientos treinta y dos mil
+```
 
 ###English configuration example
 ```json
