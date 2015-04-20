@@ -47,6 +47,9 @@ lang           | 'en'
 Each language has it's own unique grammar exceptions.
 You can create your own language.json file in the folder "i18n" and give writtenNumber support for it. I don't think the current scheme and logic cover all the cases, but may be cover some.
 
+#####useLongScale:
+'Boolean' that indicates if it use [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales). This differs the meaning of the words ```billion```, ```trillion``` and so on.
+
 #####baseSeparator:
 'String' that separates the base cardinal numbers.
 Example: 29 -> twenty```-```eight. Spanish uses the conector " y ".
@@ -110,6 +113,7 @@ With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 ###English configuration example
 ```json
 {
+  "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "and ",
   "base": {
@@ -136,6 +140,7 @@ With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 ###Spanish configuration example
 ```json
 {
+  "useLongScale": true,
   "baseSeparator": " y ",
   "unitSeparator": "",
   "base": {

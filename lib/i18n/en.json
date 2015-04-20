@@ -1,4 +1,5 @@
 {
+  "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "and ",
   "base": {
