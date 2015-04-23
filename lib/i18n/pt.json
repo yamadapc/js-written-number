@@ -68,52 +68,44 @@
       "plural": "trilhões"
     },
     {
-      "singular": "quatrilhão",
-      "plural": "quatrilhões"
+      "singular": "quadrilhão",
+      "plural": "quadrilhão"
     },
     {
       "singular": "quintilhão",
       "plural": "quintilhões"
     },
     {
-      "singular": "sextillón",
-      "plural": "sextillones"
+      "singular": "sextilhão",
+      "plural": "sextilhões"
     },
     {
-      "singular": "septillón",
-      "plural": "septillones"
+      "singular": "septilhão",
+      "plural": "septilhões"
     },
     {
-      "singular": "octillón",
-      "plural": "octillones"
+      "singular": "octilhão",
+      "plural": "octilhões"
     },
     {
-      "singular": "nonillón",
-      "plural": "nonillones"
+      "singular": "nonilhão",
+      "plural": "nonilhões"
     },
     {
-      "singular": "decillón",
-      "plural": "decillones"
+      "singular": "decilhão",
+      "plural": "decilhões"
     },
     {
-      "singular": "undecillón",
-      "plural": "undecillones"
+      "singular": "undecilhão",
+      "plural": "undecilhões"
     },
     {
-      "singular": "duodecillón",
-      "plural": "duodecillones"
+      "singular": "doudecilhão",
+      "plural": "doudecilhões"
     },
     {
-      "singular": "tredecillón",
-      "plural": "tredecillones"
-    },
-    {
-      "singular": "cuatrodecillón",
-      "plural": "cuatrodecillones"
-    },
-    {
-      "singular": "quindecillón",
-      "plural": "quindecillones"
+      "singular": "tredecilhão",
+      "plural": "tredecilhões"
     }
   ]
 }
