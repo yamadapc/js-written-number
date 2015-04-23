@@ -124,4 +124,63 @@ describe('writte-number', function() {
       );
     });
   });
+
+  describe('writtenNumber(n, { lang: \'pt\', ... })', function() {
+    before(function() {
+      writtenNumber.defaults.lang = 'pt';
+    });
+
+    it('gets exposed', function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it('correctly converts numbers < 10', function() {
+      writtenNumber(3).should.equal('três');
+      writtenNumber(8).should.equal('oito');
+    });
+
+    it('correctly converts numbers < 20', function() {
+      writtenNumber(13).should.equal('treze');
+      writtenNumber(19).should.equal('dezenove');
+    });
+
+    it('correctly converts numbers < 100', function() {
+      writtenNumber(20).should.equal('vinte');
+      writtenNumber(25).should.equal('vinte e cinco');
+      writtenNumber(88).should.equal('oitenta e oito');
+      writtenNumber(73).should.equal('setenta e três');
+    });
+
+    it('correctly converts numbers < 1000', function() {
+      writtenNumber(144).should.equal('cento e quarenta e quatro');
+      writtenNumber(200).should.equal('duzentos');
+      writtenNumber(1234).should.equal('mil duzentos e trinta e quatro');
+      writtenNumber(4323).should.equal('quatro mil trezentos e vinte e três');
+      writtenNumber(242).should.equal('duzentos e quarenta e dois');
+    });
+
+    it('correctly converts numbers > 1000', function() {
+      writtenNumber(4323000).should.equal(
+        'quatro milhões trezentos e vinte e três mil'
+      );
+      writtenNumber(4323055).should.equal(
+        'quatro milhões trezentos e vinte e três mil e cinquenta e cinco'
+      );
+      writtenNumber(1570025).should.equal(
+        'um milhão setecentos mil e vinte e cinco'
+      );
+    });
+
+    it('correctly converts numbers > 1 000 000 000', function() {
+      writtenNumber(1000000000).should.equal('um bilhão');
+      writtenNumber(2580000000).should.equal(
+        'dois bilhões quinhentos e oitenta milhões'
+      );
+      writtenNumber(1000000000000).should.equal('um bilhão');
+      writtenNumber(3627000000000).should.equal(
+        'TODO'
+      );
+    });
+  });
 });
