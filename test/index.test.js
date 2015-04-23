@@ -5,7 +5,7 @@ describe('EN - writtenNumber(n)', function() {
   var writtenNumber = require('..');
 
   before(function() {
-    writtenNumber.DEFAULTS.lang = 'en';
+    writtenNumber.defaults.lang = 'en';
   });
 
   it('gets exposed', function() {
@@ -56,7 +56,7 @@ describe('ES - writtenNumber(n)', function() {
   var writtenNumber = require('..');
 
   before(function() {
-    writtenNumber.DEFAULTS.lang = 'es';
+    writtenNumber.defaults.lang = 'es';
   });
 
   it('gets exposed', function () {
@@ -100,12 +100,5 @@ describe('ES - writtenNumber(n)', function() {
     writtenNumber(2580000000).should.equal('dos mil quinientos ochenta millones');
     writtenNumber(1000000000000).should.equal('un billón');
     writtenNumber(3627000000000).should.equal('tres billones seiscientos veintisiete mil millones');
-  });
-
-  describe('._defaults(target, defaults)', function() {
-    it('extends into the empty object', function() {
-      writtenNumber._defaults({}, {something: 'here'})
-        .should.eql({something: 'here'});
-    });
   });
 });
