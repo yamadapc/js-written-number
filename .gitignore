@@ -30,3 +30,4 @@ build/Release
 node_modules
 
 lcov
+.tern-port
