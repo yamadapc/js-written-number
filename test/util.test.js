@@ -14,7 +14,9 @@ describe('util', function() {
     });
 
     it('extends into null', function() {
-      util.defaults({}, {something: 'here'})
+      util.defaults(null, {something: 'here'})
+        .should.eql({something: 'here'});
+      util.defaults(undefined, {something: 'here'})
         .should.eql({something: 'here'});
     });
   });
