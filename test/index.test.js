@@ -1,12 +1,11 @@
-'use strict'; /* global describe, it */
+'use strict'; /* global describe, it, before */
 var should = require('should');
-
 
 describe('EN - writtenNumber(n)', function() {
   var writtenNumber = require('..');
 
   before(function() {
-    writtenNumber.defaults.lang = 'en';
+    writtenNumber.DEFAULTS.lang = 'en';
   });
 
   it('gets exposed', function() {
@@ -57,7 +56,7 @@ describe('ES - writtenNumber(n)', function() {
   var writtenNumber = require('..');
 
   before(function() {
-    writtenNumber.defaults.lang = 'es';
+    writtenNumber.DEFAULTS.lang = 'es';
   });
 
   it('gets exposed', function () {
@@ -101,5 +100,12 @@ describe('ES - writtenNumber(n)', function() {
     writtenNumber(2580000000).should.equal('dos mil quinientos ochenta millones');
     writtenNumber(1000000000000).should.equal('un billón');
     writtenNumber(3627000000000).should.equal('tres billones seiscientos veintisiete mil millones');
+  });
+
+  describe('._defaults(target, defaults)', function() {
+    it('extends into the empty object', function() {
+      writtenNumber._defaults({}, {something: 'here'})
+        .should.eql({something: 'here'});
+    });
   });
 });
