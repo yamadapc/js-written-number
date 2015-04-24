@@ -21,9 +21,14 @@ var writtenNumber = require('written-number');
 writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 ```
 
-## i18n - Internationalization
+## Options
+- `noAnd` - Defaults to `false`. Determines whether to use a separator. The
+  separator is internationalized.
+- `lang` - Defaults to `'en'`. Determines which language to use.
 
-###Spanish Example
+## Internationalization
+
+### Spanish Example
 
 ```javascript
 var writtenNumber = require('written-number');
@@ -32,11 +37,11 @@ writtenNumber(1234, { lang: 'es' }); // => 'mil doscientos treinta y cuatro'
 
 ```javascript
 var writtenNumber = require('written-number');
-writtenNumber.defaults.lang = 'es';
+writtennumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
-###Defaults
+## Options
 
 Property       | Value
 -------------- | -------------
