@@ -2,7 +2,7 @@
 var should = require('should');
 var writtenNumber = require('..');
 
-describe('writte-number', function() {
+describe('written-number', function() {
   describe('writtenNumber(n, { lang: \'en\', ... })', function() {
     before(function() {
       writtenNumber.defaults.lang = 'en';
@@ -109,7 +109,7 @@ describe('writte-number', function() {
         'cuatro millones trescientos veintitres mil cincuenta y cinco'
       );
       writtenNumber(1570025).should.equal(
-        'un millÛn quinientos setenta mil veinticinco'
+        'un mill√≥n quinientos setenta mil veinticinco'
       );
     });
 
@@ -118,7 +118,7 @@ describe('writte-number', function() {
       writtenNumber(2580000000).should.equal(
         'dos mil quinientos ochenta millones'
       );
-      writtenNumber(1000000000000).should.equal('un billÛn');
+      writtenNumber(1000000000000).should.equal('un bill√≥n');
       writtenNumber(3627000000000).should.equal(
         'tres billones seiscientos veintisiete mil millones'
       );
@@ -136,7 +136,7 @@ describe('writte-number', function() {
     });
 
     it('correctly converts numbers < 10', function() {
-      writtenNumber(3).should.equal('trÍs');
+      writtenNumber(3).should.equal('tr√™s');
       writtenNumber(8).should.equal('oito');
     });
 
@@ -149,35 +149,35 @@ describe('writte-number', function() {
       writtenNumber(20).should.equal('vinte');
       writtenNumber(25).should.equal('vinte e cinco');
       writtenNumber(88).should.equal('oitenta e oito');
-      writtenNumber(73).should.equal('setenta e trÍs');
+      writtenNumber(73).should.equal('setenta e tr√™s');
     });
 
     it('correctly converts numbers < 1000', function() {
       writtenNumber(144).should.equal('cento e quarenta e quatro');
       writtenNumber(200).should.equal('duzentos');
       writtenNumber(1234).should.equal('mil duzentos e trinta e quatro');
-      writtenNumber(4323).should.equal('quatro mil trezentos e vinte e trÍs');
+      writtenNumber(4323).should.equal('quatro mil trezentos e vinte e tr√™s');
       writtenNumber(242).should.equal('duzentos e quarenta e dois');
     });
 
     it('correctly converts numbers > 1000', function() {
       writtenNumber(4323000).should.equal(
-        'quatro milhıes trezentos e vinte e trÍs mil'
+        'quatro milh√µes trezentos e vinte e tr√™s mil'
       );
       writtenNumber(4323055).should.equal(
-        'quatro milhıes trezentos e vinte e trÍs mil e cinquenta e cinco'
+        'quatro milh√µes trezentos e vinte e tr√™s mil e cinquenta e cinco'
       );
       writtenNumber(1570025).should.equal(
-        'um milh„o setecentos mil e vinte e cinco'
+        'um milh√£o setecentos mil e vinte e cinco'
       );
     });
 
     it('correctly converts numbers > 1 000 000 000', function() {
-      writtenNumber(1000000000).should.equal('um bilh„o');
+      writtenNumber(1000000000).should.equal('um bilh√£o');
       writtenNumber(2580000000).should.equal(
-        'dois bilhıes quinhentos e oitenta milhıes'
+        'dois bilh√µes quinhentos e oitenta milh√µes'
       );
-      writtenNumber(1000000000000).should.equal('um bilh„o');
+      writtenNumber(1000000000000).should.equal('um bilh√£o');
       writtenNumber(3627000000000).should.equal(
         'TODO'
       );
