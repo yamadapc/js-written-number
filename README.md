@@ -33,7 +33,6 @@ Currently supported languages are:
 - Spanish `lang = "es"`
 
 ### Spanish Example
-
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'es' }); // => 'mil doscientos treinta y cuatro'
@@ -45,8 +44,13 @@ writtennumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
-## Options
+### Portuguese Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'pt' }); // => 'mil duzentos e trinta e quatro'
+```
 
+## Options
 Property       | Value
 -------------- | -------------
 noAnd          | false
