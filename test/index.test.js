@@ -168,7 +168,7 @@ describe('writte-number', function() {
         'quatro milhões trezentos e vinte e três mil e cinquenta e cinco'
       );
       writtenNumber(1570025).should.equal(
-        'um milhão setecentos mil e vinte e cinco'
+        'um milhão quinhentos e setenta mil e vinte e cinco'
       );
     });
 
@@ -177,9 +177,9 @@ describe('writte-number', function() {
       writtenNumber(2580000000).should.equal(
         'dois bilhões quinhentos e oitenta milhões'
       );
-      writtenNumber(1000000000000).should.equal('um bilhão');
+      writtenNumber(1000000000000000).should.equal('um quadrilhão');
       writtenNumber(3627000000000).should.equal(
-        'TODO'
+        'três trilhões seiscentos e vinte e sete bilhões'
       );
     });
   });

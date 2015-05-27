@@ -42,6 +42,9 @@
     "900": "novecentos",
     "1000": "mil"
   },
+  "andException": {
+    "10": true
+  },
   "unitExceptions": {
     "1": "um"
   },
@@ -49,11 +52,13 @@
     {
       "singular": "cento",
       "useBaseInstead": true,
-      "useBaseException": [1]
+      "useBaseException": [1],
+      "andException": true
     },
     {
       "singular": "mil",
-      "avoidPrefixException": [1]
+      "avoidPrefixException": [1],
+      "andException": true
     },
     {
       "singular": "milhão",
