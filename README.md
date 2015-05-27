@@ -8,7 +8,7 @@
 [![npm downloads per month](http://img.shields.io/npm/dm/written-number.svg)](https://www.npmjs.org/package/written-number)
 [![npm version](https://img.shields.io/npm/v/written-number.svg)](https://www.npmjs.org/package/written-number)
 - - -
-Convert numbers to their written form.
+Convert numbers to words - their written form.
 
 ## Install
 ```bash
@@ -89,7 +89,7 @@ It can be:
 
 ```json
 {
-  "singular": "mill髇",
+  "singular": "mill贸n",
   "plural": "millones"
 }
 ```
@@ -128,11 +128,11 @@ can set specific exceptions to any base cardinal number.
 Spanish example:
 
 ```
-Without Exception (Wrong): 1232000 -> **uno** mill髇 doscientos treinta y dos mil
+Without Exception (Wrong): 1232000 -> **uno** mill贸n doscientos treinta y dos mil
 ```
 
 ```
-With Exception: 1232000 -> **un** mill髇 doscientos treinta y dos mil
+With Exception: 1232000 -> **un** mill贸n doscientos treinta y dos mil
 ```
 
 ### English configuration example
@@ -190,7 +190,7 @@ With Exception: 1232000 -> **un** mill髇 doscientos treinta y dos mil
       "avoidPrefixException": [1]
     },
     {
-      "singular": "mill髇",
+      "singular": "mill贸n",
       "plural": "millones"
     },
     ...
