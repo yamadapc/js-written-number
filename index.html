@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Js-written-number by yamadapc</title>
+    <title>js-written-number by yamadapc</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Js-written-number</h1>
-        <p>Convert numbers to their written form.</p>
+        <!--<h1>js-written-number</h1>-->
+        <!--<p>Convert numbers to their written form.</p>-->
 
         <p class="view"><a href="https://github.com/yamadapc/js-written-number">View the Project on GitHub <small>yamadapc/js-written-number</small></a></p>
 
@@ -53,7 +53,7 @@
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
-writtenNumber(<span class="pl-c1">1234</span>); <span class="pl-c">// =&gt; 'one thousand two hundred and thirty-four'</span></pre></div>
+writtenNumber(<span class="pl-c1">1234</span>); <br /><span class="pl-c">// =&gt; 'one thousand two hundred and thirty-four'</span></pre></div>
 
 <h2>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
@@ -69,15 +69,19 @@ separator is internationalized.</li>
 <h2>
 <a id="internationalization" class="anchor" href="#internationalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internationalization</h2>
 
+<p>
+Currently available languages are english, spanish and portuguese.
+</p>
+
 <h3>
 <a id="spanish-example" class="anchor" href="#spanish-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spanish Example</h3>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
-writtenNumber(<span class="pl-c1">1234</span>, { lang<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>es<span class="pl-pds">'</span></span> }); <span class="pl-c">// =&gt; 'mil doscientos treinta y cuatro'</span></pre></div>
+writtenNumber(<span class="pl-c1">1234</span>, { lang<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>es<span class="pl-pds">'</span></span> }); <br /><span class="pl-c">// =&gt; 'mil doscientos treinta y cuatro'</span></pre></div>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
 writtennumber.defaults.<span class="pl-c1">lang</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>es<span class="pl-pds">'</span></span>;
-writtenNumber(<span class="pl-c1">4758</span>); <span class="pl-c">// =&gt; 'cuatro mil setecientos cincuenta y ocho'</span></pre></div>
+writtenNumber(<span class="pl-c1">4758</span>); <br /><span class="pl-c">// =&gt; 'cuatro mil setecientos cincuenta y ocho'</span></pre></div>
 
 <h2>
 <a id="options-1" class="anchor" href="#options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
