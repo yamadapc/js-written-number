@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Js-written-number by yamadapc</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Js-written-number</h1>
+        <p>Convert numbers to their written form.</p>
+
+        <p class="view"><a href="https://github.com/yamadapc/js-written-number">View the Project on GitHub <small>yamadapc/js-written-number</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/yamadapc/js-written-number/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/yamadapc/js-written-number/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/yamadapc/js-written-number">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="js-written-number" class="anchor" href="#js-written-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>js-written-number</h1>
+
+<p><a href="http://travis-ci.org/yamadapc/js-written-number"><img src="https://secure.travis-ci.org/yamadapc/js-written-number.png?branch=master" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/yamadapc/js-written-number"><img src="https://codeclimate.com/github/yamadapc/js-written-number.png" alt="Code Climate"></a>
+<a href="https://coveralls.io/r/yamadapc/js-written-number?branch=master"><img src="https://coveralls.io/repos/yamadapc/js-written-number/badge.png?branch=master" alt="Coverage Status"></a>
+<a href="https://david-dm.org/yamadapc/js-written-number"><img src="https://david-dm.org/yamadapc/js-written-number.png" alt="Dependency Status"></a>
+<a href="https://david-dm.org/yamadapc/js-written-number#info=devDependencies"><img src="https://david-dm.org/yamadapc/js-written-number/dev-status.png" alt="devDependency Status"></a>
+<a href="https://github.com/igrigorik/ga-beacon"><img src="https://ga-beacon.appspot.com/UA-54450544-1/js-written-number/README" alt="Analytics"></a>
+<a href="https://www.npmjs.org/package/written-number"><img src="http://img.shields.io/npm/dm/written-number.svg" alt="npm downloads per month"></a>
+<a href="https://www.npmjs.org/package/written-number"><img src="https://img.shields.io/npm/v/written-number.svg" alt="npm version"></a></p>
+
+<hr>
+
+<p>Convert numbers to their written form.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-bash"><pre>npm i --save written-number</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
+writtenNumber(<span class="pl-c1">1234</span>); <span class="pl-c">// =&gt; 'one thousand two hundred and thirty-four'</span></pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<ul>
+<li>
+<code>noAnd</code> - Defaults to <code>false</code>. Determines whether to use a separator. The
+separator is internationalized.</li>
+<li>
+<code>lang</code> - Defaults to <code>'en'</code>. Determines which language to use.</li>
+</ul>
+
+<h2>
+<a id="internationalization" class="anchor" href="#internationalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internationalization</h2>
+
+<h3>
+<a id="spanish-example" class="anchor" href="#spanish-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spanish Example</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
+writtenNumber(<span class="pl-c1">1234</span>, { lang<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>es<span class="pl-pds">'</span></span> }); <span class="pl-c">// =&gt; 'mil doscientos treinta y cuatro'</span></pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> writtenNumber <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>written-number<span class="pl-pds">'</span></span>);
+writtennumber.defaults.<span class="pl-c1">lang</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>es<span class="pl-pds">'</span></span>;
+writtenNumber(<span class="pl-c1">4758</span>); <span class="pl-c">// =&gt; 'cuatro mil setecientos cincuenta y ocho'</span></pre></div>
+
+<h2>
+<a id="options-1" class="anchor" href="#options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>noAnd</td>
+<td>false</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>'en'</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="configure-your-own-language" class="anchor" href="#configure-your-own-language" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure your own language</h3>
+
+<p>Each language has it's own unique grammar exceptions.  You can create your own
+language.json file in the folder "i18n" and give writtenNumber support for it. I
+don't think the current scheme and logic cover all the cases, but may be cover
+some.</p>
+
+<h5>
+<a id="uselongscale" class="anchor" href="#uselongscale" aria-hidden="true"><span class="octicon octicon-link"></span></a>useLongScale:</h5>
+
+<p>'Boolean' that indicates if it use <a href="http://en.wikipedia.org/wiki/Long_and_short_scales">long or short
+scale</a>. This differs the
+meaning of the words <code>billion</code>, <code>trillion</code> and so on.</p>
+
+<h5>
+<a id="baseseparator" class="anchor" href="#baseseparator" aria-hidden="true"><span class="octicon octicon-link"></span></a>baseSeparator:</h5>
+
+<p>'String' that separates the base cardinal numbers.
+Example: 29 -&gt; twenty<code>-</code>eight. Spanish uses the conector " y ".</p>
+
+<h5>
+<a id="unitseparator" class="anchor" href="#unitseparator" aria-hidden="true"><span class="octicon octicon-link"></span></a>unitSeparator:</h5>
+
+<p>'String' that separates the units from the last base cardinal numbers.
+Example: 1234 -&gt; one thousand two hundred <strong>and</strong> thirty-four</p>
+
+<h5>
+<a id="base" class="anchor" href="#base" aria-hidden="true"><span class="octicon octicon-link"></span></a>base:</h5>
+
+<p>Base cardinals numbers. Numbers that have unique names and are used to build
+others.</p>
+
+<h5>
+<a id="units" class="anchor" href="#units" aria-hidden="true"><span class="octicon octicon-link"></span></a>units:</h5>
+
+<p>Number units.
+It can be:</p>
+
+<ul>
+<li><p>String</p></li>
+<li><p>Object normal flow. Give support to singular and plural units. English does
+not need this, but spanish does.</p></li>
+</ul>
+
+<div class="highlight highlight-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>millón<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>plural<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>millones<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<ul>
+<li>Object with <code>useBaseInstead</code> exception.
+In some languages like spanish, specific units like "ciento", use the base
+cardinal number instead.</li>
+</ul>
+
+<p>With <code>useBaseException</code> you can also specify with which unit (1 to 9) you don't
+want use the base cardinal instead and use the regular behaviour.</p>
+
+<div class="highlight highlight-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ciento<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>useBaseInstead<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>useBaseException<span class="pl-pds">"</span></span>: [<span class="pl-c1">1</span>]
+}</pre></div>
+
+<ul>
+<li>Object with <code>avoidPrefixException</code> exception.</li>
+</ul>
+
+<p>In some languages like spanish, specific units like "mil" does not use the base
+cardinal number prefix for unit 1.</p>
+
+<div class="highlight highlight-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>mil<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>avoidPrefixException<span class="pl-pds">"</span></span>: [<span class="pl-c1">1</span>]
+}</pre></div>
+
+<h5>
+<a id="unitexceptions" class="anchor" href="#unitexceptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>unitExceptions:</h5>
+
+<p>Sometimes grammar exceptions affect the base cardinal joined to the unit. You
+can set specific exceptions to any base cardinal number.</p>
+
+<p>Spanish example:</p>
+
+<pre><code>Without Exception (Wrong): 1232000 -&gt; **uno** millón doscientos treinta y dos mil
+</code></pre>
+
+<pre><code>With Exception: 1232000 -&gt; **un** millón doscientos treinta y dos mil
+</code></pre>
+
+<h3>
+<a id="english-configuration-example" class="anchor" href="#english-configuration-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>English configuration example</h3>
+
+<div class="highlight highlight-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>useLongScale<span class="pl-pds">"</span></span>: <span class="pl-c1">false</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>baseSeparator<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>-<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>unitSeparator<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>and <span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>base<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>zero<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>one<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>two<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>3<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>three<span class="pl-pds">"</span></span>,
+    <span class="pl-ii">...</span>
+    <span class="pl-s"><span class="pl-pds">"</span>90<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ninety<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span> : [
+    <span class="pl-s"><span class="pl-pds">"</span>hundred<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>thousand<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>million<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>billion<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>trillion<span class="pl-pds">"</span></span>,
+    <span class="pl-ii">...</span>
+    <span class="pl-s"><span class="pl-pds">"</span>quindecillion<span class="pl-pds">"</span></span>
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>unitExceptions<span class="pl-pds">"</span></span>: []
+}</pre></div>
+
+<h3>
+<a id="spanish-configuration-example" class="anchor" href="#spanish-configuration-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spanish configuration example</h3>
+
+<div class="highlight highlight-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>useLongScale<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>baseSeparator<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span> y <span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>unitSeparator<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>base<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>cero<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>uno<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>dos<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>3<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>tres<span class="pl-pds">"</span></span>,
+    <span class="pl-ii">...</span>
+    <span class="pl-s"><span class="pl-pds">"</span>1000<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>mil<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>unitExceptions<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>un<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span> : [
+    {
+      <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ciento<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>useBaseInstead<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>useBaseException<span class="pl-pds">"</span></span>: [<span class="pl-c1">1</span>]
+    },
+    {
+      <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>mil<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>avoidPrefixException<span class="pl-pds">"</span></span>: [<span class="pl-c1">1</span>]
+    },
+    {
+      <span class="pl-s"><span class="pl-pds">"</span>singular<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>millón<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>plural<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>millones<span class="pl-pds">"</span></span>
+    },
+    <span class="pl-ii">...</span>
+  ]
+}</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This code is licensed under the MIT license for Pedro Tacla Yamada. For more
+information, please refer to the <a href="https://github.com/yamadapc/js-written-number/LICENSE">LICENSE</a> file.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/yamadapc">yamadapc</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-54450544-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
