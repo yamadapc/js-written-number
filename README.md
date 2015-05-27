@@ -48,30 +48,36 @@ Property       | Value
 noAnd          | false
 lang           | 'en'
 
-###Configure your own language
-Each language has it's own unique grammar exceptions.
-You can create your own language.json file in the folder "i18n" and give writtenNumber support for it. I don't think the current scheme and logic cover all the cases, but may be cover some.
+### Configure your own language
+Each language has it's own unique grammar exceptions.  You can create your own
+language.json file in the folder "i18n" and give writtenNumber support for it. I
+don't think the current scheme and logic cover all the cases, but may be cover
+some.
 
-#####useLongScale:
-'Boolean' that indicates if it use [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales). This differs the meaning of the words ```billion```, ```trillion``` and so on.
+##### useLongScale:
+'Boolean' that indicates if it use [long or short
+scale](http://en.wikipedia.org/wiki/Long_and_short_scales). This differs the
+meaning of the words `billion`, `trillion` and so on.
 
-#####baseSeparator:
+##### baseSeparator:
 'String' that separates the base cardinal numbers.
-Example: 29 -> twenty```-```eight. Spanish uses the conector " y ".
+Example: 29 -> twenty`-`eight. Spanish uses the conector " y ".
 
-#####unitSeparator:
+##### unitSeparator:
 'String' that separates the units from the last base cardinal numbers.
-Example: 1234 -> one thousand two hundred ```and``` thirty-four
+Example: 1234 -> one thousand two hundred **and** thirty-four
 
-#####base:
-Base cardinals numbers. Numbers that have unique names and are used to build others.
+##### base:
+Base cardinals numbers. Numbers that have unique names and are used to build
+others.
 
-#####units:
+##### units:
 Number units.
 It can be:
 - String
 
-- Object normal flow. Give support to singular and plural units. English does not need this, but spanish does.
+- Object normal flow. Give support to singular and plural units. English does
+  not need this, but spanish does.
 
 ```json
 {
@@ -80,9 +86,12 @@ It can be:
 }
 ```
 
-- Object with ```useBaseInstead``` exception.
-In some languages like spanish, specific units like "ciento", use the base cardinal number instead.
-With ```useBaseException``` you can also specify with which unit (1 to 9) you don't want use the base cardinal instead and use the regular behaviour.
+- Object with `useBaseInstead` exception.
+In some languages like spanish, specific units like "ciento", use the base
+cardinal number instead.
+
+With `useBaseException` you can also specify with which unit (1 to 9) you don't
+want use the base cardinal instead and use the regular behaviour.
 
 ```json
 {
@@ -92,8 +101,10 @@ With ```useBaseException``` you can also specify with which unit (1 to 9) you do
 }
 ```
 
-- Object with ```avoidPrefixException``` exception.
-In some languages like spanish, specific units like "mil" does not use the base cardinal number prefix for unit 1.
+- Object with `avoidPrefixException` exception.
+
+In some languages like spanish, specific units like "mil" does not use the base
+cardinal number prefix for unit 1.
 
 ```json
 {
@@ -102,8 +113,9 @@ In some languages like spanish, specific units like "mil" does not use the base 
 }
 ```
 
-#####unitExceptions:
-Sometimes grammar exceptions affect the base cardinal joined to the unit. You can set specific exceptions to any base cardinal number.
+##### unitExceptions:
+Sometimes grammar exceptions affect the base cardinal joined to the unit. You
+can set specific exceptions to any base cardinal number.
 
 Spanish example:
 
@@ -115,7 +127,7 @@ Without Exception (Wrong): 1232000 -> **uno** millón doscientos treinta y dos mi
 With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 ```
 
-###English configuration example
+### English configuration example
 ```json
 {
   "useLongScale": false,
@@ -142,7 +154,7 @@ With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 }
 ```
 
-###Spanish configuration example
+### Spanish configuration example
 ```json
 {
   "useLongScale": true,
