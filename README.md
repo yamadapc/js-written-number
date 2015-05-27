@@ -27,6 +27,10 @@ writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 - `lang` - Defaults to `'en'`. Determines which language to use.
 
 ## Internationalization
+Currently supported languages are:
+- English `lang = "en"`
+- Portuguese `lang = "pt"`
+- Spanish `lang = "es"`
 
 ### Spanish Example
 
