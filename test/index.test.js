@@ -2,7 +2,7 @@
 var should = require('should');
 var writtenNumber = require('..');
 
-describe('writte-number', function() {
+describe('written-number', function() {
   describe('writtenNumber(n, { lang: \'en\', ... })', function() {
     before(function() {
       writtenNumber.defaults.lang = 'en';
