@@ -25,7 +25,7 @@
     "blanket": "^1.1.7",
     "mocha": "^2.2",
     "mocha-spec-cov-alt": "^0.3.0",
-    "should": "^5.2.0"
+    "should": "^6.0.3"
   },
   "config": {
     "blanket": {
