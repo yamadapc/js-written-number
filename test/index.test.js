@@ -183,4 +183,65 @@ describe('written-number', function() {
       );
     });
   });
+  
+  describe('writtenNumber(n, { lang: \'fr\', ... })', function() {
+    before(function() {
+      writtenNumber.defaults.lang = 'fr';
+    });
+
+    it('gets exposed', function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it('correctly converts numbers < 10', function() {
+      writtenNumber(3).should.equal('trois');
+      writtenNumber(8).should.equal('huit');
+    });
+
+    it('correctly converts numbers < 20', function() {
+      writtenNumber(13).should.equal('treize');
+      writtenNumber(19).should.equal('dix-neuf');
+    });
+
+    it('correctly converts numbers < 100', function() {
+      writtenNumber(20).should.equal('vingt');
+      writtenNumber(25).should.equal('vingt-cinq');
+      writtenNumber(73).should.equal('soixante-treize');
+      writtenNumber(80).should.equal('quatre-vingts');
+      writtenNumber(88).should.equal('quatre-vingt-huit');
+      writtenNumber(90).should.equal('quatre-vingt-dix');
+      writtenNumber(91).should.equal('quatre-vingt-onze');
+    });
+
+    it('correctly converts numbers < 1000', function() {
+      writtenNumber(100).should.equal('cent');
+      writtenNumber(110).should.equal('cent dix');
+      writtenNumber(200).should.equal('deux cents');
+      writtenNumber(242).should.equal('deux cent quarente-deux');
+    });
+
+    it('correctly converts numbers > 1000', function() {
+      writtenNumber(1234).should.equal('mille deux cent trente-quatre');
+      writtenNumber(4000).should.equal('quatre mille');
+      writtenNumber(4323).should.equal('quatre mille trois cent vingt-trois');
+      writtenNumber(1000000).should.equal('un million');
+      writtenNumber(2000000).should.equal('deux millions');
+      writtenNumber(2000001).should.equal('deux millions un');
+      writtenNumber(4323000).should.equal('quatre millions trois cent vingt-trois mille');
+      writtenNumber(4323055).should.equal('quatre millions trois cent vingt-trois mille cinquante-cinq');
+      writtenNumber(1570025).should.equal('un million cinq cent soixante-dix mille vingt-cinq');
+    });
+
+    it('correctly converts numbers > 1 000 000 000', function() {
+      writtenNumber(1000000000).should.equal('un milliard');
+      writtenNumber(2580000000).should.equal(
+          'deux milliards cinq cent quatre-vingts millions'
+      );
+      writtenNumber(1000000000000).should.equal('un billion');
+      writtenNumber(3627000000000).should.equal(
+          'trois billions six cent vingt-sept milliards'
+      );
+    });
+  });
 });
