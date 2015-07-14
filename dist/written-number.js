@@ -186,6 +186,135 @@ module.exports={
 },{}],3:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
+  "baseSeparator": "-",
+  "unitSeparator": "",
+  "base": {
+    "0": "zero",
+    "1": "un",
+    "2": "deux",
+    "3": "trois",
+    "4": "quatre",
+    "5": "cinq",
+    "6": "six",
+    "7": "sept",
+    "8": "huit",
+    "9": "neuf",
+    "10": "dix",
+    "11": "onze",
+    "12": "douze",
+    "13": "treize",
+    "14": "quatorze",
+    "15": "quinze",
+    "16": "seize",
+    "17": "dix-sept",
+    "18": "dix-huit",
+    "19": "dix-neuf",
+    "20": "vingt",
+    "30": "trente",
+    "40": "quarente",
+    "50": "cinquante",
+    "60": "soixante",
+    "70": "soixante-dix",
+    "80": "quatre-vingt",
+    "90": "quatre-vingt-dix"
+  },
+  "units" : [
+    {
+      "singular": "cent",
+      "plural": "cents",
+      "avoidInNumberPlural": true,
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "mille",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "million",
+      "plural": "millions"
+    },
+    {
+      "singular": "milliard",
+      "plural": "milliards"
+    },
+    {
+      "singular": "billion",
+      "plural": "billions"
+    },
+    {
+      "singular": "billiard",
+      "plural": "billiards"
+    },
+    {
+      "singular": "trillion",
+      "plural": "trillions"
+    },
+    {
+      "singular": "trilliard",
+      "plural": "trilliards"
+    },
+    {
+      "singular": "quadrillion",
+      "plural": "quadrillions"
+    },
+    {
+      "singular": "quadrilliard",
+      "plural": "quadrilliards"
+    },
+    {
+      "singular": "quintillion",
+      "plural": "quintillions"
+    },
+    {
+      "singular": "quintilliard",
+      "plural": "quintilliards"
+    },
+    {
+      "singular": "sextillion",
+      "plural": "sextillions"
+    },
+    {
+      "singular": "sextilliard",
+      "plural": "sextilliards"
+    },
+    {
+      "singular": "septillion",
+      "plural": "septillions"
+    },
+    {
+      "singular": "septilliard",
+      "plural": "septilliards"
+    },
+    {
+      "singular": "octillion",
+      "plural": "octillions"
+    }
+  ],
+  "unitExceptions": {
+    "71": "soixante et onze",
+    "72": "soixante-douze",
+    "73": "soixante-treize",
+    "74": "soixante-quatorze",
+    "75": "soixante-quinze",
+    "76": "soixante-seize",
+    "77": "soixante-dix-sept",
+    "78": "soixante-dix-huit",
+    "79": "soixante-dix-neuf",
+    "80": "quatre-vingts",
+    "91": "quatre-vingt-onze",
+    "92": "quatre-vingt-douze",
+    "93": "quatre-vingt-treize",
+    "94": "quatre-vingt-quatorze",
+    "95": "quatre-vingt-quinze",
+    "96": "quatre-vingt-seize",
+    "97": "quatre-vingt-dix-sept",
+    "98": "quatre-vingt-dix-huit",
+    "99": "quatre-vingt-dix-neuf"
+  }
+}
+},{}],4:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
   "baseSeparator": " e ",
   "unitSeparator": "e ",
   "base": {
@@ -301,16 +430,17 @@ module.exports={
   ]
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 exports = module.exports = writtenNumber;
 var util = require('./util');
 
-var languages = ['en', 'es'];
+var languages = ['en', 'es', 'pt', 'fr'];
 var i18n = {
   en: require('./i18n/en.json'),
   es: require('./i18n/es.json'),
   pt: require('./i18n/pt.json'),
+  fr: require('./i18n/fr.json'),
 };
 exports.i18n = i18n;
 
@@ -355,6 +485,7 @@ function writtenNumber(n, options) {
 
   var baseCardinals = language.base;
 
+  if (language.unitExceptions[n]) return language.unitExceptions[n];
   if(baseCardinals[n]) return baseCardinals[n];
   if(n < 100) return handleSmallerThan100(n, language, unit, baseCardinals, options);
 
@@ -393,7 +524,7 @@ function writtenNumber(n, options) {
         str = unit;
       }
       else {
-        str = r > 1 && unit.plural ? unit.plural : unit.singular;
+        str = r > 1 && unit.plural && (!unit.avoidInNumberPlural || !m) ? unit.plural : unit.singular;
       }
       if(unit.avoidPrefixException && unit.avoidPrefixException.indexOf(r) > -1) {
         ret.push(str);
@@ -423,7 +554,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, options) {
   return baseCardinals[dec];
 }
 
-},{"./i18n/en.json":1,"./i18n/es.json":2,"./i18n/pt.json":3,"./util":5}],5:[function(require,module,exports){
+},{"./i18n/en.json":1,"./i18n/es.json":2,"./i18n/fr.json":3,"./i18n/pt.json":4,"./util":6}],6:[function(require,module,exports){
 'use strict';
 /**
  * Merges a set of default keys with a target object
@@ -446,5 +577,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[4])(4)
+},{}]},{},[5])(5)
 });
