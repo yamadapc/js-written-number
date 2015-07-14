@@ -38,6 +38,7 @@ Currently supported languages are:
 - English `lang = "en"`
 - Portuguese `lang = "pt"`
 - Spanish `lang = "es"`
+- French `lang = "fr"`
 
 ### Spanish Example
 ```javascript
@@ -55,6 +56,12 @@ writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'pt' }); // => 'mil duzentos e trinta e quatro'
+```
+
+### French Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'fr' }); // => 'mille deux cent trente-quatre'
 ```
 
 ## Options
@@ -125,6 +132,20 @@ cardinal number prefix for unit 1.
 {
   "singular": "mil",
   "avoidPrefixException": [1]
+}
+```
+
+
+- Object with `avoidInNumberPlural` exception.
+
+In some languages like french, specific units like "cent" does not use the plural form inside of
+numbers wioth trailing numbers other than 0, for example "deux cents" and "deux cent trois".
+
+```json
+{
+  "singular": "cent",
+  "plural": "cents",
+  "avoidInNumberPlural": true
 }
 ```
 
