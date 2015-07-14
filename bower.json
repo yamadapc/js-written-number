@@ -1,0 +1,27 @@
+{
+  "name": "written-number",
+  "description": "Convert numbers to words - their written form",
+  "homepage": "https://yamadapc.github.io/js-written-number",
+  "main": "./dist/written-number.js",
+  "version": "0.2.0",
+  "keywords": [
+    "numbers",
+    "words",
+    "localization"
+  ],
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "package.json",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "lib"
+  ],
+  "authors": [
+    "Pedro Tacla Yamada"
+  ],
+  "license": "MIT"
+}
