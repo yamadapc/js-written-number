@@ -10,9 +10,16 @@
 - - -
 Convert numbers to words - their written form.
 
-## Install
+## Install with npm
+
 ```bash
 npm i --save written-number
+```
+
+## Install with bower
+
+```bash
+bower install written-number
 ```
 
 ## Usage
