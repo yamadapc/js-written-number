@@ -226,6 +226,11 @@ With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
 }
 ```
 
+## Contributing
+Do your changes and submit a PR. If you've write access and want to bump the
+version, run `mversion [major|minor|patch] -m`. That'll bump both `bower.json`
+and `package.json`.
+
 ## License
 This code is licensed under the MIT license for Pedro Tacla Yamada. For more
 information, please refer to the [LICENSE](/LICENSE) file.
