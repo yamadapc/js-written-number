@@ -26,14 +26,14 @@
   "devDependencies": {
     "blanket": "^1.1.7",
     "grunt": "^0.4.5",
-    "grunt-browserify": "^3.8.0",
+    "grunt-browserify": "^4.0.1",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-uglify": "^0.11.0",
     "mocha": "^2.2",
-    "mocha-spec-cov-alt": "^0.3.0",
+    "mocha-spec-cov-alt": "^1.1.0",
     "mversion": "^1.10.0",
-    "should": "^7.0.2"
+    "should": "^8.2.0"
   },
   "config": {
     "blanket": {
