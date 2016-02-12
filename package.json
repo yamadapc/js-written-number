@@ -33,7 +33,7 @@
     "mocha": "^2.2",
     "mocha-spec-cov-alt": "^0.3.0",
     "mversion": "^1.10.0",
-    "should": "^7.0.2"
+    "should": "^8.2.1"
   },
   "config": {
     "blanket": {
