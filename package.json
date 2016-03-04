@@ -29,7 +29,7 @@
     "grunt-browserify": "^4.0.1",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-uglify": "^1.0.0",
     "mocha": "^2.2",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
