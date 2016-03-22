@@ -24,7 +24,7 @@
     "url": "https://github.com/yamadapc/js-written-number"
   },
   "devDependencies": {
-    "blanket": "1.1.7",
+    "blanket": "1.2.3",
     "grunt": "^0.4.5",
     "grunt-browserify": "^5.0.0",
     "grunt-cli": "^0.1.13",
