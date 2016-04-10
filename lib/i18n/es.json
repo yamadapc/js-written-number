@@ -19,7 +19,7 @@
     "13": "trece",
     "14": "catorce",
     "15": "quince",
-    "16": "diecis閕s",
+    "16": "diecis茅is",
     "17": "diecisiete",
     "18": "dieciocho",
     "19": "diecinueve",
@@ -65,63 +65,63 @@
       "avoidPrefixException": [1]
     },
     {
-      "singular": "mill髇",
+      "singular": "mill贸n",
       "plural": "millones"
     },
     {
-      "singular": "bill髇",
+      "singular": "bill贸n",
       "plural": "billones"
     },
     {
-      "singular": "trill髇",
+      "singular": "trill贸n",
       "plural": "trillones"
     },
     {
-      "singular": "cuatrill髇",
+      "singular": "cuatrill贸n",
       "plural": "cuatrillones"
     },
     {
-      "singular": "quintill髇",
+      "singular": "quintill贸n",
       "plural": "quintillones"
     },
     {
-      "singular": "sextill髇",
+      "singular": "sextill贸n",
       "plural": "sextillones"
     },
     {
-      "singular": "septill髇",
+      "singular": "septill贸n",
       "plural": "septillones"
     },
     {
-      "singular": "octill髇",
+      "singular": "octill贸n",
       "plural": "octillones"
     },
     {
-      "singular": "nonill髇",
+      "singular": "nonill贸n",
       "plural": "nonillones"
     },
     {
-      "singular": "decill髇",
+      "singular": "decill贸n",
       "plural": "decillones"
     },
     {
-      "singular": "undecill髇",
+      "singular": "undecill贸n",
       "plural": "undecillones"
     },
     {
-      "singular": "duodecill髇",
+      "singular": "duodecill贸n",
       "plural": "duodecillones"
     },
     {
-      "singular": "tredecill髇",
+      "singular": "tredecill贸n",
       "plural": "tredecillones"
     },
     {
-      "singular": "cuatrodecill髇",
+      "singular": "cuatrodecill贸n",
       "plural": "cuatrodecillones"
     },
     {
-      "singular": "quindecill髇",
+      "singular": "quindecill贸n",
       "plural": "quindecillones"
     }
   ]

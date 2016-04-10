@@ -6,7 +6,7 @@
     "0": "zero",
     "1": "um",
     "2": "dois",
-    "3": "trÍs",
+    "3": "tr√™s",
     "4": "quatro",
     "5": "cinco",
     "6": "seis",
@@ -61,56 +61,56 @@
       "andException": true
     },
     {
-      "singular": "milh„o",
-      "plural": "milhıes"
+      "singular": "milh√£o",
+      "plural": "milh√µes"
     },
     {
-      "singular": "bilh„o",
-      "plural": "bilhıes"
+      "singular": "bilh√£o",
+      "plural": "bilh√µes"
     },
     {
-      "singular": "trilh„o",
-      "plural": "trilhıes"
+      "singular": "trilh√£o",
+      "plural": "trilh√µes"
     },
     {
-      "singular": "quadrilh„o",
-      "plural": "quadrilh„o"
+      "singular": "quadrilh√£o",
+      "plural": "quadrilh√£o"
     },
     {
-      "singular": "quintilh„o",
-      "plural": "quintilhıes"
+      "singular": "quintilh√£o",
+      "plural": "quintilh√µes"
     },
     {
-      "singular": "sextilh„o",
-      "plural": "sextilhıes"
+      "singular": "sextilh√£o",
+      "plural": "sextilh√µes"
     },
     {
-      "singular": "septilh„o",
-      "plural": "septilhıes"
+      "singular": "septilh√£o",
+      "plural": "septilh√µes"
     },
     {
-      "singular": "octilh„o",
-      "plural": "octilhıes"
+      "singular": "octilh√£o",
+      "plural": "octilh√µes"
     },
     {
-      "singular": "nonilh„o",
-      "plural": "nonilhıes"
+      "singular": "nonilh√£o",
+      "plural": "nonilh√µes"
     },
     {
-      "singular": "decilh„o",
-      "plural": "decilhıes"
+      "singular": "decilh√£o",
+      "plural": "decilh√µes"
     },
     {
-      "singular": "undecilh„o",
-      "plural": "undecilhıes"
+      "singular": "undecilh√£o",
+      "plural": "undecilh√µes"
     },
     {
-      "singular": "doudecilh„o",
-      "plural": "doudecilhıes"
+      "singular": "doudecilh√£o",
+      "plural": "doudecilh√µes"
     },
     {
-      "singular": "tredecilh„o",
-      "plural": "tredecilhıes"
+      "singular": "tredecilh√£o",
+      "plural": "tredecilh√µes"
     }
   ]
 }
