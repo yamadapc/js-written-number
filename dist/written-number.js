@@ -211,7 +211,7 @@ module.exports={
     "19": "dix-neuf",
     "20": "vingt",
     "30": "trente",
-    "40": "quarente",
+    "40": "quarante",
     "50": "cinquante",
     "60": "soixante",
     "70": "soixante-dix",

@@ -219,7 +219,7 @@ describe('written-number', function() {
       writtenNumber(100).should.equal('cent');
       writtenNumber(110).should.equal('cent dix');
       writtenNumber(200).should.equal('deux cents');
-      writtenNumber(242).should.equal('deux cent quarente-deux');
+      writtenNumber(242).should.equal('deux cent quarante-deux');
     });
 
     it('correctly converts numbers > 1000', function() {
