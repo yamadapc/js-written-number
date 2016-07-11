@@ -13,6 +13,21 @@ describe('written-number', function() {
       writtenNumber.should.be.instanceof(Function);
     });
 
+    it('doesn\'t blow up weirdly with invalid input', function() {
+      writtenNumber('asdfasdfasdf').should.equal('');
+      writtenNumber('0.as').should.equal('');
+      writtenNumber('0.123').should.equal('zero');
+      writtenNumber('0.8').should.equal('one');
+      writtenNumber('2.8').should.equal('three');
+      writtenNumber('asdf.8').should.equal('');
+      writtenNumber('120391938123..').should.equal('');
+      writtenNumber('1000000000.123').should.equal('one billion');
+      writtenNumber('1/3').should.equal('');
+      writtenNumber(1/3).should.equal('zero');
+      writtenNumber('1/2').should.equal('');
+      writtenNumber('1.123/2').should.equal('');
+    });
+
     it('correctly converts numbers < 10', function() {
       writtenNumber(1000000000).should.equal('one billion');
       writtenNumber(3).should.equal('three');
