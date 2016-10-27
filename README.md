@@ -40,6 +40,7 @@ Currently supported languages are:
 - Portuguese `lang = "pt"`
 - Spanish `lang = "es"`
 - French `lang = "fr"`
+- Esperanto `lang = "eo"`
 
 ### Spanish Example
 ```javascript
@@ -63,6 +64,12 @@ writtenNumber(1234, { lang: 'pt' }); // => 'mil duzentos e trinta e quatro'
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'fr' }); // => 'mille deux cent trente-quatre'
+```
+
+### Experanto Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'eo' }); // => 'mil ducent tridek kvar'
 ```
 
 ## Options
