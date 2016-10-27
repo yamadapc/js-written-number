@@ -66,7 +66,7 @@ var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'fr' }); // => 'mille deux cent trente-quatre'
 ```
 
-### Experanto Example
+### Esperanto Example
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'eo' }); // => 'mil ducent tridek kvar'
