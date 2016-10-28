@@ -56,6 +56,69 @@ module.exports={
 }
 },{}],2:[function(require,module,exports){
 module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "nulo",
+    "1": "unu",
+    "2": "du",
+    "3": "tri",
+    "4": "kvar",
+    "5": "kvin",
+    "6": "ses",
+    "7": "sep",
+    "8": "ok",
+    "9": "naŭ",
+    "10": "dek",
+    "20": "dudek",
+    "30": "tridek",
+    "40": "kvardek",
+    "50": "kvindek",
+    "60": "sesdek",
+    "70": "sepdek",
+    "80": "okdek",
+    "90": "naŭdek",
+    "100": "cent",
+    "200": "ducent",
+    "300": "tricent",
+    "400": "kvarcent",
+    "500": "kvincent",
+    "600": "sescent",
+    "700": "sepcent",
+    "800": "okcent",
+    "900": "naŭcent"
+  },
+  "units" : [
+    {
+      "useBaseInstead": true,
+      "useBaseException": []
+    },
+    {
+      "singular": "mil",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "miliono",
+      "plural": "milionoj",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "miliardo",
+      "plural": "miliardoj",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "biliono",
+      "plural": "bilionoj",
+      "avoidPrefixException": [1]
+    }
+  ],
+  "unitExceptions": []
+}
+
+},{}],3:[function(require,module,exports){
+module.exports={
   "useLongScale": true,
   "baseSeparator": " y ",
   "unitSeparator": "",
@@ -76,7 +139,7 @@ module.exports={
     "13": "trece",
     "14": "catorce",
     "15": "quince",
-    "16": "diecis�is",
+    "16": "dieciséis",
     "17": "diecisiete",
     "18": "dieciocho",
     "19": "diecinueve",
@@ -122,68 +185,69 @@ module.exports={
       "avoidPrefixException": [1]
     },
     {
-      "singular": "mill�n",
+      "singular": "millón",
       "plural": "millones"
     },
     {
-      "singular": "bill�n",
+      "singular": "billón",
       "plural": "billones"
     },
     {
-      "singular": "trill�n",
+      "singular": "trillón",
       "plural": "trillones"
     },
     {
-      "singular": "cuatrill�n",
+      "singular": "cuatrillón",
       "plural": "cuatrillones"
     },
     {
-      "singular": "quintill�n",
+      "singular": "quintillón",
       "plural": "quintillones"
     },
     {
-      "singular": "sextill�n",
+      "singular": "sextillón",
       "plural": "sextillones"
     },
     {
-      "singular": "septill�n",
+      "singular": "septillón",
       "plural": "septillones"
     },
     {
-      "singular": "octill�n",
+      "singular": "octillón",
       "plural": "octillones"
     },
     {
-      "singular": "nonill�n",
+      "singular": "nonillón",
       "plural": "nonillones"
     },
     {
-      "singular": "decill�n",
+      "singular": "decillón",
       "plural": "decillones"
     },
     {
-      "singular": "undecill�n",
+      "singular": "undecillón",
       "plural": "undecillones"
     },
     {
-      "singular": "duodecill�n",
+      "singular": "duodecillón",
       "plural": "duodecillones"
     },
     {
-      "singular": "tredecill�n",
+      "singular": "tredecillón",
       "plural": "tredecillones"
     },
     {
-      "singular": "cuatrodecill�n",
+      "singular": "cuatrodecillón",
       "plural": "cuatrodecillones"
     },
     {
-      "singular": "quindecill�n",
+      "singular": "quindecillón",
       "plural": "quindecillones"
     }
   ]
 }
-},{}],3:[function(require,module,exports){
+
+},{}],4:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -312,7 +376,8 @@ module.exports={
     "99": "quatre-vingt-dix-neuf"
   }
 }
-},{}],4:[function(require,module,exports){
+
+},{}],5:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -321,7 +386,7 @@ module.exports={
     "0": "zero",
     "1": "um",
     "2": "dois",
-    "3": "tr�s",
+    "3": "três",
     "4": "quatro",
     "5": "cinco",
     "6": "seis",
@@ -376,71 +441,72 @@ module.exports={
       "andException": true
     },
     {
-      "singular": "milh�o",
-      "plural": "milh�es"
+      "singular": "milhão",
+      "plural": "milhões"
     },
     {
-      "singular": "bilh�o",
-      "plural": "bilh�es"
+      "singular": "bilhão",
+      "plural": "bilhões"
     },
     {
-      "singular": "trilh�o",
-      "plural": "trilh�es"
+      "singular": "trilhão",
+      "plural": "trilhões"
     },
     {
-      "singular": "quadrilh�o",
-      "plural": "quadrilh�o"
+      "singular": "quadrilhão",
+      "plural": "quadrilhão"
     },
     {
-      "singular": "quintilh�o",
-      "plural": "quintilh�es"
+      "singular": "quintilhão",
+      "plural": "quintilhões"
     },
     {
-      "singular": "sextilh�o",
-      "plural": "sextilh�es"
+      "singular": "sextilhão",
+      "plural": "sextilhões"
     },
     {
-      "singular": "septilh�o",
-      "plural": "septilh�es"
+      "singular": "septilhão",
+      "plural": "septilhões"
     },
     {
-      "singular": "octilh�o",
-      "plural": "octilh�es"
+      "singular": "octilhão",
+      "plural": "octilhões"
     },
     {
-      "singular": "nonilh�o",
-      "plural": "nonilh�es"
+      "singular": "nonilhão",
+      "plural": "nonilhões"
     },
     {
-      "singular": "decilh�o",
-      "plural": "decilh�es"
+      "singular": "decilhão",
+      "plural": "decilhões"
     },
     {
-      "singular": "undecilh�o",
-      "plural": "undecilh�es"
+      "singular": "undecilhão",
+      "plural": "undecilhões"
     },
     {
-      "singular": "doudecilh�o",
-      "plural": "doudecilh�es"
+      "singular": "doudecilhão",
+      "plural": "doudecilhões"
     },
     {
-      "singular": "tredecilh�o",
-      "plural": "tredecilh�es"
+      "singular": "tredecilhão",
+      "plural": "tredecilhões"
     }
   ]
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 exports = module.exports = writtenNumber;
 var util = require('./util');
 
-var languages = ['en', 'es', 'pt', 'fr'];
+var languages = ['en', 'es', 'pt', 'fr', 'eo'];
 var i18n = {
   en: require('./i18n/en.json'),
   es: require('./i18n/es.json'),
   pt: require('./i18n/pt.json'),
   fr: require('./i18n/fr.json'),
+  eo: require('./i18n/eo.json')
 };
 exports.i18n = i18n;
 
@@ -471,6 +537,8 @@ function writtenNumber(n, options) {
   options = options || {};
   if(options.lang) options.lang = options.lang.toLowerCase();
   options = util.defaults(options, writtenNumber.defaults);
+
+  n = Math.round(+n);
 
   var language = i18n[options.lang];
   var scale = language.useLongScale ? longScale : shortScale;
@@ -554,7 +622,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, options) {
   return baseCardinals[dec];
 }
 
-},{"./i18n/en.json":1,"./i18n/es.json":2,"./i18n/fr.json":3,"./i18n/pt.json":4,"./util":6}],6:[function(require,module,exports){
+},{"./i18n/en.json":1,"./i18n/eo.json":2,"./i18n/es.json":3,"./i18n/fr.json":4,"./i18n/pt.json":5,"./util":7}],7:[function(require,module,exports){
 'use strict';
 /**
  * Merges a set of default keys with a target object
@@ -577,5 +645,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[5])(5)
+},{}]},{},[6])(6)
 });
