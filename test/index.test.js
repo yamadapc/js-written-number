@@ -113,16 +113,16 @@ describe('written-number', function() {
       writtenNumber(144).should.equal('ciento cuarenta y cuatro');
       writtenNumber(200).should.equal('doscientos');
       writtenNumber(1234).should.equal('mil doscientos treinta y cuatro');
-      writtenNumber(4323).should.equal('cuatro mil trescientos veintitres');
+      writtenNumber(4323).should.equal('cuatro mil trescientos veintitrés');
       writtenNumber(242).should.equal('doscientos cuarenta y dos');
     });
 
     it('correctly converts numbers > 1000', function() {
       writtenNumber(4323000).should.equal(
-        'cuatro millones trescientos veintitres mil'
+        'cuatro millones trescientos veintitrés mil'
       );
       writtenNumber(4323055).should.equal(
-        'cuatro millones trescientos veintitres mil cincuenta y cinco'
+        'cuatro millones trescientos veintitrés mil cincuenta y cinco'
       );
       writtenNumber(1570025).should.equal(
         'un millón quinientos setenta mil veinticinco'
