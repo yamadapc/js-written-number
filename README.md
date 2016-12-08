@@ -24,15 +24,23 @@ bower install written-number
 ```
 
 ## Usage
+- `lang` as **string**
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 ```
 
+- `lang` as **object**
+```javascript
+var writtenNumber = require('written-number');
+var langEn = require('./en.json');
+writtenNumber(1234, { lang: langEn }); // => 'one thousand two hundred and thirty-four'
+```
+
 ## Options
 - `noAnd` - Defaults to `false`. Determines whether to use a separator. The
   separator is internationalized.
-- `lang` - Defaults to `'en'`. Determines which language to use.
+- `lang` - Could be `string` or `object`. Defaults to `'en'`. Determines which language to use.
 
 ## Internationalization
 Currently supported languages are:
@@ -41,6 +49,7 @@ Currently supported languages are:
 - Spanish `lang = "es"`
 - French `lang = "fr"`
 - Esperanto `lang = "eo"`
+- Vietnamese `lang = "vi"`
 
 ### Spanish Example
 ```javascript
@@ -70,6 +79,12 @@ writtenNumber(1234, { lang: 'fr' }); // => 'mille deux cent trente-quatre'
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'eo' }); // => 'mil ducent tridek kvar'
+```
+
+### Esperanto Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'vi' }); // => 'một ngàn hai trăm và ba mươi bốn'
 ```
 
 ## Options
