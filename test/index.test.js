@@ -91,6 +91,10 @@ describe('written-number', function() {
       writtenNumber.should.be.instanceof(Function);
     });
 
+    it('correctly converts 1 - #34', function() {
+      writtenNumber(1).should.equal('uno');
+    });
+
     it('correctly converts numbers < 10', function() {
       writtenNumber(3).should.equal('tres');
       writtenNumber(8).should.equal('ocho');
@@ -105,6 +109,7 @@ describe('written-number', function() {
     it('correctly converts numbers < 100', function() {
       writtenNumber(20).should.equal('veinte');
       writtenNumber(25).should.equal('veinticinco');
+      writtenNumber(31).should.equal('treinta y uno');
       writtenNumber(88).should.equal('ochenta y ocho');
       writtenNumber(73).should.equal('setenta y tres');
     });
