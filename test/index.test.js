@@ -260,4 +260,65 @@ describe('written-number', function() {
       );
     });
   });
+
+  describe('writtenNumber(n, { lang: \'it\', ... })', function() {
+    before(function() {
+      writtenNumber.defaults.lang = 'it';
+    });
+
+    it('gets exposed', function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it('correctly converts numbers < 10', function() {
+      writtenNumber(3).should.equal('tre');
+      writtenNumber(8).should.equal('otto');
+    });
+
+    it('correctly converts numbers < 20', function() {
+      writtenNumber(13).should.equal('tredici');
+      writtenNumber(19).should.equal('diciannove');
+    });
+
+    it('correctly converts numbers < 100', function() {
+      writtenNumber(20).should.equal('venti');
+      writtenNumber(23).should.equal('ventitré');
+      writtenNumber(73).should.equal('settantatré');
+      writtenNumber(80).should.equal('ottanta');
+      writtenNumber(88).should.equal('ottantotto');
+      writtenNumber(90).should.equal('novanta');
+      writtenNumber(91).should.equal('novantuno');
+    });
+
+    it('correctly converts numbers < 1000', function() {
+      writtenNumber(100).should.equal('cento');
+      writtenNumber(101).should.equal('centuno');
+      writtenNumber(201).should.equal('duecentuno');
+      writtenNumber(242).should.equal('due cento quarantadue');
+    });
+
+    it('correctly converts numbers > 1000', function() {
+      writtenNumber(1234).should.equal('mille due cento trentaquattro');
+      writtenNumber(4000).should.equal('quattro mila');
+      writtenNumber(4323).should.equal('quattro mila tre cento ventitré');
+      writtenNumber(1000000).should.equal('un milione');
+      writtenNumber(2000000).should.equal('due milioni');
+      writtenNumber(2000001).should.equal('due milioni un');
+      writtenNumber(4323000).should.equal('quattro milioni tre cento ventitré mila');
+      writtenNumber(4323055).should.equal('quattro milioni tre cento ventitré mila cinquantacinque');
+      writtenNumber(1570025).should.equal('un milione cinque cento settanta mila venticinque');
+    });
+
+    it('correctly converts numbers > 1 000 000 000', function() {
+      writtenNumber(1000000000).should.equal('un miliardo');
+      writtenNumber(2580000000).should.equal(
+          'due miliardi cinque cento ottanta milioni'
+      );
+      writtenNumber(1000000000000).should.equal('un bilione');
+      writtenNumber(3627000000000).should.equal(
+          'tre bilioni sei cento ventisette miliardi'
+      );
+    });
+  });
 });
