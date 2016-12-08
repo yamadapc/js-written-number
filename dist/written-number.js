@@ -145,11 +145,11 @@ module.exports={
     "19": "diecinueve",
     "20": "veinte",
     "21": "veintiuno",
-    "22": "veintidos",
-    "23": "veintitres",
+    "22": "veintidós",
+    "23": "veintitrés",
     "24": "veinticuatro",
     "25": "veinticinco",
-    "26": "veintiseis",
+    "26": "veintiséis",
     "27": "veintisiete",
     "28": "veintiocho",
     "29": "veintinueve",
@@ -379,6 +379,131 @@ module.exports={
 
 },{}],5:[function(require,module,exports){
 module.exports={
+    "useLongScale": false,
+    "baseSeparator": "",
+    "unitSeparator": "",
+    "generalSeparator": "",
+    "wordSeparator": "",
+    "base": {
+        "0": "zero",
+        "1": "uno",
+        "2": "due",
+        "3": "tre",
+        "4": "quattro",
+        "5": "cinque",
+        "6": "sei",
+        "7": "sette",
+        "8": "otto",
+        "9": "nove",
+        "10": "dieci",
+        "11": "undici",
+        "12": "dodici",
+        "13": "tredici",
+        "14": "quattordici",
+        "15": "quindici",
+        "16": "sedici",
+        "17": "diciassette",
+        "18": "diciotto",
+        "19": "diciannove",
+        "20": "venti",
+        "21": "ventuno",
+        "23": "ventitré",
+        "28": "ventotto",
+        "30": "trenta",
+        "31": "trentuno",
+        "33": "trentatré",
+        "38": "trentotto",
+        "40": "quaranta",
+        "41": "quarantuno",
+        "43": "quaranta­tré",
+        "48": "quarantotto",
+        "50": "cinquanta",
+        "51": "cinquantuno",
+        "53": "cinquantatré",
+        "58": "cinquantotto",
+        "60": "sessanta",
+        "61": "sessantuno",
+        "63": "sessanta­tré",
+        "68": "sessantotto",
+        "70": "settanta",
+        "71": "settantuno",
+        "73": "settantatré",
+        "78": "settantotto",
+        "80": "ottanta",
+        "81": "ottantuno",
+        "83": "ottantatré",
+        "88": "ottantotto",
+        "90": "novanta",
+        "91": "novantuno",
+        "93": "novantatré",
+        "98": "novantotto",
+        "100": "cento",
+        "101": "centuno",
+        "108": "centootto",
+        "180": "centottanta",
+        "201": "duecentuno",
+        "301": "tre­cent­uno",
+        "401": "quattro­cent­uno",
+        "501": "cinque­cent­uno",
+        "601": "sei­cent­uno",
+        "701": "sette­cent­uno",
+        "801": "otto­cent­uno",
+        "901": "nove­cent­uno"
+    },
+    "unitExceptions": {
+        "1": "un"
+    },
+    "units": [
+        {
+            "singular": "cento",
+            "avoidPrefixException": [
+                1
+            ]
+        },
+        {
+            "singular": "mille",
+            "plural": "mila",
+            "avoidPrefixException": [
+                1
+            ]
+        },
+        {
+            "singular": "milione",
+            "plural": "milioni"
+        },
+        {
+            "singular": "miliardo",
+            "plural": "miliardi"
+        },
+        {
+            "singular": "bilione",
+            "plural": "bilioni"
+        },
+        {
+            "singular": "biliardo",
+            "plural": "biliardi"
+        },
+        {
+            "singular": "trilione",
+            "plural": "trilioni"
+        },
+        {
+            "singular": "triliardo",
+            "plural": "triliardi"
+        },
+        {
+            "singular": "quadrilione",
+            "plural": "quadrilioni"
+        },
+        {
+            "singular": "quadriliardo",
+            "plural": "quadriliardi"
+        }
+    ]
+}
+
+},{}],6:[function(require,module,exports){
+module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
   "unitSeparator": "e ",
@@ -495,18 +620,71 @@ module.exports={
   ]
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "và ",
+  "base": {
+    "0": "không",
+    "1": "một",
+    "2": "hai",
+    "3": "ba",
+    "4": "bốn",
+    "5": "năm",
+    "6": "sáu",
+    "7": "bảy",
+    "8": "tám",
+    "9": "chín",
+    "10": "mười",
+    "15": "mười lăm",
+    "20": "hai mươi",
+    "21": "hai mươi mốt",
+    "25": "hai mươi lăm",
+    "30": "ba mươi",
+    "31": "ba mươi mốt",
+    "40": "bốn mươi",
+    "41": "bốn mươi mốt",
+    "45": "bốn mươi lăm",
+    "50": "năm mươi",
+    "51": "năm mươi mốt",
+    "55": "năm mươi lăm",
+    "60": "sáu mươi",
+    "61": "sáu mươi mốt",
+    "65": "sáu mươi lăm",
+    "70": "bảy mươi",
+    "71": "bảy mươi mốt",
+    "75": "bảy mươi lăm",
+    "80": "tám mươi",
+    "81": "tám mươi mốt",
+    "85": "tám mươi lăm",
+    "90": "chín mươi",
+    "91": "chín mươi mốt",
+    "95": "chín mươi lăm"
+  },
+  "units" : [
+    "trăm",
+    "ngàn",
+    "triệu",
+    "tỷ",
+    "nghìn tỷ"
+  ],
+  "unitExceptions": []
+}
+},{}],8:[function(require,module,exports){
 'use strict';
 exports = module.exports = writtenNumber;
 var util = require('./util');
 
-var languages = ['en', 'es', 'pt', 'fr', 'eo'];
+var languages = ['en', 'es', 'pt', 'fr', 'eo', 'it', 'vi'];
 var i18n = {
   en: require('./i18n/en.json'),
   es: require('./i18n/es.json'),
   pt: require('./i18n/pt.json'),
   fr: require('./i18n/fr.json'),
-  eo: require('./i18n/eo.json')
+  eo: require('./i18n/eo.json'),
+  it: require('./i18n/it.json'),
+  vi: require('./i18n/vi.json'),
 };
 exports.i18n = i18n;
 
@@ -535,12 +713,13 @@ writtenNumber.defaults = {
 
 function writtenNumber(n, options) {
   options = options || {};
-  if(options.lang) options.lang = options.lang.toLowerCase();
   options = util.defaults(options, writtenNumber.defaults);
 
   n = Math.round(+n);
 
-  var language = i18n[options.lang];
+  var language = typeof options.lang === 'string'
+    ? i18n[options.lang]
+    : options.lang;
   var scale = language.useLongScale ? longScale : shortScale;
   var unit;
 
@@ -622,7 +801,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, options) {
   return baseCardinals[dec];
 }
 
-},{"./i18n/en.json":1,"./i18n/eo.json":2,"./i18n/es.json":3,"./i18n/fr.json":4,"./i18n/pt.json":5,"./util":7}],7:[function(require,module,exports){
+},{"./i18n/en.json":1,"./i18n/eo.json":2,"./i18n/es.json":3,"./i18n/fr.json":4,"./i18n/it.json":5,"./i18n/pt.json":6,"./i18n/vi.json":7,"./util":9}],9:[function(require,module,exports){
 'use strict';
 /**
  * Merges a set of default keys with a target object
@@ -645,5 +824,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[6])(6)
+},{}]},{},[8])(8)
 });
