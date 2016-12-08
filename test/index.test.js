@@ -1,6 +1,6 @@
 'use strict'; /* global describe, it, before */
 var should = require('should');
-var writtenNumber = require('../lib/');
+var writtenNumber = require('..');
 
 describe('written-number', function() {
   describe('writtenNumber(n, { lang: \'en\', ... })', function() {
