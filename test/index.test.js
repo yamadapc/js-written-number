@@ -321,4 +321,82 @@ describe('written-number', function() {
       );
     });
   });
+  
+  describe('writtenNumber(n, { lang: \'enIndian\', ... })', function() {
+    before(function() {
+      writtenNumber.defaults.lang = 'enIndian';
+    });
+
+    it('gets exposed', function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it('doesn\'t blow up weirdly with invalid input', function() {
+      writtenNumber('asdfasdfasdf').should.equal('');
+      writtenNumber('0.as').should.equal('');
+      writtenNumber('0.123').should.equal('zero');
+      writtenNumber('0.8').should.equal('one');
+      writtenNumber('2.8').should.equal('three');
+      writtenNumber('asdf.8').should.equal('');
+      writtenNumber('120391938123..').should.equal('');
+      writtenNumber(1000000000).should.equal('one hundred crore');
+      writtenNumber('1/3').should.equal('');
+      writtenNumber(1/3).should.equal('zero');
+      writtenNumber('1/2').should.equal('');
+      writtenNumber('1.123/2').should.equal('');
+    });
+
+    it('correctly converts numbers < 10', function() {
+      writtenNumber(1000000000).should.equal('one hundred crore');
+      writtenNumber(3).should.equal('three');
+      writtenNumber(8).should.equal('eight');
+    });
+
+    it('correctly converts numbers < 20', function() {
+      writtenNumber(13).should.equal('thirteen');
+      writtenNumber(19).should.equal('nineteen');
+    });
+
+    it('correctly converts numbers < 100', function() {
+      writtenNumber(20).should.equal('twenty');
+      writtenNumber(25).should.equal('twenty-five');
+      writtenNumber(88).should.equal('eighty-eight');
+      writtenNumber(73).should.equal('seventy-three');
+    });
+
+    it('correctly converts numbers < 1000', function() {
+      writtenNumber(200).should.equal('two hundred');
+      writtenNumber(242).should.equal('two hundred and forty-two');
+      writtenNumber(1234).should.equal(
+        'one thousand two hundred and thirty-four'
+      );
+      writtenNumber(4323).should.equal(
+        'four thousand three hundred and twenty-three'
+      );
+    });
+
+    it('correctly converts numbers > 1000', function() {
+      writtenNumber(4323000).should.equal(
+        'forty-three lakh twenty-three thousand'
+      );
+      writtenNumber(4323055).should.equal(
+          'forty-three lakh twenty-three thousand and fifty-five'
+        );
+      writtenNumber(1570025).should.equal(
+        'fifteen lakh seventy thousand and twenty-five'
+      );
+    });
+
+    it('correctly converts numbers > 1 000 000 000', function() {
+      writtenNumber(1000000000).should.equal('one hundred crore');
+      writtenNumber(2580000000).should.equal(
+        'two hundred fifty-eight crore'
+      );
+      writtenNumber(1000000000000).should.equal('one lakh crore');
+      writtenNumber(3627000000000).should.equal(
+        'three lakh sixty-two thousand seven hundred crore'
+      );
+    });
+  });
 });
