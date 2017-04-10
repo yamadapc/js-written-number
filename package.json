@@ -29,11 +29,11 @@
     "grunt-browserify": "^5.0.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "mocha": "^2.2",
+    "grunt-contrib-uglify": "^2.3.0",
+    "mocha": "^3.2.0",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
-    "should": "^9.0.0"
+    "should": "^11.2.1"
   },
   "config": {
     "blanket": {
