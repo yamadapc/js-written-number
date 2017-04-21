@@ -54,7 +54,7 @@ writtenNumber(1234, { lang: 'es' }); // => 'mil doscientos treinta y cuatro'
 
 ```javascript
 var writtenNumber = require('written-number');
-writtennumber.defaults.lang = 'es';
+writtenNumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
