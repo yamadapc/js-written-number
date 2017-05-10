@@ -2,6 +2,7 @@
   "useLongScale": false,
   "baseSeparator": " e ",
   "unitSeparator": "e ",
+  "andWhenTrailing": true,
   "base": {
     "0": "zero",
     "1": "um",
@@ -42,9 +43,6 @@
     "900": "novecentos",
     "1000": "mil"
   },
-  "andException": {
-    "10": true
-  },
   "unitExceptions": {
     "1": "um"
   },
@@ -52,7 +50,10 @@
     {
       "singular": "cento",
       "useBaseInstead": true,
-      "useBaseException": [1],
+      "useBaseException": [
+        1
+      ],
+      "useBaseExceptionWhenNoTrailingNumbers": true,
       "andException": true
     },
     {
