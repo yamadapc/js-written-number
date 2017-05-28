@@ -235,6 +235,7 @@ describe("written-number", function() {
     });
 
     it("correctly converts numbers < 10", function() {
+      writtenNumber(0).should.equal("zéro");
       writtenNumber(3).should.equal("trois");
       writtenNumber(8).should.equal("huit");
     });
