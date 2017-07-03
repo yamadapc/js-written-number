@@ -224,6 +224,89 @@ describe("written-number", function() {
     });
   });
 
+describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
+    before(function() {
+      writtenNumber.defaults.lang = "ptPT";
+    });
+
+    it("gets exposed", function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("correctly converts numbers < 10", function() {
+      writtenNumber(3).should.equal("três");
+      writtenNumber(8).should.equal("oito");
+    });
+
+    it("correctly converts numbers < 20", function() {
+      writtenNumber(13).should.equal("treze");
+      writtenNumber(19).should.equal("dezanove");
+    });
+
+    it("correctly converts numbers < 100", function() {
+      writtenNumber(20).should.equal("vinte");
+      writtenNumber(25).should.equal("vinte e cinco");
+      writtenNumber(88).should.equal("oitenta e oito");
+      writtenNumber(73).should.equal("setenta e três");
+    });
+
+    it("correctly converts numbers < 1000", function() {
+      writtenNumber(144).should.equal("cento e quarenta e quatro");
+      writtenNumber(200).should.equal("duzentos");
+      writtenNumber(1234).should.equal("mil duzentos e trinta e quatro");
+      writtenNumber(4323).should.equal("quatro mil trezentos e vinte e três");
+      writtenNumber(242).should.equal("duzentos e quarenta e dois");
+    });
+
+    it("correctly converts numbers > 1000", function() {
+      writtenNumber(4323000).should.equal(
+        "quatro milhões trezentos e vinte e três mil"
+      );
+      writtenNumber(4323055).should.equal(
+        "quatro milhões trezentos e vinte e três mil e cinquenta e cinco"
+      );
+      writtenNumber(1570025).should.equal(
+        "um milhão quinhentos e setenta mil e vinte e cinco"
+      );
+    });
+
+    it("works for 14101 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(14101).should.equal("catorze mil cento e um");
+    });
+
+    it("works for 14201 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(14201).should.equal("catorze mil duzentos e um");
+    });
+
+    it("works for 1001000 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(1001000).should.equal("um milhão e mil");
+    });
+
+    it("works for 1001200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(1001200).should.equal("um milhão mil e duzentos");
+    });
+
+    it("works for 14200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(14200).should.equal("catorze mil e duzentos");
+    });
+
+    it("works for 14100 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+      writtenNumber(14100).should.equal("catorze mil e cem");
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function() {
+      writtenNumber(1000000000).should.equal("mil milhões");
+      writtenNumber(2580000000).should.equal(
+        "dois mil quinhentos e oitenta milhões"
+      );
+      writtenNumber(1000000000000000).should.equal("mil biliões");
+      writtenNumber(3627000000000).should.equal(
+        "três biliões seiscentos e vinte e sete mil milhões"
+      );
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'fr', ... })", function() {
     before(function() {
       writtenNumber.defaults.lang = "fr";

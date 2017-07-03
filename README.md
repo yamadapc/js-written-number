@@ -39,7 +39,8 @@ writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 ## Internationalization
 Currently supported languages are:
 - English `lang = "en"`
-- Portuguese `lang = "pt"`
+- Portuguese (Brazil) `lang = "pt"`
+- Portuguese (Portugal) `lang = "ptPT"`
 - Spanish `lang = "es"`
 - French `lang = "fr"`
 - Esperanto `lang = "eo"`
@@ -59,7 +60,7 @@ writtenNumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
-### Portuguese Example
+### Portuguese (Brazil) Example
 ```javascript
 var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'pt' }); // => 'mil duzentos e trinta e quatro'
