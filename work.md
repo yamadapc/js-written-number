@@ -30,5 +30,6 @@ yarn.lock
 ## Revert
 ```text
 bower.json
+package.json
 ```
 
