@@ -1,9 +1,9 @@
 {
-  "name": "written-number",
+  "name": "p3x-written-number",
   "description": "Convert numbers to words - their written form",
-  "homepage": "https://yamadapc.github.io/js-written-number",
+  "homepage": "https://github.com/patrikx3/js-written-number",
   "main": "./dist/written-number.js",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "keywords": [
     "numbers",
     "words",
@@ -21,7 +21,8 @@
     "lib"
   ],
   "authors": [
-    "Pedro Tacla Yamada"
+    "Pedro Tacla Yamada",
+    "Patrik Laszlo"
   ],
   "license": "MIT"
 }
