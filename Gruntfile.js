@@ -35,4 +35,6 @@ module.exports = function (grunt) {
         'browserify:dist',
         'uglify:dist'
     ]);
+
+    grunt.registerTask('default', ['dist']);
 };
