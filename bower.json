@@ -3,7 +3,7 @@
   "description": "Convert numbers to words - their written form",
   "homepage": "https://github.com/patrikx3/js-written-number",
   "main": "./dist/written-number.js",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "keywords": [
     "numbers",
     "words",

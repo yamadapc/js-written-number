@@ -1,6 +1,6 @@
 {
   "name": "p3x-written-number",
-  "version": "0.6.3",
+  "version": "1.0.0",
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {
@@ -18,6 +18,11 @@
     "spoken"
   ],
   "author": "Pedro Tacla Yamada",
+  "contributors": [{
+    "name": "Patrik Laszlo",
+    "email": "alabard@gmail.com",
+    "url" : "http://patrikx3.com/"
+  }],
   "license": "MIT",
   "repository": {
     "type": "git",

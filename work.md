@@ -8,16 +8,22 @@
 ### With Hungarian
 ```p3x-written-number```
 
-### Register
+### Login
+
 ```bash
 bower login
+```
+
+### Register
+
+```bash
 grunt
 bower register p3x-written-number https://github.com/patrikx3/js-written-number
 ```
 
 #### Unregister 
 
-``bash
+```bash
 bower unregister p3x-written-number
 ```
 
