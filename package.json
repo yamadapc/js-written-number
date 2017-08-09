@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yamadapc/js-written-number"
+    "url": "https://github.com/patrikx3/js-written-number"
   },
   "devDependencies": {
     "blanket": "1.1.7",
