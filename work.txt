@@ -1,9 +1,15 @@
 bower -> written-number
 
-https://hu.wikipedia.org/wiki/T%C3%ADz_hatv%C3%A1nyai
 
+
+https://hu.wikipedia.org/wiki/T%C3%ADz_hatv%C3%A1nyai
 
 // remove
 .idea
 work.txt
 yarn.lock
+
+// revert
+bower.json
+
+p3x-written-number
