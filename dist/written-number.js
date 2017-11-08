@@ -1049,6 +1049,10 @@ function writtenNumber(n, options) {
   options = options || {};
   options = util.defaults(options, writtenNumber.defaults);
 
+  if (n < 0) {
+    return "";
+  }
+
   n = Math.round(+n);
 
   var language = typeof options.lang === "string"
