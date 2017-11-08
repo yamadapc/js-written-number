@@ -33,6 +33,49 @@ module.exports={
     "80": "eighty",
     "90": "ninety"
   },
+  "units" : {
+    "2": "hundred",
+    "3": "thousand",
+    "5": "lakh",
+    "7": "crore"
+  },
+  "unitExceptions": []
+}
+},{}],2:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": "-",
+  "unitSeparator": "and ",
+  "base": {
+    "0": "zero",
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine",
+    "10": "ten",
+    "11": "eleven",
+    "12": "twelve",
+    "13": "thirteen",
+    "14": "fourteen",
+    "15": "fifteen",
+    "16": "sixteen",
+    "17": "seventeen",
+    "18": "eighteen",
+    "19": "nineteen",
+    "20": "twenty",
+    "30": "thirty",
+    "40": "forty",
+    "50": "fifty",
+    "60": "sixty",
+    "70": "seventy",
+    "80": "eighty",
+    "90": "ninety"
+  },
   "units" : [
     "hundred",
     "thousand",
@@ -54,7 +97,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -117,7 +160,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " y ",
@@ -247,13 +290,13 @@ module.exports={
   ]
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "",
   "base": {
-    "0": "zero",
+    "0": "zéro",
     "1": "un",
     "2": "deux",
     "3": "trois",
@@ -377,7 +420,133 @@ module.exports={
   }
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
+module.exports={
+  "useLongScale": true,
+  "baseSeparator": "",
+  "unitSeparator": "és ",
+  "base": {
+    "0": "nulla",
+    "1": "egy",
+    "2": "kettő",
+    "3": "három",
+    "4": "négy",
+    "5": "öt",
+    "6": "hat",
+    "7": "hét",
+    "8": "nyolc",
+    "9": "kilenc",
+    "10": "tíz",
+    "11": "tizenegy",
+    "12": "tizenkettő",
+    "13": "tizenhárom",
+    "14": "tizennégy",
+    "15": "tizenöt",
+    "16": "tizenhat",
+    "17": "tizenhét",
+    "18": "tizennyolc",
+    "19": "tizenkilenc",
+    "20": "húsz",
+    "21": "huszonegy",
+    "22": "huszonkettő",
+    "23": "huszonhárom",
+    "24": "huszonnégy",
+    "25": "huszonöt",
+    "26": "huszonhat",
+    "27": "huszonhét",
+    "28": "huszonnyolc",
+    "29": "huszonkilenc",
+    "30": "harminc",
+    "40": "negyven",
+    "50": "ötven",
+    "60": "hatvan",
+    "70": "hetven",
+    "80": "nyolcvan",
+    "90": "kilencven",
+    "100": "száz",
+    "200": "kétszáz",
+    "300": "háromszáz",
+    "400": "négyszáz",
+    "500": "ötszáz",
+    "600": "hatszáz",
+    "700": "hétszáz",
+    "800": "nyolcszáz",
+    "900": "kilencszáz",
+    "1000": "ezer"
+  },
+  "unitExceptions": {
+    "1": "egy"
+  },
+  "units" : [
+    {
+      "singular": "száz",
+      "useBaseInstead": true,
+      "useBaseException": [1]
+    },
+    {
+      "singular": "ezer",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "millió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "milliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "-billió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "billiárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "trillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "trilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvadrillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvadrilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvintillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvintilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "szextillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "szeptillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "oktillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "nonillió",
+      "avoidPrefixException": [1]
+    }
+  ]
+}
+
+},{}],7:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": "",
@@ -502,11 +671,12 @@ module.exports={
     ]
 }
 
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports={
-  "useLongScale": false,
+  "useLongScale": true,
   "baseSeparator": " e ",
   "unitSeparator": "e ",
+  "andWhenTrailing": true,
   "base": {
     "0": "zero",
     "1": "um",
@@ -526,6 +696,113 @@ module.exports={
     "15": "quinze",
     "16": "dezasseis",
     "17": "dezassete",
+    "18": "dezoito",
+    "19": "dezanove",
+    "20": "vinte",
+    "30": "trinta",
+    "40": "quarenta",
+    "50": "cinquenta",
+    "60": "sessenta",
+    "70": "setenta",
+    "80": "oitenta",
+    "90": "noventa",
+    "100": "cem",
+    "200": "duzentos",
+    "300": "trezentos",
+    "400": "quatrocentos",
+    "500": "quinhentos",
+    "600": "seiscentos",
+    "700": "setecentos",
+    "800": "oitocentos",
+    "900": "novecentos",
+    "1000": "mil"
+  },
+  "unitExceptions": {
+    "1": "um"
+  },
+  "units" : [
+    {
+      "singular": "cento",
+      "useBaseInstead": true,
+      "useBaseException": [
+        1
+      ],
+      "useBaseExceptionWhenNoTrailingNumbers": true,
+      "andException": true
+    },
+    {
+      "singular": "mil",
+      "avoidPrefixException": [1],
+      "andException": true
+    },
+    {
+      "singular": "milhão",
+      "plural": "milhões"
+    },
+    {
+      "singular": "bilião",
+      "plural": "biliões"
+    },
+    {
+      "singular": "trilião",
+      "plural": "triliões"
+    },
+    {
+      "singular": "quadrilião",
+      "plural": "quadriliões"
+    },
+    {
+      "singular": "quintilião",
+      "plural": "quintiliões"
+    },
+    {
+      "singular": "sextilião",
+      "plural": "sextiliões"
+    },
+    {
+      "singular": "septilião",
+      "plural": "septiliões"
+    },
+    {
+      "singular": "octilião",
+      "plural": "octiliões"
+    },
+    {
+      "singular": "nonilião",
+      "plural": "noniliões"
+    },
+    {
+      "singular": "decilião",
+      "plural": "deciliões"
+    }
+  ]
+}
+
+},{}],9:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": " e ",
+  "unitSeparator": "e ",
+  "andWhenTrailing": true,
+  "base": {
+    "0": "zero",
+    "1": "um",
+    "2": "dois",
+    "3": "três",
+    "4": "quatro",
+    "5": "cinco",
+    "6": "seis",
+    "7": "sete",
+    "8": "oito",
+    "9": "nove",
+    "10": "dez",
+    "11": "onze",
+    "12": "doze",
+    "13": "treze",
+    "14": "catorze",
+    "15": "quinze",
+    "16": "dezesseis",
+    "17": "dezessete",
     "18": "dezoito",
     "19": "dezenove",
     "20": "vinte",
@@ -547,9 +824,6 @@ module.exports={
     "900": "novecentos",
     "1000": "mil"
   },
-  "andException": {
-    "10": true
-  },
   "unitExceptions": {
     "1": "um"
   },
@@ -557,7 +831,10 @@ module.exports={
     {
       "singular": "cento",
       "useBaseInstead": true,
-      "useBaseException": [1],
+      "useBaseException": [
+        1
+      ],
+      "useBaseExceptionWhenNoTrailingNumbers": true,
       "andException": true
     },
     {
@@ -620,7 +897,60 @@ module.exports={
   ]
 }
 
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "sıfır",
+    "1": "bir",
+    "2": "iki",
+    "3": "üç",
+    "4": "dört",
+    "5": "beş",
+    "6": "altı",
+    "7": "yedi",
+    "8": "sekiz",
+    "9": "dokuz",
+    "10": "on",
+    "20": "yirmi",
+    "30": "otuz",
+    "40": "kırk",
+    "50": "elli",
+    "60": "altmış",
+    "70": "yetmiş",
+    "80": "seksen",
+    "90": "doksan"
+  },
+  "units" : [
+    { 
+      "singular": "yüz",
+      "avoidPrefixException": [1]
+    },
+    { 
+      "singular": "bin",
+      "avoidPrefixException": [1]
+    },
+    "milyon",
+    "milyar",
+    "trilyon",
+    "katrilyon",
+    "kentilyon",
+    "sekstilyon",
+    "septilyon",
+    "oktilyon",
+    "nonilyon",
+    "desilyon",
+    "andesilyon",
+    "dodesilyon",
+    "tredesilyon",
+    "katordesilyon",
+    "kendesilyon"
+  ],
+  "unitExceptions": []
+}
+},{}],11:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -671,20 +1001,24 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],8:[function(require,module,exports){
-'use strict';
+},{}],12:[function(require,module,exports){
+"use strict";
 exports = module.exports = writtenNumber;
-var util = require('./util');
+var util = require("./util");
 
-var languages = ['en', 'es', 'pt', 'fr', 'eo', 'it', 'vi'];
+var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr"];
 var i18n = {
-  en: require('./i18n/en.json'),
-  es: require('./i18n/es.json'),
-  pt: require('./i18n/pt.json'),
-  fr: require('./i18n/fr.json'),
-  eo: require('./i18n/eo.json'),
-  it: require('./i18n/it.json'),
-  vi: require('./i18n/vi.json'),
+  en: require("./i18n/en.json"),
+  es: require("./i18n/es.json"),
+  pt: require("./i18n/pt.json"),
+  ptPT: require("./i18n/pt-PT.json"),
+  fr: require("./i18n/fr.json"),
+  eo: require("./i18n/eo.json"),
+  it: require("./i18n/it.json"),
+  vi: require("./i18n/vi.json"),
+  tr: require("./i18n/tr.json"),
+  hu: require("./i18n/hu.json"),
+  enIndian: require("./i18n/en-indian.json")
 };
 exports.i18n = i18n;
 
@@ -700,7 +1034,7 @@ for (i = 1; i <= 15; i++) {
 
 writtenNumber.defaults = {
   noAnd: false,
-  lang: 'en',
+  lang: "en"
 };
 
 /**
@@ -717,92 +1051,149 @@ function writtenNumber(n, options) {
 
   n = Math.round(+n);
 
-  var language = typeof options.lang === 'string'
+  var language = typeof options.lang === "string"
     ? i18n[options.lang]
     : options.lang;
   var scale = language.useLongScale ? longScale : shortScale;
+  var units = language.units;
   var unit;
+
+  if (!(units instanceof Array)) {
+    var rawUnits = units;
+
+    units = [];
+    scale = Object.keys(rawUnits);
+
+    for (var i in scale) {
+      units.push(rawUnits[scale[i]]);
+      scale[i] = Math.pow(10, parseInt(scale[i]));
+    }
+  }
 
   if (!language) {
     if (languages.indexOf(writtenNumber.defaults.lang) < 0) {
-      writtenNumber.defaults.lang = 'en';
+      writtenNumber.defaults.lang = "en";
     }
+
     language = i18n[writtenNumber.defaults.lang];
   }
 
   var baseCardinals = language.base;
 
   if (language.unitExceptions[n]) return language.unitExceptions[n];
-  if(baseCardinals[n]) return baseCardinals[n];
-  if(n < 100) return handleSmallerThan100(n, language, unit, baseCardinals, options);
+  if (baseCardinals[n]) return baseCardinals[n];
+  if (n < 100)
+    return handleSmallerThan100(n, language, unit, baseCardinals, options);
 
   var m = n % 100;
   var ret = [];
-  if(m) {
-    if(options.noAnd && !(language.andException && language.andException[10])
-      ) {
-        ret.push(writtenNumber(m, options));
+
+  if (m) {
+    if (
+      options.noAnd &&
+      !(language.andException && language.andException[10])
+    ) {
+      ret.push(writtenNumber(m, options));
     } else {
       ret.push(language.unitSeparator + writtenNumber(m, options));
     }
-    n -= m;
-  } else ret = [];
+  }
 
-  for(var i = 0, len = language.units.length; i < len; i++) {
+  var firstSignificant;
+
+  for (var i = 0, len = units.length; i < len; i++) {
     var r = Math.floor(n / scale[i]);
-    if(i === 0) {
-      r %= 10;
-    } else if(!language.useLongScale || (i === 1 && language.useLongScale)) {
-      r %= 1000;
-    } else r %= 1000000;
+    var divideBy;
 
-    unit = language.units[i];
-    if(r && unit.useBaseInstead) {
-      if(unit.useBaseException.indexOf(r) < 0) {
+    if (i === len - 1) divideBy = 1000000;
+    else divideBy = scale[i + 1] / scale[i];
+
+    r %= divideBy;
+
+    unit = units[i];
+
+    if (!r) continue;
+    firstSignificant = scale[i];
+
+    if (unit.useBaseInstead) {
+      var shouldUseBaseException =
+        unit.useBaseException.indexOf(r) > -1 &&
+        (unit.useBaseExceptionWhenNoTrailingNumbers
+          ? i === 0 && ret.length
+          : true);
+      if (!shouldUseBaseException) {
         ret.push(baseCardinals[r * scale[i]]);
-      }
-      else {
+      } else {
         ret.push(r > 1 && unit.plural ? unit.plural : unit.singular);
       }
-    }
-    else if(r) {
-      var str;
-      if(typeof unit === 'string') {
-        str = unit;
-      }
-      else {
-        str = r > 1 && unit.plural && (!unit.avoidInNumberPlural || !m) ? unit.plural : unit.singular;
-      }
-      if(unit.avoidPrefixException && unit.avoidPrefixException.indexOf(r) > -1) {
-        ret.push(str);
-      }
-      else {
-        var exception = language.unitExceptions[r];
-        var number = exception || writtenNumber(r, util.defaults({
-          // Languages with and exceptions need to set `noAnd` to false
-          noAnd: !(language.andException && language.andException[r] ||
-                   unit.andException) &&
-                 true,
-        }, options));
-        ret.push(number + ' ' + str);
-      }
+      continue;
     }
 
+    var str;
+    if (typeof unit === "string") {
+      str = unit;
+    } else {
+      str = r > 1 && unit.plural && (!unit.avoidInNumberPlural || !m)
+        ? unit.plural
+        : unit.singular;
+    }
+
+    if (
+      unit.avoidPrefixException &&
+      unit.avoidPrefixException.indexOf(r) > -1
+    ) {
+      ret.push(str);
+      continue;
+    }
+
+    var exception = language.unitExceptions[r];
+    var number =
+      exception ||
+      writtenNumber(
+        r,
+        util.defaults(
+          {
+            // Languages with and exceptions need to set `noAnd` to false
+            noAnd: !((language.andException && language.andException[r]) ||
+              unit.andException) && true
+          },
+          options
+        )
+      );
+    n -= r * scale[i];
+    ret.push(number + " " + str);
   }
-  return ret.reverse().join(' ');
+
+  var firstSignificantN = firstSignificant * Math.floor(n / firstSignificant);
+  var rest = n - firstSignificantN;
+
+  if (
+    language.andWhenTrailing &&
+    firstSignificant &&
+    0 < rest &&
+    ret[0].indexOf(language.unitSeparator) !== 0
+  ) {
+    ret = [ret[0], language.unitSeparator.replace(/\s+$/, "")].concat(
+      ret.slice(1)
+    );
+  }
+
+  return ret.reverse().join(" ");
 }
 
 function handleSmallerThan100(n, language, unit, baseCardinals, options) {
   var dec = Math.floor(n / 10) * 10;
   unit = n - dec;
-  if(unit) {
-    return baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options);
+  if (unit) {
+    return (
+      baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options)
+    );
   }
   return baseCardinals[dec];
 }
 
-},{"./i18n/en.json":1,"./i18n/eo.json":2,"./i18n/es.json":3,"./i18n/fr.json":4,"./i18n/it.json":5,"./i18n/pt.json":6,"./i18n/vi.json":7,"./util":9}],9:[function(require,module,exports){
-'use strict';
+},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/it.json":7,"./i18n/pt-PT.json":8,"./i18n/pt.json":9,"./i18n/tr.json":10,"./i18n/vi.json":11,"./util":13}],13:[function(require,module,exports){
+"use strict";
 /**
  * Merges a set of default keys with a target object
  * (Like _.defaults, but will also extend onto null/undefined)
@@ -813,10 +1204,10 @@ function handleSmallerThan100(n, language, unit, baseCardinals, options) {
  */
 
 function defaults(target, defs) {
-  if(target == null) target = {};
+  if (target == null) target = {};
   var ret = {};
   var keys = Object.keys(defs);
-  for(var i = 0, len = keys.length; i < len; i++) {
+  for (var i = 0, len = keys.length; i < len; i++) {
     var key = keys[i];
     ret[key] = target[key] || defs[key];
   }
@@ -824,5 +1215,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[8])(8)
+},{}]},{},[12])(12)
 });
