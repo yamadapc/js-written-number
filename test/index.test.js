@@ -13,6 +13,11 @@ describe("written-number", function() {
       writtenNumber.should.be.instanceof(Function);
     });
 
+    it("negative numbers return \"\"", function() {
+      writtenNumber(-3).should.equal("");
+      writtenNumber(-5).should.equal("");
+    });
+
     it("doesn't blow up weirdly with invalid input", function() {
       writtenNumber("asdfasdfasdf").should.equal("");
       writtenNumber("0.as").should.equal("");
