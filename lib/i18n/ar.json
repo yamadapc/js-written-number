@@ -111,22 +111,14 @@
     "96": "ستة وتسعون",
     "97": "سبعة وتسعون",
     "98": "ثمانية وتسعون",
-    "99": "تسعة وتسعون",
-
-    "200": "مائتان",
-    "300": "ثلاثمائة",
-    "400": "أربعمائة",
-    "500": "خمسمائة",
-    "600": "ستمائة",
-    "700": "سبعمائة",
-    "800": "ثمانمائة",
-    "900": "تسعمائة"
+    "99": "تسعة وتسعون"
   },
   "units" : [
-    {"singular":"مائة", "plural":"مائة", "avoidPrefixException": [1, 2]},
-    {"singular":"ألف", "plural":"آلاف", "avoidPrefixException": [1, 2]},
-    {"singular":"مليون", "plural":"ملايين", "avoidPrefixException": [1, 2]},
-    {"singular":"مليار", "plural":"ملايير", "avoidPrefixException": [1, 2]},
+    {"singular":"مائة", "dual":"مائتان", "plural":"مائة", "avoidPrefixException": [1, 2]},
+    {"singular":"ألف", "dual":"ألفان", "plural":"آلاف", "avoidPrefixException": [1, 2]},
+    {"singular":"مليون", "dual":"مليونان", "plural":"ملايين", "avoidPrefixException": [1, 2]},
+    {"singular":"مليار", "dual":"ملياران", "plural":"ملايير", "avoidPrefixException": [1, 2]},
+
     {"singular":"تريليون", "plural":"تريليون", "avoidPrefixException": [1, 2]},
     {"singular":"كوادريليون", "plural":"كوادريليون", "avoidPrefixException": [1, 2]},
     {"singular":"كوينتليون", "plural":"كوينتليون", "avoidPrefixException": [1, 2]},
@@ -141,5 +133,17 @@
     {"singular":"كواتوردشيليون", "plural":"كواتوردشيليون", "avoidPrefixException": [1, 2]},
     {"singular":"كويندشيليون" , "plural":"كويندشيليون", "avoidPrefixException": [1, 2]}
   ],
-  "unitExceptions": []
+  "unitExceptions": {
+    "200": "مائتان",
+    "300": "ثلاثمائة",
+    "400": "أربعمائة",
+    "500": "خمسمائة",
+    "600": "ستمائة",
+    "700": "سبعمائة",
+    "800": "ثمانمائة",
+    "900": "تسعمائة",
+    "2000": "ألفان",
+    "2000000": "مليونان",
+    "2000000000": "ملياران"
+  }
 }
