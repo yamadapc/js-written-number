@@ -39,6 +39,7 @@ writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
   external language definitions.
 
 Currently supported languages are:
+
 | Language | `lang` |
 |---------|--------|
 | English | `en` |
@@ -51,6 +52,7 @@ Currently supported languages are:
 | Arabic | `ar` |
 | Turkish | `tr` |
 | English (Indian) | `enIndian` |
+
 
 ```javascript
 var writtenNumber = require('written-number');
