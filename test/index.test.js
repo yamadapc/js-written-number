@@ -3,6 +3,21 @@ var should = require("should");
 var writtenNumber = require("..");
 
 describe("written-number", function() {
+describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
+    before(function() {
+      writtenNumber.defaults.lang = "";
+    });
+
+    it("gets exposed", function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("defaults to english on wrong language", function() {
+      writtenNumber(1, { lang: 'zzz' }).should.equal("one");
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'en', ... })", function() {
     before(function() {
       writtenNumber.defaults.lang = "en";

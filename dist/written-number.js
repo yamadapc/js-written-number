@@ -1248,6 +1248,15 @@ function writtenNumber(n, options) {
   var language = typeof options.lang === "string"
     ? i18n[options.lang]
     : options.lang;
+
+  if (!language) {
+    if (languages.indexOf(writtenNumber.defaults.lang) < 0) {
+      writtenNumber.defaults.lang = "en";
+    }
+
+    language = i18n[writtenNumber.defaults.lang];
+  }
+  
   var scale = language.useLongScale ? longScale : shortScale;
   var units = language.units;
   var unit;
@@ -1262,14 +1271,6 @@ function writtenNumber(n, options) {
       units.push(rawUnits[scale[i]]);
       scale[i] = Math.pow(10, parseInt(scale[i]));
     }
-  }
-
-  if (!language) {
-    if (languages.indexOf(writtenNumber.defaults.lang) < 0) {
-      writtenNumber.defaults.lang = "en";
-    }
-
-    language = i18n[writtenNumber.defaults.lang];
   }
 
   var baseCardinals = language.base;
@@ -1321,14 +1322,8 @@ function writtenNumber(n, options) {
           : true);
       if (!shouldUseBaseException) {
         ret.push(alternativeBaseCardinals[r * scale[i]] || baseCardinals[r * scale[i]]);
-      } else if (r === 1 || unit.useSingularEnding && r % 10 === 1 
-        && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0)) {
-        ret.push(unit.singular);
-      } else if (unit.few && (r > 1 && r < 5 || unit.useFewEnding && r % 10 > 1 && r % 10 < 5
-        && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0))) {
-        ret.push(unit.few);
       } else {
-        ret.push(unit.plural || unit.singular);
+        ret.push(r > 1 && unit.plural ? unit.plural : unit.singular);
       }
       continue;
     }
