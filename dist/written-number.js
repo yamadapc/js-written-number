@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.writtenNumber = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.writtenNumber = f()}})(function(){var define,module,exports;return (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -954,6 +954,194 @@ module.exports={
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "нуль",
+    "1": "один",
+    "2": "два",
+    "3": "три",
+    "4": "чотири",
+    "5": "п’ять",
+    "6": "шість",
+    "7": "сім",
+    "8": "вісім",
+    "9": "дев’ять",
+    "10": "десять",
+    "11": "одинадцять",
+    "12": "дванадцять",
+    "13": "тринадцять",
+    "14": "чотирнадцять",
+    "15": "п’ятнадцять",
+    "16": "шістнадцять",
+    "17": "сімнадцять",
+    "18": "вісімнадцять",
+    "19": "дев’ятнадцять",
+    "20": "двадцять",
+    "30": "тридцять",
+    "40": "сорок",
+    "50": "п’ятдесят",
+    "60": "шістдесят",
+    "70": "сімдесят",
+    "80": "вісімдесят",
+    "90": "дев’яносто",
+    "100": "сто",
+    "200": "двісті",
+    "300": "триста",
+    "400": "чотириста",
+    "500": "п’ятсот",
+    "600": "шістсот",
+    "700": "сімсот",
+    "800": "вісімсот",
+    "900": "дев’ятсот"
+  },
+  "alternativeBase": {
+    "feminine": {
+      "1": "одна",
+      "2": "дві"
+    }
+  },
+  "units" : [
+    {
+      "useBaseInstead": true,
+      "useBaseException": []
+    },
+    {
+      "singular": "тисяча",
+      "few": "тисячі",
+      "plural": "тисяч",
+      "useAlternativeBase": "feminine",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "мільйон",
+      "few": "мільйони",
+      "plural": "мільйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "мільярд",
+      "few": "мільярди",
+      "plural": "мільярдів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "трильйон",
+      "few": "трильйони",
+      "plural": "трильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квадрильйон",
+      "few": "квадрильйони",
+      "plural": "квадрильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квінтильйон",
+      "few": "квінтильйони",
+      "plural": "квінтильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "секстильйон",
+      "few": "секстильйони",
+      "plural": "секстильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "септілліон",
+      "few": "септілліони",
+      "plural": "септілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "октілліон",
+      "few": "октілліони",
+      "plural": "октілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "нонілліон",
+      "few": "нонілліони",
+      "plural": "нонілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "децілліон",
+      "few": "децілліони",
+      "plural": "децілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "ундецілліон",
+      "few": "ундецілліони",
+      "plural": "ундецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "дуодецілліон",
+      "few": "дуодецілліони",
+      "plural": "дуодецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "тредецілліон",
+      "few": "тредецілліони",
+      "plural": "тредецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "кватуордецілліон",
+      "few": "кватуордецілліони",
+      "plural": "кватуордецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квіндецілліон",
+      "few": "квіндецілліони",
+      "plural": "квіндецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    }
+  ],
+  "unitExceptions": []
+}
+
+},{}],12:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
   "unitSeparator": "và ",
   "base": {
     "0": "không",
@@ -1001,12 +1189,12 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr"];
+var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr", "uk"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
@@ -1018,7 +1206,8 @@ var i18n = {
   vi: require("./i18n/vi.json"),
   tr: require("./i18n/tr.json"),
   hu: require("./i18n/hu.json"),
-  enIndian: require("./i18n/en-indian.json")
+  enIndian: require("./i18n/en-indian.json"),
+  uk: require("./i18n/uk.json")
 };
 exports.i18n = i18n;
 
@@ -1034,6 +1223,7 @@ for (i = 1; i <= 15; i++) {
 
 writtenNumber.defaults = {
   noAnd: false,
+  alternativeBase: null,
   lang: "en"
 };
 
@@ -1083,11 +1273,15 @@ function writtenNumber(n, options) {
   }
 
   var baseCardinals = language.base;
+  var alternativeBaseCardinals = options.alternativeBase 
+    ? language.alternativeBase[options.alternativeBase]
+    : {};
 
   if (language.unitExceptions[n]) return language.unitExceptions[n];
+  if (alternativeBaseCardinals[n]) return alternativeBaseCardinals[n];
   if (baseCardinals[n]) return baseCardinals[n];
   if (n < 100)
-    return handleSmallerThan100(n, language, unit, baseCardinals, options);
+    return handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseCardinals, options);
 
   var m = n % 100;
   var ret = [];
@@ -1126,9 +1320,15 @@ function writtenNumber(n, options) {
           ? i === 0 && ret.length
           : true);
       if (!shouldUseBaseException) {
-        ret.push(baseCardinals[r * scale[i]]);
+        ret.push(alternativeBaseCardinals[r * scale[i]] || baseCardinals[r * scale[i]]);
+      } else if (r === 1 || unit.useSingularEnding && r % 10 === 1 
+        && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0)) {
+        ret.push(unit.singular);
+      } else if (unit.few && (r > 1 && r < 5 || unit.useFewEnding && r % 10 > 1 && r % 10 < 5
+        && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0))) {
+        ret.push(unit.few);
       } else {
-        ret.push(r > 1 && unit.plural ? unit.plural : unit.singular);
+        ret.push(unit.plural || unit.singular);
       }
       continue;
     }
@@ -1136,8 +1336,14 @@ function writtenNumber(n, options) {
     var str;
     if (typeof unit === "string") {
       str = unit;
+    } else if (r === 1 || unit.useSingularEnding && r % 10 === 1
+      && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0)) {
+      str = unit.singular;
+    } else if (unit.few && (r > 1 && r < 5 || unit.useFewEnding && r % 10 > 1 && r % 10 < 5
+      && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0))) {
+      str = unit.few;
     } else {
-      str = r > 1 && unit.plural && (!unit.avoidInNumberPlural || !m)
+      str = unit.plural && (!unit.avoidInNumberPlural || !m)
         ? unit.plural
         : unit.singular;
     }
@@ -1159,7 +1365,8 @@ function writtenNumber(n, options) {
           {
             // Languages with and exceptions need to set `noAnd` to false
             noAnd: !((language.andException && language.andException[r]) ||
-              unit.andException) && true
+              unit.andException) && true,
+            alternativeBase: unit.useAlternativeBase
           },
           options
         )
@@ -1185,18 +1392,18 @@ function writtenNumber(n, options) {
   return ret.reverse().join(" ");
 }
 
-function handleSmallerThan100(n, language, unit, baseCardinals, options) {
+function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseCardinals, options) {
   var dec = Math.floor(n / 10) * 10;
   unit = n - dec;
   if (unit) {
     return (
-      baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options)
+      alternativeBaseCardinals[dec] || baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options)
     );
   }
-  return baseCardinals[dec];
+  return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/it.json":7,"./i18n/pt-PT.json":8,"./i18n/pt.json":9,"./i18n/tr.json":10,"./i18n/vi.json":11,"./util":13}],13:[function(require,module,exports){
+},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/it.json":7,"./i18n/pt-PT.json":8,"./i18n/pt.json":9,"./i18n/tr.json":10,"./i18n/uk.json":11,"./i18n/vi.json":12,"./util":14}],14:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1219,5 +1426,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[12])(12)
+},{}]},{},[13])(13)
 });

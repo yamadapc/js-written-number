@@ -47,6 +47,7 @@ Currently supported languages are:
 - Vietnamese `lang = "vi"`
 - Turkish `lang = "tr"`
 - English (Indian) `lang = "enIndian"`
+- Ukrainian `lang = "uk"`
 
 ### Spanish Example
 ```javascript
@@ -84,6 +85,12 @@ var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'vi' }); // => 'một ngàn hai trăm và ba mươi bốn'
 ```
 
+### Ukrainian Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'uk' }); // => 'одна тисяча двісті тридцять чотири'
+```
+
 ## Options
 Property       | Value
 -------------- | -------------
@@ -113,6 +120,18 @@ Example: 1234 -> one thousand two hundred **and** thirty-four
 Base cardinals numbers. Numbers that have unique names and are used to build
 others.
 
+##### alternativeBase:
+Alternative versions of base cardinals numbers for usage with specific units (ex. thousands in Ukrainian use feminine form of base cardinal numbers). These bases will be treated as an extension for the default `base`.
+
+```json
+"alternativeBase": {
+  "feminine": {
+    "1": "одна",
+    "2": "дві"
+  }
+}
+```
+
 ##### units:
 Number units.
 It can be:
@@ -128,7 +147,35 @@ It can be:
 }
 ```
 
+- Object with `few` word form.
+
+In some languages like Ukrainian, there are specific unit forms for values from 2 (including) to 4 (including). This forms can be specified with `few`.
+
+```json
+{
+  "singular": "мільйон",
+  "few": "мільйони",
+  "plural": "мільйонів",
+  ...
+}
+```
+
+- Object with `useAlternativeBase`.
+
+Selects an `alternativeBase` name which this unit should prefer over the default `base` if possible.
+
+```json
+{
+  "singular": "тисяча",
+  "few": "тисячі",
+  "plural": "тисяч",
+  "useAlternativeBase": "feminine"
+  ...
+}
+```
+
 - Object with `useBaseInstead` exception.
+
 In some languages like spanish, specific units like "ciento", use the base
 cardinal number instead.
 
@@ -166,6 +213,21 @@ numbers wioth trailing numbers other than 0, for example "deux cents" and "deux 
   "singular": "cent",
   "plural": "cents",
   "avoidInNumberPlural": true
+}
+```
+
+- Object with `useSingularEnding` exception and `useFewEnding` exception.
+
+In some languages like Ukrainian, singular form of the unit is also used for any values that end with 1 (21, 31, 14, ..., 101, ...) and "few" form of the unit is also used for any values that end with 2, 3 and 4 (22, 33, 44, ..., 104, ...). The `avoidEndingRules` exception provides values (1 to 999) where these rules must be ignored and the plural form must be used instead.
+
+```json
+{
+  "singular": "мільйон",
+  "few": "мільйони",
+  "plural": "мільйонів",
+  "useSingularEnding": true,
+  "useFewEnding": true,
+  "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
 }
 ```
 

@@ -600,4 +600,82 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
   });
+
+describe("writtenNumber(n, { lang: 'uk', ... })", function() {
+    before(function() {
+      writtenNumber.defaults.lang = "uk";
+    });
+
+    it("gets exposed", function() {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("correctly converts numbers < 10", function() {
+      writtenNumber(0).should.equal("нуль");
+      writtenNumber(1).should.equal("один");
+      writtenNumber(2).should.equal("два");
+      writtenNumber(3).should.equal("три");
+      writtenNumber(9).should.equal("дев’ять");
+    });
+
+    it("correctly converts numbers < 20", function() {
+      writtenNumber(11).should.equal("одинадцять");
+      writtenNumber(13).should.equal("тринадцять");
+      writtenNumber(19).should.equal("дев’ятнадцять");
+    });
+
+    it("correctly converts numbers < 100", function() {
+      writtenNumber(20).should.equal("двадцять");
+      writtenNumber(21).should.equal("двадцять один");
+      writtenNumber(25).should.equal("двадцять п’ять");
+      writtenNumber(73).should.equal("сімдесят три");
+      writtenNumber(80).should.equal("вісімдесят");
+      writtenNumber(88).should.equal("вісімдесят вісім");
+    });
+
+    it("correctly converts numbers < 1000", function() {
+      writtenNumber(100).should.equal("сто");
+      writtenNumber(101).should.equal("сто один");
+      writtenNumber(110).should.equal("сто десять");
+      writtenNumber(111).should.equal("сто одинадцять");
+      writtenNumber(146).should.equal("сто сорок шість");
+      writtenNumber(200).should.equal("двісті");
+      writtenNumber(242).should.equal("двісті сорок два");
+    });
+
+    it("correctly converts numbers > 1000", function() {
+      writtenNumber(1000).should.equal("одна тисяча");
+      writtenNumber(2000).should.equal("дві тисячі");
+      writtenNumber(3000).should.equal("три тисячі");
+      writtenNumber(4000).should.equal("чотири тисячі");
+      writtenNumber(5000).should.equal("п’ять тисяч");
+      writtenNumber(1234).should.equal("одна тисяча двісті тридцять чотири");
+      writtenNumber(4323).should.equal("чотири тисячі триста двадцять три");
+      writtenNumber(1000000).should.equal("один мільйон");
+      writtenNumber(2000000).should.equal("два мільйони");
+      writtenNumber(2000001).should.equal("два мільйони один");
+      writtenNumber(5000000).should.equal("п’ять мільйонів");
+      writtenNumber(21000000).should.equal(
+        "двадцять один мільйон"
+      );
+      writtenNumber(111000000).should.equal(
+        "сто одинадцять мільйонів"
+      );
+      writtenNumber(214567891).should.equal(
+        "двісті чотирнадцять мільйонів п’ятсот шістдесят сім тисяч вісімсот дев’яносто один"
+      );
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function() {
+      writtenNumber(1000000000).should.equal("один мільярд");
+      writtenNumber(2580000000).should.equal(
+        "два мільярди п’ятсот вісімдесят мільйонів"
+      );
+      writtenNumber(1000000000000).should.equal("один трильйон");
+      writtenNumber(3627000000000).should.equal(
+        "три трильйони шістсот двадцять сім мільярдів"
+      );
+    });
+  });
 });
