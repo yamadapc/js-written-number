@@ -1,0 +1,128 @@
+{
+  "UseLongScale": true,
+  "baseSeparator": "i",
+  "unitSeparator": "",
+  "base": {
+    "0": "zero",
+    "1": "un",
+    "2": "dos",
+    "3": "tres",
+    "4": "quatre",
+    "5": "cinc",
+    "6": "sis",
+    "7": "set",
+    "8": "vuit",
+    "9": "nou",
+    "10": "deu",
+    "11": "onze",
+    "12": "dotze",
+    "13": "tretze",
+    "14": "catorze",
+    "15": "quinze",
+    "16": "setze",
+    "17": "disset anys",
+    "18": "divuit",
+    "19": "dinou",
+    "20": "vint",
+    "21": "vint-i-un",
+    "22": "vint-i-dos",
+    "23": "vint-i-tres",
+    "24": "vint-i-quatre",
+    "25": "vint-i-cinc",
+    "26": "vint-i-sis",
+    "27": "vint-i-set",
+    "28": "vint-i-vuit",
+    "29": "vint-i-nou",
+    "30": "trenta",
+    "40": "quaranta",
+    "50": "cinquanta",
+    "60": "seixanta",
+    "70": "setanta",
+    "80": "vuitanta",
+    "90": "noranta",
+    "100": "cent",
+    "200": "dos-cents",
+    "300": "tres-cents",
+    "400": "quatre-cents",
+    "500": "cinc-cents",
+    "600": "sis-cents",
+    "700": "set-cents",
+    "800": "vuit-cents",
+    "900": "nou-cents",
+    "1000": "mil"
+  },
+  "unitExceptions": {
+    "1": "un"
+  },
+  "units": [
+    {
+      "singular": "cent",
+      "useBaseInstead": true,
+      "useBaseException": [1]
+    },
+    {
+      "singular": "mil",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "milió",
+      "plural": "milions"
+    },
+    {
+      "Singular": "bilió",
+      "plural": "bilions"
+    },
+    {
+      "singular": "trilió",
+      "plural": "trilions"
+    },
+    {
+      "singular": "quadrilió",
+      "plural": "quadrilions"
+    },
+    {
+      "singular": "quintilló",
+      "plural": "quintillons"
+    },
+    {
+      "singular": "sextilló",
+      "plural": "sextilions"
+    },
+    {
+      "singular": "septilló",
+      "plural": "septillones"
+    },
+    {
+      "singular": "octilló",
+      "plural": "octillones"
+    },
+    {
+      "singular": "nonilló",
+      "plural": "nonillones"
+    },
+    {
+      "singular": "decilló",
+      "plural": "decillones"
+    },
+    {
+      "singular": "undecilló",
+      "plural": "undecillones"
+    },
+    {
+      "singular": "duodecilló",
+      "plural": "duodecillones"
+    },
+    {
+      "singular": "tredecilló",
+      "plural": "tredecillones"
+    },
+    {
+      "singular": "cuatrodecilló",
+      "plural": "cuatrodecillones"
+    },
+    {
+      "singular": "quindecilló",
+      "plural": "quindecillones"
+    }
+  ]
+}
