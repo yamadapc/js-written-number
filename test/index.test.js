@@ -600,4 +600,61 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'id', ... })", function() {
+    before(function() {
+      writtenNumber.defaults.lang = "id";
+    });
+
+    it("correctly converts numbers < 10", function() {
+      writtenNumber(1).should.equal("satu");
+      writtenNumber(3).should.equal("tiga");
+      writtenNumber(8).should.equal("delapan");
+    });
+
+    it("correctly converts numbers < 20", function() {
+      writtenNumber(11).should.equal("sebelas");
+      writtenNumber(13).should.equal("tiga belas");
+      writtenNumber(19).should.equal("sembilan belas");
+    });
+
+    it("correctly converts numbers < 100", function() {
+      writtenNumber(20).should.equal("dua puluh");
+      writtenNumber(25).should.equal("dua puluh lima");
+      writtenNumber(88).should.equal("delapan puluh delapan");
+      writtenNumber(73).should.equal("tujuh puluh tiga");
+    });
+
+    it("correctly converts numbers < 1000", function() {
+      writtenNumber(144).should.equal("seratus empat puluh empat");
+      writtenNumber(200).should.equal("dua ratus");
+      writtenNumber(242).should.equal("dua ratus empat puluh dua");
+    });
+
+    it("correctly converts numbers > 1000", function() {
+      writtenNumber(1111).should.equal("seribu seratus sebelas");
+      writtenNumber(1234).should.equal("seribu dua ratus tiga puluh empat");
+      writtenNumber(111234).should.equal(
+        "seratus sebelas ribu dua ratus tiga puluh empat"
+      );
+      writtenNumber(432055).should.equal(
+        "empat ratus tiga puluh dua ribu lima puluh lima"
+      );
+      writtenNumber(1111234).should.equal(
+        "satu juta seratus sebelas ribu dua ratus tiga puluh empat"
+      );
+
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function() {
+      writtenNumber(1000000000).should.equal("satu miliar");
+      writtenNumber(2580000000).should.equal(
+        "dua miliar lima ratus delapan puluh juta"
+      );
+      writtenNumber(1000000000000).should.equal("satu triliun");
+      writtenNumber(3627000000000).should.equal(
+        "tiga triliun enam ratus dua puluh tujuh miliar"
+      );
+    });
+  });
 });
