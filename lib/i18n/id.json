@@ -30,7 +30,7 @@
     "60": "enam puluh",
     "70": "tujuh puluh",
     "80": "delapan puluh",
-    "90": "sembilan puluh",
+    "90": "sembilan puluh"
   },
   "units" : [
     {
@@ -46,7 +46,7 @@
     "juta",
     "miliar",
     "triliun",
-    "kuadiliun",
+    "kuadiliun"
   ],
   "unitExceptions": []
 }
