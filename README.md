@@ -84,6 +84,12 @@ var writtenNumber = require('written-number');
 writtenNumber(1234, { lang: 'vi' }); // => 'một ngàn hai trăm và ba mươi bốn'
 ```
 
+### Indonesian Example
+```javascript
+var writtenNumber = require('written-number');
+writtenNumber(1234, { lang: 'id' }); // => 'seribu dua ratus tiga puluh empat'
+```
+
 ## Options
 Property       | Value
 -------------- | -------------
