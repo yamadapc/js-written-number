@@ -579,7 +579,7 @@ module.exports={
     "60": "enam puluh",
     "70": "tujuh puluh",
     "80": "delapan puluh",
-    "90": "sembilan puluh",
+    "90": "sembilan puluh"
   },
   "units" : [
     {
@@ -595,10 +595,11 @@ module.exports={
     "juta",
     "miliar",
     "triliun",
-    "kuadiliun",
+    "kuadiliun"
   ],
   "unitExceptions": []
 }
+
 },{}],8:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
@@ -1059,7 +1060,7 @@ module.exports={
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr"];
+var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr", "id"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
