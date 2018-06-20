@@ -46,6 +46,7 @@ Currently supported languages are:
 - Esperanto `lang = "eo"`
 - Vietnamese `lang = "vi"`
 - Turkish `lang = "tr"`
+- Indonesian `lang = "id"`
 - English (Indian) `lang = "enIndian"`
 
 ### Spanish Example
