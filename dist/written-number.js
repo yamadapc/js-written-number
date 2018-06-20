@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.writtenNumber = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.writtenNumber = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -548,6 +548,59 @@ module.exports={
 
 },{}],7:[function(require,module,exports){
 module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "nol",
+    "1": "satu",
+    "2": "dua",
+    "3": "tiga",
+    "4": "empat",
+    "5": "lima",
+    "6": "enam",
+    "7": "tujuh",
+    "8": "delapan",
+    "9": "sembilan",
+    "10": "sepuluh",
+    "11": "sebelas",
+    "12": "dua belas",
+    "13": "tiga belas",
+    "14": "empat belas",
+    "15": "lima belas",
+    "16": "enam belas",
+    "17": "tujuh belas",
+    "18": "delapan belas",
+    "19": "sembilan belas",
+    "20": "dua puluh",
+    "30": "tiga puluh",
+    "40": "empat puluh",
+    "50": "lima puluh",
+    "60": "enam puluh",
+    "70": "tujuh puluh",
+    "80": "delapan puluh",
+    "90": "sembilan puluh",
+  },
+  "units" : [
+    {
+        "singular": "seratus",
+        "plural": "ratus",
+        "avoidPrefixException": [1]
+    },
+    {
+        "singular": "seribu",
+        "plural": "ribu",
+        "avoidPrefixException": [1]
+    },
+    "juta",
+    "miliar",
+    "triliun",
+    "kuadiliun",
+  ],
+  "unitExceptions": []
+}
+},{}],8:[function(require,module,exports){
+module.exports={
     "useLongScale": false,
     "baseSeparator": "",
     "unitSeparator": "",
@@ -671,7 +724,7 @@ module.exports={
     ]
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " e ",
@@ -778,7 +831,7 @@ module.exports={
   ]
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -897,7 +950,7 @@ module.exports={
   ]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -950,7 +1003,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1001,7 +1054,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
@@ -1018,6 +1071,7 @@ var i18n = {
   vi: require("./i18n/vi.json"),
   tr: require("./i18n/tr.json"),
   hu: require("./i18n/hu.json"),
+  id: require("./i18n/id.json"),
   enIndian: require("./i18n/en-indian.json")
 };
 exports.i18n = i18n;
@@ -1196,7 +1250,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, options) {
   return baseCardinals[dec];
 }
 
-},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/it.json":7,"./i18n/pt-PT.json":8,"./i18n/pt.json":9,"./i18n/tr.json":10,"./i18n/vi.json":11,"./util":13}],13:[function(require,module,exports){
+},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/id.json":7,"./i18n/it.json":8,"./i18n/pt-PT.json":9,"./i18n/pt.json":10,"./i18n/tr.json":11,"./i18n/vi.json":12,"./util":14}],14:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1219,5 +1273,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[12])(12)
+},{}]},{},[13])(13)
 });
