@@ -105,6 +105,11 @@
     }
   ],
   "unitExceptions": {
+    "21": "vingt et un",
+    "31": "trente et un",
+    "41": "quarante et un",
+    "51": "cinquante et un",
+    "61": "soixante et un",
     "71": "soixante et onze",
     "72": "soixante-douze",
     "73": "soixante-treize",
