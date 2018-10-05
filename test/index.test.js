@@ -97,6 +97,7 @@ describe("written-number", function() {
     });
 
     it("correctly converts numbers < 10", function() {
+      writtenNumber(1).should.equal("uno");
       writtenNumber(3).should.equal("tres");
       writtenNumber(8).should.equal("ocho");
     });
@@ -130,7 +131,7 @@ describe("written-number", function() {
         "cuatro millones trescientos veintitrés mil cincuenta y cinco"
       );
       writtenNumber(1570025).should.equal(
-        "un millón quinientos setenta mil veinticinco"
+        "uno millón quinientos setenta mil veinticinco"
       );
     });
 
