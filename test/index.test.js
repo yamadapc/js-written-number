@@ -229,7 +229,7 @@ describe("written-number", function() {
     });
   });
 
-describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
+  describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     before(function() {
       writtenNumber.defaults.lang = "ptPT";
     });
@@ -566,7 +566,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber(73).should.equal("yetmiş üç");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 10000", function() {
       writtenNumber(200).should.equal("iki yüz");
       writtenNumber(242).should.equal("iki yüz kırk iki");
       writtenNumber(1234).should.equal(
@@ -577,7 +577,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 10000", function() {
       writtenNumber(4323000).should.equal(
         "dört milyon üç yüz yirmi üç bin"
       );
@@ -599,5 +599,75 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
         "üç trilyon altı yüz yirmi yedi milyar"
       );
     });
+  });
+
+  describe("writtenNumber(n, { lang: 'ar', ... })", function () {
+    before(function () {writtenNumber.defaults.lang = "ar";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("صفر");
+      writtenNumber("0.8").should.equal("واحد");
+      writtenNumber("2.8").should.equal("ثلاثة");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("صفر");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(0).should.equal("صفر");
+      writtenNumber(3).should.equal("ثلاثة");
+      writtenNumber(6).should.equal("ستة");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(11).should.equal("أحد عشر");
+      writtenNumber(13).should.equal("ثلاثة عشر");
+      writtenNumber(19).should.equal("تسعة عشر");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("عشرون");
+      writtenNumber(25).should.equal("خمسة وعشرون");
+      writtenNumber(40).should.equal("أربعون");
+      writtenNumber(88).should.equal("ثمانية وثمانون");
+      writtenNumber(73).should.equal("ثلاثة وسبعون");
+      writtenNumber(99).should.equal("تسعة وتسعون");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(200).should.equal("مائتان");
+      writtenNumber(310).should.equal("ثلاثمائة وعشرة");
+      writtenNumber(242).should.equal("مائتان واثنان وأربعون");
+      writtenNumber(1234).should.equal("ألف ومائتان وأربعة وثلاثون");
+      writtenNumber(3000).should.equal("ثلاثة آلاف");
+      writtenNumber(4323).should.equal("أربعة آلاف وثلاثمائة وثلاثة وعشرون");
+    });
+
+    it("correctly converts numbers > 10000", function() {
+      writtenNumber(10000).should.equal("عشرة آلاف");
+      writtenNumber(11000).should.equal("أحد عشر ألف");
+      writtenNumber(4323000).should.equal("أربعة ملايين وثلاثمائة وثلاثة وعشرون ألف");
+      writtenNumber(4323055).should.equal("أربعة ملايين وثلاثمائة وثلاثة وعشرون ألف وخمسة وخمسون");
+      writtenNumber(1570025).should.equal("مليون وخمسمائة وسبعون ألف وخمسة وعشرون");
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function() {
+      writtenNumber(1000000000).should.equal("مليار");
+      writtenNumber(2580000000).should.equal("ملياران وخمسمائة وثمانون مليون");
+      writtenNumber(1000000000000).should.equal("تريليون");
+      writtenNumber(3627000000000).should.equal("ثلاثة تريليون وستمائة وسبعة وعشرون مليار");
+    });
+
   });
 });
