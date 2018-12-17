@@ -14,7 +14,7 @@ Convert numbers to words - their written form.
 ## Install
 With npm:
 ```bash
-npm i --save written-number
+npm install --save written-number
 ```
 With bower:
 ```bash
@@ -26,9 +26,17 @@ bower install written-number
 var writtenNumber = require('written-number');
 writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 
-writtenNumber(1234, {lang: 'fr'}); // => 'mille deux cent trente-quatre'
 writtenNumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
+
+writtenNumber(1234, {lang: 'fr'});   // => 'mille deux cent trente-quatre'
+writtenNumber(1234, {lang: 'es'});   // => 'mil doscientos treinta y cuatro'
+writtenNumber(1234, {lang: 'pt'});   // => 'mil duzentos e trinta e quatro'
+writtenNumber(1234, {lang: 'ar'});   // => 'ألف ومائتان وأربعة وثلاثون'
+writtenNumber(1234, {lang: 'eo'});   // => 'mil ducent tridek kvar'
+writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi bốn'
+writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
+writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
 ```
 
 ## Options
@@ -52,93 +60,59 @@ Currently supported languages are:
 | Arabic | `ar` |
 | Turkish | `tr` |
 | English (Indian) | `enIndian` |
+| Ukrainian | `uk` |
+| Indonesian | `id` |
 
-
-```javascript
-var writtenNumber = require('written-number');
-writtenNumber(1234, {lang: 'es'}); // => 'mil doscientos treinta y cuatro'
-writtenNumber(1234, {lang: 'pt'}); // => 'mil duzentos e trinta e quatro'
-writtenNumber(1234, {lang: 'fr'}); // => 'mille deux cent trente-quatre'
-writtenNumber(1234, {lang: 'ar'}); // => 'ألف ومائتان وأربعة وثلاثون'
-writtenNumber(1234, {lang: 'eo'}); // => 'mil ducent tridek kvar'
-writtenNumber(1234, {lang: 'vi'}); // => 'một ngàn hai trăm và ba mươi bốn'
-```
-
-## Configure your own language
-Each language has it's own unique grammar exceptions.  You can create your own language.json file in the folder "i18n" and give writtenNumber support for it. I don't think the current scheme and logic cover all the cases, but may be cover some.
-
-##### useLongScale:
-'Boolean' that indicates if it use [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales). This differs the meaning of the words `billion`, `trillion` and so on.
-
-##### baseSeparator:
-'String' that separates the base cardinal numbers.
-Example: 29 -> twenty`-`eight. Spanish uses the conector " y ".
-
-##### unitSeparator:
-'String' that separates the units from the last base cardinal numbers.
-Example: 1234 -> one thousand two hundred **and** thirty-four
-
-##### allSeparator:
-'String' that separates all cardinals, not only the last one.
-Example: 1125 -> ألف **و**مائة **و**خمسة **و**عشرون
-
-##### base:
-Base cardinals numbers. Numbers that have unique names and are used to build others.
-
-##### units:
-Number units.
-It can be:
-- String
-- Object normal flow. Give support to singular, dual, and plural units. English does not need this, but spanish does.
-```json
-{
-  "singular": "millón",
-  "plural": "millones"
-}
-```
-- Object with `useBaseInstead` exception.
-In some languages like spanish and arabic, specific units like "ciento", use the base cardinal number instead.
-- Object with `useBaseException`: You can also specify with which unit (1 to 9) you don't
-want use the base cardinal instead and use the regular behaviour:
-```json
-{
-  "singular": "ciento",
-  "useBaseInstead": true,
-  "useBaseException": [1]
-}
-```
-- Object with `avoidPrefixException` exception:
-In some languages like spanish, specific units like "mil" does not use the base
-cardinal number prefix for unit 1.
-```json
-{
-  "singular": "mil",
-  "avoidPrefixException": [1]
-}
-```
-- Object with `avoidInNumberPlural` exception.
-In some languages like french, specific units like "cent" does not use the plural form inside of
-numbers wioth trailing numbers other than 0, for example "deux cents" and "deux cent trois".
-```json
-{
-  "singular": "cent",
-  "plural": "cents",
-  "avoidInNumberPlural": true
-}
-```
-- Object with `restrictedPlural` boolean:
-If plural is used only for numbers from 3 to 10 , but the singular form is used if the number is older than 11. 
-
-##### unitExceptions:
-Sometimes grammar exceptions affect the base cardinal joined to the unit. You
-can set specific exceptions to any base cardinal number.
-Spanish example:
-```
-Without Exception (Wrong): 1232000 -> **uno** millón doscientos treinta y dos mil
-With Exception: 1232000 -> **un** millón doscientos treinta y dos mil
-```
 
 ## Contributing
+
+### Configure your own language
+Each language has its own unique grammar exceptions.  You can create your own 
+language.json file in the folder "i18n" and give writtenNumber support for it. I 
+don't think the current scheme and logic cover all the cases, but may be cover 
+some.
+
+The following parameters have been used for the currently available languages:
+
+
+### Language parameters
+
+| Parameter       | Type    | Description                                                                                                                                        | Examples                                                                                                                                                                     |
+|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `useLongScale`    | boolean | Indicates if it uses [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales).                                                    | This differs the meaning of the words `billion`, `trillion` and so on.                                                                                                       |
+| `baseSeparator`   | string  | Separates the base cardinal numbers.                                                                                                               | 29 -> twenty`-`eight.  Spanish uses the connector " y "                                                                                                                      |
+| `unitSeparator`   | string  | Separates the units from the last base cardinal numbers.                                                                                           | 1234 -> one thousand two hundred **and** thirty-four                                                                                                                         |
+| `allSeparator`    | string  | Separates all cardinals, not only the last one.                                                                                                    | 1125 -> ألف **و**مائة **و**خمسة **و**عشرون                                                                                                                                   |
+| `base`            | Object  | Base cardinals numbers.  Numbers that have unique names and are used to build others.                                                              |                                                                                                                                                                              |
+| `alternativeBase` | Object  | Alternative versions of base cardinals numbers for usage with specific units.  These bases will be treated as an extension for the default `base`. | ``` "alternativeBase": {   "feminine": {"1":"одна","2":"дві"} } ```                                                                                                          |
+| `units`           | Array   | A list of number units (string or Object). Gives support to singular, dual an plural units. Check the Object parameters below.                                                |                                                                                                                                                                              |
+| `unitExceptions`  | Object  | Sometimes grammar exceptions affect the base cardinal joined to the unit. You can set specific exceptions to any base cardinal number.             | Converting 1232000 in Spanish:  Without Exception (Wrong):  -> **uno** millón doscientos treinta y dos mil  With Exception:  -> **un** millón doscientos treinta y dos mil   |
+
+### Units parameters
+
+A `unit` can be:
+- A simple string. e.g. `"hundred"`
+- An Object with multiple parameters:
+
+| Unit parameter         | Description                                                                                            | e.g. of languages |
+|------------------------|--------------------------------------------------------------------------------------------------------|-------------------|
+| `singular`             | One element.                                                                                           | All               |
+| `dual`                 | Two elements.                                                                                          | `ar`              |
+| `plural`               | Two or more elements. (or 3 or more)                                                                   | All               |
+| `few`                  | Between 2 and 4 including.                                                                             | `uk`              |
+| `useAlternativeBase`   | Overwrites default `base`.                                                                             | `uk`              |
+| `useBaseInstead`       | Use the base cardinal number instead.                                                                  | `es`,`hu`,`pt`    |
+| `useBaseException`     | Specify with which unit (1 to 9) you don't want to use the base, and instead use the regular behavior. | `es`,`hu`,`pt`    |
+| `avoidPrefixException` | Units not using the base cardinal number prefix for unit 1.                                            | `id`,`tr`,`it`    |
+| `avoidInNumberPlural`  | Units not using the plural form with trailing numbers other than 0.                                    | `fr`              |
+| `restrictedPlural`     | Plural only for 3 to 10. Singular if >= 11.                                                            | `ar`              |
+| `useSingularEnding`    | Use singular form for numbers ending with 1.                                                           | `uk`              |
+| `useFewEnding`         | Use _few_ form for numbers ending with 2, 3 or 4.                                                      | `uk`              |
+| `avoidEndingRules`     | Plural form used instead of `useSingularEnding` and `useFewEnding`                                     | `uk`              |
+
+
+
+### Versioning
 Do your changes and submit a PR. If you've write access and want to bump the version, run `mversion [major|minor|patch] -m`. That'll bump both `bower.json` and `package.json`.
 
 ## License
