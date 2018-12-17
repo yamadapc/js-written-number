@@ -2,38 +2,39 @@
 var should = require("should");
 var writtenNumber = require("..");
 
-describe("written-number", function() {
-describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
-    before(function() {
+describe("written-number", function () {
+
+  describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("defaults to english on wrong language", function() {
+    it("defaults to english on wrong language", function () {
       writtenNumber(1, { lang: 'zzz' }).should.equal("one");
     });
   });
 
-  describe("writtenNumber(n, { lang: 'en', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'en', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "en";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("negative numbers return \"\"", function() {
+    it("negative numbers return \"\"", function () {
       writtenNumber(-3).should.equal("");
       writtenNumber(-5).should.equal("");
     });
 
-    it("doesn't blow up weirdly with invalid input", function() {
+    it("doesn't blow up weirdly with invalid input", function () {
       writtenNumber("asdfasdfasdf").should.equal("");
       writtenNumber("0.as").should.equal("");
       writtenNumber("0.123").should.equal("zero");
@@ -48,25 +49,25 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       writtenNumber("1.123/2").should.equal("");
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(1000000000).should.equal("one billion");
       writtenNumber(3).should.equal("three");
       writtenNumber(8).should.equal("eight");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("thirteen");
       writtenNumber(19).should.equal("nineteen");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("twenty");
       writtenNumber(25).should.equal("twenty-five");
       writtenNumber(88).should.equal("eighty-eight");
       writtenNumber(73).should.equal("seventy-three");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(200).should.equal("two hundred");
       writtenNumber(242).should.equal("two hundred and forty-two");
       writtenNumber(1234).should.equal(
@@ -77,7 +78,7 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
         "four million three hundred twenty-three thousand"
       );
@@ -89,7 +90,7 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("one billion");
       writtenNumber(2580000000).should.equal(
         "two billion five hundred eighty million"
@@ -101,35 +102,36 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'es', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'es', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "es";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(1).should.equal("uno");
       writtenNumber(3).should.equal("tres");
       writtenNumber(8).should.equal("ocho");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("trece");
       writtenNumber(16).should.equal("dieciséis");
       writtenNumber(19).should.equal("diecinueve");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("veinte");
       writtenNumber(25).should.equal("veinticinco");
       writtenNumber(88).should.equal("ochenta y ocho");
       writtenNumber(73).should.equal("setenta y tres");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(144).should.equal("ciento cuarenta y cuatro");
       writtenNumber(200).should.equal("doscientos");
       writtenNumber(1234).should.equal("mil doscientos treinta y cuatro");
@@ -137,7 +139,7 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       writtenNumber(242).should.equal("doscientos cuarenta y dos");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
         "cuatro millones trescientos veintitrés mil"
       );
@@ -145,11 +147,11 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
         "cuatro millones trescientos veintitrés mil cincuenta y cinco"
       );
       writtenNumber(1570025).should.equal(
-        "un millón quinientos setenta mil veinticinco"
+        "uno millón quinientos setenta mil veinticinco"
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("mil millones");
       writtenNumber(2580000000).should.equal(
         "dos mil quinientos ochenta millones"
@@ -161,34 +163,34 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'pt', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'pt', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "pt";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(3).should.equal("três");
       writtenNumber(8).should.equal("oito");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("treze");
       writtenNumber(19).should.equal("dezenove");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("vinte");
       writtenNumber(25).should.equal("vinte e cinco");
       writtenNumber(88).should.equal("oitenta e oito");
       writtenNumber(73).should.equal("setenta e três");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(144).should.equal("cento e quarenta e quatro");
       writtenNumber(200).should.equal("duzentos");
       writtenNumber(1234).should.equal("mil duzentos e trinta e quatro");
@@ -196,7 +198,7 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       writtenNumber(242).should.equal("duzentos e quarenta e dois");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
         "quatro milhões trezentos e vinte e três mil"
       );
@@ -208,31 +210,31 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
       );
     });
 
-    it("works for 14101 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14101 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14101).should.equal("catorze mil cento e um");
     });
 
-    it("works for 14201 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14201 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14201).should.equal("catorze mil duzentos e um");
     });
 
-    it("works for 1001000 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 1001000 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(1001000).should.equal("um milhão e mil");
     });
 
-    it("works for 1001200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 1001200 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(1001200).should.equal("um milhão mil e duzentos");
     });
 
-    it("works for 14200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14200 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14200).should.equal("catorze mil e duzentos");
     });
 
-    it("works for 14100 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14100 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14100).should.equal("catorze mil e cem");
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("um bilhão");
       writtenNumber(2580000000).should.equal(
         "dois bilhões quinhentos e oitenta milhões"
@@ -244,34 +246,34 @@ describe("writtenNumber(n, { lang: 'zzz', ... })", function() {
     });
   });
 
-describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'ptPT', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "ptPT";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(3).should.equal("três");
       writtenNumber(8).should.equal("oito");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("treze");
       writtenNumber(19).should.equal("dezanove");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("vinte");
       writtenNumber(25).should.equal("vinte e cinco");
       writtenNumber(88).should.equal("oitenta e oito");
       writtenNumber(73).should.equal("setenta e três");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(144).should.equal("cento e quarenta e quatro");
       writtenNumber(200).should.equal("duzentos");
       writtenNumber(1234).should.equal("mil duzentos e trinta e quatro");
@@ -279,7 +281,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber(242).should.equal("duzentos e quarenta e dois");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
         "quatro milhões trezentos e vinte e três mil"
       );
@@ -291,31 +293,31 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("works for 14101 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14101 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14101).should.equal("catorze mil cento e um");
     });
 
-    it("works for 14201 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14201 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14201).should.equal("catorze mil duzentos e um");
     });
 
-    it("works for 1001000 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 1001000 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(1001000).should.equal("um milhão e mil");
     });
 
-    it("works for 1001200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 1001200 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(1001200).should.equal("um milhão mil e duzentos");
     });
 
-    it("works for 14200 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14200 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14200).should.equal("catorze mil e duzentos");
     });
 
-    it("works for 14100 (https://github.com/yamadapc/js-written-number/issues/38)", function() {
+    it("works for 14100 (https://github.com/yamadapc/js-written-number/issues/38)", function () {
       writtenNumber(14100).should.equal("catorze mil e cem");
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("mil milhões");
       writtenNumber(2580000000).should.equal(
         "dois mil quinhentos e oitenta milhões"
@@ -327,28 +329,28 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'fr', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'fr', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "fr";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(0).should.equal("zéro");
       writtenNumber(3).should.equal("trois");
       writtenNumber(8).should.equal("huit");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("treize");
       writtenNumber(19).should.equal("dix-neuf");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("vingt");
       writtenNumber(25).should.equal("vingt-cinq");
       writtenNumber(73).should.equal("soixante-treize");
@@ -358,14 +360,14 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber(91).should.equal("quatre-vingt-onze");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(100).should.equal("cent");
       writtenNumber(110).should.equal("cent dix");
       writtenNumber(200).should.equal("deux cents");
       writtenNumber(242).should.equal("deux cent quarante-deux");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(1234).should.equal("mille deux cent trente-quatre");
       writtenNumber(4000).should.equal("quatre mille");
       writtenNumber(4323).should.equal("quatre mille trois cent vingt-trois");
@@ -383,7 +385,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("un milliard");
       writtenNumber(2580000000).should.equal(
         "deux milliards cinq cent quatre-vingts millions"
@@ -395,27 +397,27 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'it', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'it', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "it";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(3).should.equal("tre");
       writtenNumber(8).should.equal("otto");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("tredici");
       writtenNumber(19).should.equal("diciannove");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("venti");
       writtenNumber(23).should.equal("ventitré");
       writtenNumber(73).should.equal("settantatré");
@@ -425,14 +427,14 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber(91).should.equal("novantuno");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(100).should.equal("cento");
       writtenNumber(101).should.equal("centuno");
       writtenNumber(201).should.equal("duecentuno");
       writtenNumber(242).should.equal("due cento quarantadue");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(1234).should.equal("mille due cento trentaquattro");
       writtenNumber(4000).should.equal("quattro mila");
       writtenNumber(4323).should.equal("quattro mila tre cento ventitré");
@@ -450,7 +452,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("un miliardo");
       writtenNumber(2580000000).should.equal(
         "due miliardi cinque cento ottanta milioni"
@@ -462,17 +464,17 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'enIndian', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'enIndian', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "enIndian";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("doesn't blow up weirdly with invalid input", function() {
+    it("doesn't blow up weirdly with invalid input", function () {
       writtenNumber("asdfasdfasdf").should.equal("");
       writtenNumber("0.as").should.equal("");
       writtenNumber("0.123").should.equal("zero");
@@ -487,25 +489,25 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber("1.123/2").should.equal("");
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(1000000000).should.equal("one hundred crore");
       writtenNumber(3).should.equal("three");
       writtenNumber(8).should.equal("eight");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("thirteen");
       writtenNumber(19).should.equal("nineteen");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("twenty");
       writtenNumber(25).should.equal("twenty-five");
       writtenNumber(88).should.equal("eighty-eight");
       writtenNumber(73).should.equal("seventy-three");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(200).should.equal("two hundred");
       writtenNumber(242).should.equal("two hundred and forty-two");
       writtenNumber(1234).should.equal(
@@ -516,7 +518,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
         "forty-three lakh twenty-three thousand"
       );
@@ -528,7 +530,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("one hundred crore");
       writtenNumber(2580000000).should.equal("two hundred fifty-eight crore");
       writtenNumber(1000000000000).should.equal("one lakh crore");
@@ -538,17 +540,17 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     });
   });
 
-  describe("writtenNumber(n, { lang: 'tr', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'tr', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "tr";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
 
-    it("doesn't blow up weirdly with invalid input", function() {
+    it("doesn't blow up weirdly with invalid input", function () {
       writtenNumber("asdfasdfasdf").should.equal("");
       writtenNumber("0.as").should.equal("");
       writtenNumber("0.123").should.equal("sıfır");
@@ -562,18 +564,18 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber("1.123/2").should.equal("");
     });
 
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(0).should.equal("sıfır");
       writtenNumber(3).should.equal("üç");
       writtenNumber(6).should.equal("altı");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(13).should.equal("on üç");
       writtenNumber(19).should.equal("on dokuz");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("yirmi");
       writtenNumber(25).should.equal("yirmi beş");
       writtenNumber(40).should.equal("kırk");
@@ -581,7 +583,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       writtenNumber(73).should.equal("yetmiş üç");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 10000", function () {
       writtenNumber(200).should.equal("iki yüz");
       writtenNumber(242).should.equal("iki yüz kırk iki");
       writtenNumber(1234).should.equal(
@@ -592,7 +594,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 10000", function () {
       writtenNumber(4323000).should.equal(
         "dört milyon üç yüz yirmi üç bin"
       );
@@ -604,7 +606,7 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("bir milyar");
       writtenNumber(2580000000).should.equal(
         "iki milyar beş yüz seksen milyon"
@@ -616,17 +618,16 @@ describe("writtenNumber(n, { lang: 'ptPT', ... })", function() {
     });
   });
 
-describe("writtenNumber(n, { lang: 'uk', ... })", function() {
-    before(function() {
+  describe("writtenNumber(n, { lang: 'uk', ... })", function () {
+    before(function () {
       writtenNumber.defaults.lang = "uk";
     });
 
-    it("gets exposed", function() {
+    it("gets exposed", function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
-
-    it("correctly converts numbers < 10", function() {
+    it("correctly converts numbers < 10", function () {
       writtenNumber(0).should.equal("нуль");
       writtenNumber(1).should.equal("один");
       writtenNumber(2).should.equal("два");
@@ -634,13 +635,13 @@ describe("writtenNumber(n, { lang: 'uk', ... })", function() {
       writtenNumber(9).should.equal("дев’ять");
     });
 
-    it("correctly converts numbers < 20", function() {
+    it("correctly converts numbers < 20", function () {
       writtenNumber(11).should.equal("одинадцять");
       writtenNumber(13).should.equal("тринадцять");
       writtenNumber(19).should.equal("дев’ятнадцять");
     });
 
-    it("correctly converts numbers < 100", function() {
+    it("correctly converts numbers < 100", function () {
       writtenNumber(20).should.equal("двадцять");
       writtenNumber(21).should.equal("двадцять один");
       writtenNumber(25).should.equal("двадцять п’ять");
@@ -649,7 +650,7 @@ describe("writtenNumber(n, { lang: 'uk', ... })", function() {
       writtenNumber(88).should.equal("вісімдесят вісім");
     });
 
-    it("correctly converts numbers < 1000", function() {
+    it("correctly converts numbers < 1000", function () {
       writtenNumber(100).should.equal("сто");
       writtenNumber(101).should.equal("сто один");
       writtenNumber(110).should.equal("сто десять");
@@ -659,7 +660,7 @@ describe("writtenNumber(n, { lang: 'uk', ... })", function() {
       writtenNumber(242).should.equal("двісті сорок два");
     });
 
-    it("correctly converts numbers > 1000", function() {
+    it("correctly converts numbers > 1000", function () {
       writtenNumber(1000).should.equal("одна тисяча");
       writtenNumber(2000).should.equal("дві тисячі");
       writtenNumber(3000).should.equal("три тисячі");
@@ -682,7 +683,7 @@ describe("writtenNumber(n, { lang: 'uk', ... })", function() {
       );
     });
 
-    it("correctly converts numbers > 1 000 000 000", function() {
+    it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("один мільярд");
       writtenNumber(2580000000).should.equal(
         "два мільярди п’ятсот вісімдесят мільйонів"
@@ -693,4 +694,77 @@ describe("writtenNumber(n, { lang: 'uk', ... })", function() {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'ar', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "ar";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("صفر");
+      writtenNumber("0.8").should.equal("واحد");
+      writtenNumber("2.8").should.equal("ثلاثة");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("صفر");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(0).should.equal("صفر");
+      writtenNumber(3).should.equal("ثلاثة");
+      writtenNumber(6).should.equal("ستة");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(11).should.equal("أحد عشر");
+      writtenNumber(13).should.equal("ثلاثة عشر");
+      writtenNumber(19).should.equal("تسعة عشر");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("عشرون");
+      writtenNumber(25).should.equal("خمسة وعشرون");
+      writtenNumber(40).should.equal("أربعون");
+      writtenNumber(88).should.equal("ثمانية وثمانون");
+      writtenNumber(73).should.equal("ثلاثة وسبعون");
+      writtenNumber(99).should.equal("تسعة وتسعون");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(200).should.equal("مائتان");
+      writtenNumber(310).should.equal("ثلاثمائة وعشرة");
+      writtenNumber(242).should.equal("مائتان واثنان وأربعون");
+      writtenNumber(1234).should.equal("ألف ومائتان وأربعة وثلاثون");
+      writtenNumber(3000).should.equal("ثلاثة آلاف");
+      writtenNumber(4323).should.equal("أربعة آلاف وثلاثمائة وثلاثة وعشرون");
+    });
+
+    it("correctly converts numbers > 10000", function () {
+      writtenNumber(10000).should.equal("عشرة آلاف");
+      writtenNumber(11000).should.equal("أحد عشر ألف");
+      writtenNumber(4323000).should.equal("أربعة ملايين وثلاثمائة وثلاثة وعشرون ألف");
+      writtenNumber(4323055).should.equal("أربعة ملايين وثلاثمائة وثلاثة وعشرون ألف وخمسة وخمسون");
+      writtenNumber(1570025).should.equal("مليون وخمسمائة وسبعون ألف وخمسة وعشرون");
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("مليار");
+      writtenNumber(2580000000).should.equal("ملياران وخمسمائة وثمانون مليون");
+      writtenNumber(1000000000000).should.equal("تريليون");
+      writtenNumber(3627000000000).should.equal("ثلاثة تريليون وستمائة وسبعة وعشرون مليار");
+    });
+  });
+
 });
+
+
