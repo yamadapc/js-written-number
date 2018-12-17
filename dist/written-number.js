@@ -715,6 +715,60 @@ module.exports={
 
 },{}],8:[function(require,module,exports){
 module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "nol",
+    "1": "satu",
+    "2": "dua",
+    "3": "tiga",
+    "4": "empat",
+    "5": "lima",
+    "6": "enam",
+    "7": "tujuh",
+    "8": "delapan",
+    "9": "sembilan",
+    "10": "sepuluh",
+    "11": "sebelas",
+    "12": "dua belas",
+    "13": "tiga belas",
+    "14": "empat belas",
+    "15": "lima belas",
+    "16": "enam belas",
+    "17": "tujuh belas",
+    "18": "delapan belas",
+    "19": "sembilan belas",
+    "20": "dua puluh",
+    "30": "tiga puluh",
+    "40": "empat puluh",
+    "50": "lima puluh",
+    "60": "enam puluh",
+    "70": "tujuh puluh",
+    "80": "delapan puluh",
+    "90": "sembilan puluh"
+  },
+  "units" : [
+    {
+        "singular": "seratus",
+        "plural": "ratus",
+        "avoidPrefixException": [1]
+    },
+    {
+        "singular": "seribu",
+        "plural": "ribu",
+        "avoidPrefixException": [1]
+    },
+    "juta",
+    "miliar",
+    "triliun",
+    "kuadiliun"
+  ],
+  "unitExceptions": []
+}
+
+},{}],9:[function(require,module,exports){
+module.exports={
     "useLongScale": false,
     "baseSeparator": "",
     "unitSeparator": "",
@@ -838,7 +892,7 @@ module.exports={
     ]
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " e ",
@@ -945,7 +999,7 @@ module.exports={
   ]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -1064,7 +1118,7 @@ module.exports={
   ]
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1117,7 +1171,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1305,7 +1359,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1356,12 +1410,12 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk"];
+var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk", "id"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
@@ -1375,7 +1429,8 @@ var i18n = {
   tr: require("./i18n/tr.json"),
   hu: require("./i18n/hu.json"),
   enIndian: require("./i18n/en-indian.json"),
-  uk: require("./i18n/uk.json")
+  uk: require("./i18n/uk.json"),
+  id: require("./i18n/id.json")
 };
 exports.i18n = i18n;
 
@@ -1579,7 +1634,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseC
   return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/it.json":8,"./i18n/pt-PT.json":9,"./i18n/pt.json":10,"./i18n/tr.json":11,"./i18n/uk.json":12,"./i18n/vi.json":13,"./util":15}],15:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/id.json":8,"./i18n/it.json":9,"./i18n/pt-PT.json":10,"./i18n/pt.json":11,"./i18n/tr.json":12,"./i18n/uk.json":13,"./i18n/vi.json":14,"./util":16}],16:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1602,5 +1657,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[14])(14)
+},{}]},{},[15])(15)
 });
