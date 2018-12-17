@@ -52,6 +52,7 @@ Currently supported languages are:
 | Arabic | `ar` |
 | Turkish | `tr` |
 | English (Indian) | `enIndian` |
+| Ukrainian | `uk` |
 
 
 ```javascript
@@ -62,10 +63,15 @@ writtenNumber(1234, {lang: 'fr'}); // => 'mille deux cent trente-quatre'
 writtenNumber(1234, {lang: 'ar'}); // => 'ألف ومائتان وأربعة وثلاثون'
 writtenNumber(1234, {lang: 'eo'}); // => 'mil ducent tridek kvar'
 writtenNumber(1234, {lang: 'vi'}); // => 'một ngàn hai trăm và ba mươi bốn'
+writtenNumber(1234, { lang: 'uk' }); // => 'одна тисяча двісті тридцять чотири'
 ```
 
+
 ## Configure your own language
-Each language has it's own unique grammar exceptions.  You can create your own language.json file in the folder "i18n" and give writtenNumber support for it. I don't think the current scheme and logic cover all the cases, but may be cover some.
+Each language has it's own unique grammar exceptions.  You can create your own 
+language.json file in the folder "i18n" and give writtenNumber support for it. I 
+don't think the current scheme and logic cover all the cases, but may be cover 
+some.
 
 ##### useLongScale:
 'Boolean' that indicates if it use [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales). This differs the meaning of the words `billion`, `trillion` and so on.
@@ -85,6 +91,18 @@ Example: 1125 -> ألف **و**مائة **و**خمسة **و**عشرون
 ##### base:
 Base cardinals numbers. Numbers that have unique names and are used to build others.
 
+##### alternativeBase:
+Alternative versions of base cardinals numbers for usage with specific units (ex. thousands in Ukrainian use feminine form of base cardinal numbers). These bases will be treated as an extension for the default `base`.
+
+```json
+"alternativeBase": {
+  "feminine": {
+    "1": "одна",
+    "2": "дві"
+  }
+}
+```
+
 ##### units:
 Number units.
 It can be:
@@ -96,10 +114,42 @@ It can be:
   "plural": "millones"
 }
 ```
+
+- Object with `few` word form.
+
+In some languages like Ukrainian, there are specific unit forms for values from 2 (including) to 4 (including). This forms can be specified with `few`.
+
+```json
+{
+  "singular": "мільйон",
+  "few": "мільйони",
+  "plural": "мільйонів",
+  ...
+}
+```
+
+- Object with `useAlternativeBase`.
+
+Selects an `alternativeBase` name which this unit should prefer over the default `base` if possible.
+
+```json
+{
+  "singular": "тисяча",
+  "few": "тисячі",
+  "plural": "тисяч",
+  "useAlternativeBase": "feminine"
+  ...
+}
+```
+
+
 - Object with `useBaseInstead` exception.
+
 In some languages like spanish and arabic, specific units like "ciento", use the base cardinal number instead.
+
 - Object with `useBaseException`: You can also specify with which unit (1 to 9) you don't
 want use the base cardinal instead and use the regular behaviour:
+
 ```json
 {
   "singular": "ciento",
@@ -128,6 +178,21 @@ numbers wioth trailing numbers other than 0, for example "deux cents" and "deux 
 ```
 - Object with `restrictedPlural` boolean:
 If plural is used only for numbers from 3 to 10 , but the singular form is used if the number is older than 11. 
+
+- Object with `useSingularEnding` exception and `useFewEnding` exception.
+
+In some languages like Ukrainian, singular form of the unit is also used for any values that end with 1 (21, 31, 14, ..., 101, ...) and "few" form of the unit is also used for any values that end with 2, 3 and 4 (22, 33, 44, ..., 104, ...). The `avoidEndingRules` exception provides values (1 to 999) where these rules must be ignored and the plural form must be used instead.
+
+```json
+{
+  "singular": "мільйон",
+  "few": "мільйони",
+  "plural": "мільйонів",
+  "useSingularEnding": true,
+  "useFewEnding": true,
+  "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+}
+```
 
 ##### unitExceptions:
 Sometimes grammar exceptions affect the base cardinal joined to the unit. You
