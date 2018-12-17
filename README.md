@@ -14,7 +14,7 @@ Convert numbers to words - their written form.
 ## Install
 With npm:
 ```bash
-npm i --save written-number
+npm install --save written-number
 ```
 With bower:
 ```bash
@@ -29,6 +29,14 @@ writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 writtenNumber(1234, {lang: 'fr'}); // => 'mille deux cent trente-quatre'
 writtenNumber.defaults.lang = 'es';
 writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
+
+writtenNumber(1234, {lang: 'es'});   // => 'mil doscientos treinta y cuatro'
+writtenNumber(1234, {lang: 'pt'});   // => 'mil duzentos e trinta e quatro'
+writtenNumber(1234, {lang: 'ar'});   // => 'ألف ومائتان وأربعة وثلاثون'
+writtenNumber(1234, {lang: 'eo'});   // => 'mil ducent tridek kvar'
+writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi bốn'
+writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
+writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
 ```
 
 ## Options
@@ -53,18 +61,7 @@ Currently supported languages are:
 | Turkish | `tr` |
 | English (Indian) | `enIndian` |
 | Ukrainian | `uk` |
-
-
-```javascript
-var writtenNumber = require('written-number');
-writtenNumber(1234, {lang: 'es'}); // => 'mil doscientos treinta y cuatro'
-writtenNumber(1234, {lang: 'pt'}); // => 'mil duzentos e trinta e quatro'
-writtenNumber(1234, {lang: 'fr'}); // => 'mille deux cent trente-quatre'
-writtenNumber(1234, {lang: 'ar'}); // => 'ألف ومائتان وأربعة وثلاثون'
-writtenNumber(1234, {lang: 'eo'}); // => 'mil ducent tridek kvar'
-writtenNumber(1234, {lang: 'vi'}); // => 'một ngàn hai trăm và ba mươi bốn'
-writtenNumber(1234, { lang: 'uk' }); // => 'одна тисяча двісті тридцять чотири'
-```
+| Indonesian | `id` |
 
 
 ## Configure your own language
@@ -124,7 +121,6 @@ In some languages like Ukrainian, there are specific unit forms for values from 
   "singular": "мільйон",
   "few": "мільйони",
   "plural": "мільйонів",
-  ...
 }
 ```
 
@@ -138,7 +134,6 @@ Selects an `alternativeBase` name which this unit should prefer over the default
   "few": "тисячі",
   "plural": "тисяч",
   "useAlternativeBase": "feminine"
-  ...
 }
 ```
 
