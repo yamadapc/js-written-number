@@ -1,6 +1,154 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.writtenNumber = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
+  "baseSeparator": "",
+  "unitSeparator": "",
+  "allSeparator": "و",
+  "base": {
+    "0": "صفر",
+    "1": "واحد",
+    "2": "اثنان",
+    "3": "ثلاثة",
+    "4": "أربعة",
+    "5": "خمسة",
+    "6": "ستة",
+    "7": "سبعة",
+    "8": "ثمانية",
+    "9": "تسعة",
+
+    "10": "عشرة",
+    "11": "أحد عشر",
+    "12": "إثنا عشر",
+    "13": "ثلاثة عشر",
+    "14": "أربعة عشر",
+    "15": "خمسة عشر",
+    "16": "ستة عشر",
+    "17": "سبعة عشر",
+    "18": "ثمانية عشر",
+    "19": "تسعة عشر",
+
+    "20": "عشرون",
+    "21": "واحد وعشرون",
+    "22": "اثنان وعشرون",
+    "23": "ثلاثة وعشرون",
+    "24": "أربعة وعشرون",
+    "25": "خمسة وعشرون",
+    "26": "ستة وعشرون",
+    "27": "سبعة وعشرون",
+    "28": "ثمانية وعشرون",
+    "29": "تسعة وعشرون",
+    
+    "30": "ثلاثون",    
+    "31": "واحد وثلاثون",
+    "32": "اثنان وثلاثون",
+    "33": "ثلاثة وثلاثون",
+    "34": "أربعة وثلاثون",
+    "35": "خمسة وثلاثون",
+    "36": "ستة وثلاثون",
+    "37": "سبعة وثلاثون",
+    "38": "ثمانية وثلاثون",
+    "39": "تسعة وثلاثون",
+
+    "40": "أربعون",
+    "41": "واحد وأربعون",
+    "42": "اثنان وأربعون",
+    "43": "ثلاثة وأربعون",
+    "44": "أربعة وأربعون",
+    "45": "خمسة وأربعون",
+    "46": "ستة وأربعون",
+    "47": "سبعة وأربعون",
+    "48": "ثمانية وأربعون",
+    "49": "تسعة وأربعون",
+
+    "50": "خمسون",
+    "51": "واحد وخمسون",
+    "52": "اثنان وخمسون",
+    "53": "ثلاثة وخمسون",
+    "54": "أربعة وخمسون",
+    "55": "خمسة وخمسون",
+    "56": "ستة وخمسون",
+    "57": "سبعة وخمسون",
+    "58": "ثمانية وخمسون",
+    "59": "تسعة وخمسون",
+
+    "60": "ستون",
+    "61": "واحد وستون",
+    "62": "اثنان وستون",
+    "63": "ثلاثة وستون",
+    "64": "أربعة وستون",
+    "65": "خمسة وستون",
+    "66": "ستة وستون",
+    "67": "سبعة وستون",
+    "68": "ثمانية وستون",
+    "69": "تسعة وستون",
+
+    "70": "سبعون",
+    "71": "واحد وسبعون",
+    "72": "اثنان وسبعون",
+    "73": "ثلاثة وسبعون",
+    "74": "أربعة وسبعون",
+    "75": "خمسة وسبعون",
+    "76": "ستة وسبعون",
+    "77": "سبعة وسبعون",
+    "78": "ثمانية وسبعون",
+    "79": "تسعة وسبعون",
+
+    "80": "ثمانون",
+    "81": "واحد وثمانون",
+    "82": "اثنان وثمانون",
+    "83": "ثلاثة وثمانون",
+    "84": "أربعة وثمانون",
+    "85": "خمسة وثمانون",
+    "86": "ستة وثمانون",
+    "87": "سبعة وثمانون",
+    "88": "ثمانية وثمانون",
+    "89": "تسعة وثمانون",
+    
+    "90": "تسعون",
+    "91": "واحد وتسعون",
+    "92": "اثنان وتسعون",
+    "93": "ثلاثة وتسعون",
+    "94": "أربعة وتسعون",
+    "95": "خمسة وتسعون",
+    "96": "ستة وتسعون",
+    "97": "سبعة وتسعون",
+    "98": "ثمانية وتسعون",
+    "99": "تسعة وتسعون",
+
+    "200": "مائتان",
+    "300": "ثلاثمائة",
+    "400": "أربعمائة",
+    "500": "خمسمائة",
+    "600": "ستمائة",
+    "700": "سبعمائة",
+    "800": "ثمانمائة",
+    "900": "تسعمائة"
+  },
+  "units" : [
+    {"singular":"مائة", "useBaseInstead": true, "useBaseException": [1]},
+    {"singular":"ألف", "dual":"ألفان", "plural":"آلاف", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+    {"singular":"مليون", "dual":"مليونان", "plural":"ملايين", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+    {"singular":"مليار", "dual":"ملياران", "plural":"ملايير", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+
+    {"singular":"تريليون", "avoidPrefixException": [1]},
+    {"singular":"كوادريليون", "avoidPrefixException": [1]},
+    {"singular":"كوينتليون", "avoidPrefixException": [1]},
+    {"singular":"سكستليون", "avoidPrefixException": [1]},
+    {"singular":"سبتيلليون", "avoidPrefixException": [1]},
+    {"singular":"أوكتيليون", "avoidPrefixException": [1]},
+    {"singular":"نونيلليون", "avoidPrefixException": [1]},
+    {"singular":"دشيليون", "avoidPrefixException": [1]},
+    {"singular":"أوندشيلليون", "avoidPrefixException": [1]},
+    {"singular":"دودشيليون", "avoidPrefixException": [1]},
+    {"singular":"تريدشيليون", "avoidPrefixException": [1]},
+    {"singular":"كواتوردشيليون", "avoidPrefixException": [1]},
+    {"singular":"كويندشيليون" , "avoidPrefixException": [1]}
+  ],
+  "unitExceptions": {}
+}
+},{}],2:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "and ",
   "base": {
@@ -41,7 +189,7 @@ module.exports={
   },
   "unitExceptions": []
 }
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -97,7 +245,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -160,7 +308,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " y ",
@@ -215,7 +363,21 @@ module.exports={
     "1000": "mil"
   },
   "unitExceptions": {
-    "1": "un"
+    "1000000": "un millón",
+    "1000000000000": "un billón",
+    "1000000000000000000": "un trillón",
+    "1000000000000000000000000": "un cuatrillones",
+    "1000000000000000000000000000000": "un quintillón",
+    "1000000000000000000000000000000000000": "un sextillón",
+    "1000000000000000000000000000000000000000000": "un septillón",
+    "1000000000000000000000000000000000000000000000000": "un octillón",
+    "1000000000000000000000000000000000000000000000000000000": "un nonillón",
+    "1000000000000000000000000000000000000000000000000000000000000": "un decillón",
+    "1000000000000000000000000000000000000000000000000000000000000000000": "un undecillón",
+    "1000000000000000000000000000000000000000000000000000000000000000000000000": "un duodecillón",
+    "1000000000000000000000000000000000000000000000000000000000000000000000000000000": "un tredecillón",
+    "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un cuatordecillón",
+    "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un quindecillón"
   },
   "units" : [
     {
@@ -290,7 +452,7 @@ module.exports={
   ]
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -398,6 +560,11 @@ module.exports={
     }
   ],
   "unitExceptions": {
+    "21": "vingt et un",
+    "31": "trente et un",
+    "41": "quarante et un",
+    "51": "cinquante et un",
+    "61": "soixante et un",
     "71": "soixante et onze",
     "72": "soixante-douze",
     "73": "soixante-treize",
@@ -420,7 +587,7 @@ module.exports={
   }
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": "",
@@ -544,60 +711,6 @@ module.exports={
       "avoidPrefixException": [1]
     }
   ]
-}
-
-},{}],7:[function(require,module,exports){
-module.exports={
-  "useLongScale": false,
-  "baseSeparator": " ",
-  "unitSeparator": "",
-  "base": {
-    "0": "nol",
-    "1": "satu",
-    "2": "dua",
-    "3": "tiga",
-    "4": "empat",
-    "5": "lima",
-    "6": "enam",
-    "7": "tujuh",
-    "8": "delapan",
-    "9": "sembilan",
-    "10": "sepuluh",
-    "11": "sebelas",
-    "12": "dua belas",
-    "13": "tiga belas",
-    "14": "empat belas",
-    "15": "lima belas",
-    "16": "enam belas",
-    "17": "tujuh belas",
-    "18": "delapan belas",
-    "19": "sembilan belas",
-    "20": "dua puluh",
-    "30": "tiga puluh",
-    "40": "empat puluh",
-    "50": "lima puluh",
-    "60": "enam puluh",
-    "70": "tujuh puluh",
-    "80": "delapan puluh",
-    "90": "sembilan puluh"
-  },
-  "units" : [
-    {
-        "singular": "seratus",
-        "plural": "ratus",
-        "avoidPrefixException": [1]
-    },
-    {
-        "singular": "seribu",
-        "plural": "ribu",
-        "avoidPrefixException": [1]
-    },
-    "juta",
-    "miliar",
-    "triliun",
-    "kuadiliun"
-  ],
-  "unitExceptions": []
 }
 
 },{}],8:[function(require,module,exports){
@@ -1008,6 +1121,194 @@ module.exports={
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "нуль",
+    "1": "один",
+    "2": "два",
+    "3": "три",
+    "4": "чотири",
+    "5": "п’ять",
+    "6": "шість",
+    "7": "сім",
+    "8": "вісім",
+    "9": "дев’ять",
+    "10": "десять",
+    "11": "одинадцять",
+    "12": "дванадцять",
+    "13": "тринадцять",
+    "14": "чотирнадцять",
+    "15": "п’ятнадцять",
+    "16": "шістнадцять",
+    "17": "сімнадцять",
+    "18": "вісімнадцять",
+    "19": "дев’ятнадцять",
+    "20": "двадцять",
+    "30": "тридцять",
+    "40": "сорок",
+    "50": "п’ятдесят",
+    "60": "шістдесят",
+    "70": "сімдесят",
+    "80": "вісімдесят",
+    "90": "дев’яносто",
+    "100": "сто",
+    "200": "двісті",
+    "300": "триста",
+    "400": "чотириста",
+    "500": "п’ятсот",
+    "600": "шістсот",
+    "700": "сімсот",
+    "800": "вісімсот",
+    "900": "дев’ятсот"
+  },
+  "alternativeBase": {
+    "feminine": {
+      "1": "одна",
+      "2": "дві"
+    }
+  },
+  "units" : [
+    {
+      "useBaseInstead": true,
+      "useBaseException": []
+    },
+    {
+      "singular": "тисяча",
+      "few": "тисячі",
+      "plural": "тисяч",
+      "useAlternativeBase": "feminine",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "мільйон",
+      "few": "мільйони",
+      "plural": "мільйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "мільярд",
+      "few": "мільярди",
+      "plural": "мільярдів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "трильйон",
+      "few": "трильйони",
+      "plural": "трильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квадрильйон",
+      "few": "квадрильйони",
+      "plural": "квадрильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квінтильйон",
+      "few": "квінтильйони",
+      "plural": "квінтильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "секстильйон",
+      "few": "секстильйони",
+      "plural": "секстильйонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "септілліон",
+      "few": "септілліони",
+      "plural": "септілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "октілліон",
+      "few": "октілліони",
+      "plural": "октілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "нонілліон",
+      "few": "нонілліони",
+      "plural": "нонілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "децілліон",
+      "few": "децілліони",
+      "plural": "децілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "ундецілліон",
+      "few": "ундецілліони",
+      "plural": "ундецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "дуодецілліон",
+      "few": "дуодецілліони",
+      "plural": "дуодецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "тредецілліон",
+      "few": "тредецілліони",
+      "plural": "тредецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "кватуордецілліон",
+      "few": "кватуордецілліони",
+      "plural": "кватуордецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    },
+    {
+      "singular": "квіндецілліон",
+      "few": "квіндецілліони",
+      "plural": "квіндецілліонів",
+      "useSingularEnding": true,
+      "useFewEnding": true,
+      "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+    }
+  ],
+  "unitExceptions": []
+}
+
+},{}],13:[function(require,module,exports){
+module.exports={
+  "useLongScale": false,
+  "baseSeparator": " ",
   "unitSeparator": "và ",
   "base": {
     "0": "không",
@@ -1055,15 +1356,16 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "pt", "fr", "eo", "it", "vi", "tr", "id"];
+var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
+  ar: require("./i18n/ar.json"),
   pt: require("./i18n/pt.json"),
   ptPT: require("./i18n/pt-PT.json"),
   fr: require("./i18n/fr.json"),
@@ -1072,8 +1374,8 @@ var i18n = {
   vi: require("./i18n/vi.json"),
   tr: require("./i18n/tr.json"),
   hu: require("./i18n/hu.json"),
-  id: require("./i18n/id.json"),
-  enIndian: require("./i18n/en-indian.json")
+  enIndian: require("./i18n/en-indian.json"),
+  uk: require("./i18n/uk.json")
 };
 exports.i18n = i18n;
 
@@ -1089,6 +1391,7 @@ for (i = 1; i <= 15; i++) {
 
 writtenNumber.defaults = {
   noAnd: false,
+  alternativeBase: null,
   lang: "en"
 };
 
@@ -1113,6 +1416,15 @@ function writtenNumber(n, options) {
   var language = typeof options.lang === "string"
     ? i18n[options.lang]
     : options.lang;
+
+  if (!language) {
+    if (languages.indexOf(writtenNumber.defaults.lang) < 0) {
+      writtenNumber.defaults.lang = "en";
+    }
+
+    language = i18n[writtenNumber.defaults.lang];
+  }
+  
   var scale = language.useLongScale ? longScale : shortScale;
   var units = language.units;
   var unit;
@@ -1129,20 +1441,16 @@ function writtenNumber(n, options) {
     }
   }
 
-  if (!language) {
-    if (languages.indexOf(writtenNumber.defaults.lang) < 0) {
-      writtenNumber.defaults.lang = "en";
-    }
-
-    language = i18n[writtenNumber.defaults.lang];
-  }
-
   var baseCardinals = language.base;
+  var alternativeBaseCardinals = options.alternativeBase 
+    ? language.alternativeBase[options.alternativeBase]
+    : {};
 
   if (language.unitExceptions[n]) return language.unitExceptions[n];
+  if (alternativeBaseCardinals[n]) return alternativeBaseCardinals[n];
   if (baseCardinals[n]) return baseCardinals[n];
   if (n < 100)
-    return handleSmallerThan100(n, language, unit, baseCardinals, options);
+    return handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseCardinals, options);
 
   var m = n % 100;
   var ret = [];
@@ -1181,7 +1489,7 @@ function writtenNumber(n, options) {
           ? i === 0 && ret.length
           : true);
       if (!shouldUseBaseException) {
-        ret.push(baseCardinals[r * scale[i]]);
+        ret.push(alternativeBaseCardinals[r * scale[i]] || baseCardinals[r * scale[i]]);
       } else {
         ret.push(r > 1 && unit.plural ? unit.plural : unit.singular);
       }
@@ -1191,10 +1499,22 @@ function writtenNumber(n, options) {
     var str;
     if (typeof unit === "string") {
       str = unit;
+    } else if (r === 1 || unit.useSingularEnding && r % 10 === 1
+      && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0)) {
+      str = unit.singular;
+    } else if (unit.few && (r > 1 && r < 5 || unit.useFewEnding && r % 10 > 1 && r % 10 < 5
+      && (!unit.avoidEndingRules || unit.avoidEndingRules.indexOf(r) < 0))) {
+      str = unit.few;
     } else {
-      str = r > 1 && unit.plural && (!unit.avoidInNumberPlural || !m)
+      str = unit.plural && (!unit.avoidInNumberPlural || !m)
         ? unit.plural
         : unit.singular;
+      
+      // Languages with dual
+      str = (r === 2 && unit.dual) ? unit.dual : str;
+      
+      // "restrictedPlural" : use plural only for 3 to 10
+      str = (r > 10 && unit.restrictedPlural) ? unit.singular : str;
     }
 
     if (
@@ -1214,7 +1534,8 @@ function writtenNumber(n, options) {
           {
             // Languages with and exceptions need to set `noAnd` to false
             noAnd: !((language.andException && language.andException[r]) ||
-              unit.andException) && true
+              unit.andException) && true,
+            alternativeBase: unit.useAlternativeBase
           },
           options
         )
@@ -1236,22 +1557,29 @@ function writtenNumber(n, options) {
       ret.slice(1)
     );
   }
-
-  return ret.reverse().join(" ");
+  
+  // Languages that have separators for all cardinals.
+  if (language.allSeparator) {
+    for (var j = 0; j < ret.length-1; j++) {
+      ret[j] = language.allSeparator + ret[j];      
+    }
+  }
+  var result = ret.reverse().join(" ");
+  return result;
 }
 
-function handleSmallerThan100(n, language, unit, baseCardinals, options) {
+function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseCardinals, options) {
   var dec = Math.floor(n / 10) * 10;
   unit = n - dec;
   if (unit) {
     return (
-      baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options)
+      alternativeBaseCardinals[dec] || baseCardinals[dec] + language.baseSeparator + writtenNumber(unit, options)
     );
   }
-  return baseCardinals[dec];
+  return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/en-indian.json":1,"./i18n/en.json":2,"./i18n/eo.json":3,"./i18n/es.json":4,"./i18n/fr.json":5,"./i18n/hu.json":6,"./i18n/id.json":7,"./i18n/it.json":8,"./i18n/pt-PT.json":9,"./i18n/pt.json":10,"./i18n/tr.json":11,"./i18n/vi.json":12,"./util":14}],14:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/it.json":8,"./i18n/pt-PT.json":9,"./i18n/pt.json":10,"./i18n/tr.json":11,"./i18n/uk.json":12,"./i18n/vi.json":13,"./util":15}],15:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1274,5 +1602,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[13])(13)
+},{}]},{},[14])(14)
 });
