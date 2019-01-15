@@ -32,3 +32,6 @@ node_modules
 lcov
 .tern-port
 lib/.DS_Store
+lib/i18n/.DS_Store
+package-lock.json
+.DS_Store
