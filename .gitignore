@@ -31,3 +31,4 @@ node_modules
 
 lcov
 .tern-port
+lib/.DS_Store
