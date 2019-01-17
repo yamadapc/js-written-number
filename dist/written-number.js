@@ -1120,6 +1120,193 @@ module.exports={
 
 },{}],12:[function(require,module,exports){
 module.exports={
+    "useLongScale": false,
+    "baseSeparator": " ",
+    "unitSeparator": "",
+    "base": {
+        "0": "ноль",
+        "1": "один",
+        "2": "два",
+        "3": "три",
+        "4": "четыре",
+        "5": "пять",
+        "6": "шесть",
+        "7": "семь",
+        "8": "восемь",
+        "9": "девять",
+        "10": "десять",
+        "11": "одиннадцать",
+        "12": "двенадцать",
+        "13": "тринадцать",
+        "14": "четырнадцать",
+        "15": "пятнадцать",
+        "16": "шестнадцать",
+        "17": "семнадцать",
+        "18": "восемнадцать",
+        "19": "девятнадцать",
+        "20": "двадцать",
+        "30": "тридцать",
+        "40": "сорок",
+        "50": "пятьдесят",
+        "60": "шестьдесят",
+        "70": "семьдесят",
+        "80": "восемьдесят",
+        "90": "девяносто",
+        "100": "сто",
+        "200": "двести",
+        "300": "триста",
+        "400": "четыреста",
+        "500": "пятьсот",
+        "600": "шестьсот",
+        "700": "семьсот",
+        "800": "восемьсот",
+        "900": "девятьсот"
+    },
+    "alternativeBase": {
+        "feminine": {
+            "1": "одна",
+            "2": "две"
+        }
+    },
+    "units": [
+        {
+            "useBaseInstead": true,
+            "useBaseException": []
+        },
+        {
+            "singular": "тысяча",
+            "few": "тысячи",
+            "plural": "тысяч",
+            "useAlternativeBase": "feminine",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "миллион",
+            "few": "миллиона",
+            "plural": "миллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "миллиард",
+            "few": "миллиарда",
+            "plural": "миллиардов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "триллион",
+            "few": "триллиона",
+            "plural": "триллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "квадрильон",
+            "few": "квадриллион",
+            "plural": "квадрилон",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "квинтиллион",
+            "few": "квинтиллиона",
+            "plural": "квинтильонов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "секстиллионов",
+            "few": "секстильона",
+            "plural": "секстиллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "септиллион",
+            "few": "септиллиона",
+            "plural": "септиллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "октиллион",
+            "few": "октиллиона",
+            "plural": "октиллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "нониллион",
+            "few": "нониллиона",
+            "plural": "нониллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "дециллион",
+            "few": "дециллиона",
+            "plural": "дециллионов",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "ундециллион",
+            "few": "ундециллиона",
+            "plural": "ундециллионив",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "дуодециллион",
+            "few": "дуодециллиона",
+            "plural": "дуодециллионив",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "тредециллион",
+            "few": "тредециллиона",
+            "plural": "тредециллионив",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "кватуордециллион",
+            "few": "кватуордециллиона",
+            "plural": "кватуордециллионив",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        },
+        {
+            "singular": "квиндециллион",
+            "few": "квиндециллиона",
+            "plural": "квиндециллионив",
+            "useSingularEnding": true,
+            "useFewEnding": true,
+            "avoidEndingRules": [11, 12, 13, 14, 111, 112, 113, 114, 211, 212, 213, 214, 311, 312, 313, 314, 411, 412, 413, 414, 511, 512, 513, 514, 611, 612, 613, 614, 711, 712, 713, 714, 811, 812, 813, 814, 911, 912, 913, 914]
+        }
+    ],
+    "unitExceptions": []
+}
+},{}],13:[function(require,module,exports){
+module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
   "unitSeparator": "",
@@ -1171,7 +1358,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1359,7 +1546,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1410,12 +1597,12 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk", "id"];
+var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk", "ru", "id"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
@@ -1430,6 +1617,7 @@ var i18n = {
   hu: require("./i18n/hu.json"),
   enIndian: require("./i18n/en-indian.json"),
   uk: require("./i18n/uk.json"),
+  ru: require("./i18n/ru.json"),
   id: require("./i18n/id.json")
 };
 exports.i18n = i18n;
@@ -1634,7 +1822,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseC
   return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/id.json":8,"./i18n/it.json":9,"./i18n/pt-PT.json":10,"./i18n/pt.json":11,"./i18n/tr.json":12,"./i18n/uk.json":13,"./i18n/vi.json":14,"./util":16}],16:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/id.json":8,"./i18n/it.json":9,"./i18n/pt-PT.json":10,"./i18n/pt.json":11,"./i18n/ru.json":12,"./i18n/tr.json":13,"./i18n/uk.json":14,"./i18n/vi.json":15,"./util":17}],17:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1657,5 +1845,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[15])(15)
+},{}]},{},[16])(16)
 });
