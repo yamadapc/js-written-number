@@ -63,7 +63,7 @@
         },
         {
             "singular": "миллион",
-            "few": "миллионы",
+            "few": "миллиона",
             "plural": "миллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -71,7 +71,7 @@
         },
         {
             "singular": "миллиард",
-            "few": "миллиарды",
+            "few": "миллиарда",
             "plural": "миллиардов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -79,7 +79,7 @@
         },
         {
             "singular": "триллион",
-            "few": "триллионы",
+            "few": "триллиона",
             "plural": "триллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -103,7 +103,7 @@
         },
         {
             "singular": "секстиллионов",
-            "few": "секстильоны",
+            "few": "секстильона",
             "plural": "секстиллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -111,7 +111,7 @@
         },
         {
             "singular": "септиллион",
-            "few": "септиллионы",
+            "few": "септиллиона",
             "plural": "септиллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -119,7 +119,7 @@
         },
         {
             "singular": "октиллион",
-            "few": "октиллионы",
+            "few": "октиллиона",
             "plural": "октиллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -127,7 +127,7 @@
         },
         {
             "singular": "нониллион",
-            "few": "нониллионы",
+            "few": "нониллиона",
             "plural": "нониллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -135,7 +135,7 @@
         },
         {
             "singular": "дециллион",
-            "few": "дециллионы",
+            "few": "дециллиона",
             "plural": "дециллионов",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -143,7 +143,7 @@
         },
         {
             "singular": "ундециллион",
-            "few": "ундециллионы",
+            "few": "ундециллиона",
             "plural": "ундециллионив",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -151,7 +151,7 @@
         },
         {
             "singular": "дуодециллион",
-            "few": "дуодециллионы",
+            "few": "дуодециллиона",
             "plural": "дуодециллионив",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -159,7 +159,7 @@
         },
         {
             "singular": "тредециллион",
-            "few": "тредециллионы",
+            "few": "тредециллиона",
             "plural": "тредециллионив",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -167,7 +167,7 @@
         },
         {
             "singular": "кватуордециллион",
-            "few": "кватуордециллионы",
+            "few": "кватуордециллиона",
             "plural": "кватуордециллионив",
             "useSingularEnding": true,
             "useFewEnding": true,
@@ -175,7 +175,7 @@
         },
         {
             "singular": "квиндециллион",
-            "few": "квиндециллионы",
+            "few": "квиндециллиона",
             "plural": "квиндециллионив",
             "useSingularEnding": true,
             "useFewEnding": true,

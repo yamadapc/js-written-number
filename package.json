@@ -24,7 +24,7 @@
     "url": "https://github.com/yamadapc/js-written-number"
   },
   "devDependencies": {
-    "blanket": "1.1.7",
+    "blanket": "^1.1.7",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.0.0",
     "grunt-cli": "^1.2.0",
@@ -49,5 +49,8 @@
         "lcovOutput": "lcov"
       }
     }
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
   }
 }
