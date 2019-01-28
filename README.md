@@ -62,6 +62,7 @@ Currently supported languages are:
 | English (Indian) | `enIndian` |
 | Ukrainian | `uk` |
 | Indonesian | `id` |
+| Russian | `ru` |
 
 
 ## Contributing
