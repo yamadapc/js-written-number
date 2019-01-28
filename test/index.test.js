@@ -822,5 +822,86 @@ describe("written-number", function () {
     });
   });
 
-});
+  describe("writtenNumber(n, { lang: 'ru', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "ru";
+    });
 
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("negative numbers return \"\"", function () {
+      writtenNumber(-3).should.equal("");
+      writtenNumber(-5).should.equal("");
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("ноль");
+      writtenNumber("0.8").should.equal("один");
+      writtenNumber("2.8").should.equal("три");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1000000000.123").should.equal("один миллиард");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("ноль");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(1000000000).should.equal("один миллиард");
+      writtenNumber(3).should.equal("три");
+      writtenNumber(8).should.equal("восемь");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("тринадцать");
+      writtenNumber(19).should.equal("девятнадцать");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("двадцать");
+      writtenNumber(25).should.equal("двадцать пять");
+      writtenNumber(88).should.equal("восемьдесят восемь");
+      writtenNumber(73).should.equal("семьдесят три");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(200).should.equal("двести");
+      writtenNumber(242).should.equal("двести сорок два");
+      writtenNumber(1234).should.equal(
+        "одна тысяча двести тридцать четыре"
+      );
+      writtenNumber(4323).should.equal(
+        "четыре тысячи триста двадцать три"
+      );
+    });
+
+    it("correctly converts numbers > 1000", function () {
+      writtenNumber(4323000).should.equal(
+        "четыре миллиона триста двадцать три тысячи"
+      );
+      writtenNumber(4323055).should.equal(
+        "четыре миллиона триста двадцать три тысячи пятьдесят пять"
+      );
+      writtenNumber(1570025).should.equal(
+        "один миллион пятьсот семьдесят тысяч двадцать пять"
+      );
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("один миллиард");
+      writtenNumber(2580000000).should.equal(
+        "два миллиарда пятьсот восемьдесят миллионов"
+      );
+      writtenNumber(1000000000000).should.equal("один триллион");
+      writtenNumber(3627000000000).should.equal(
+        "три триллиона шестьсот двадцать семь миллиардов"
+      );
+    });
+  });
+});

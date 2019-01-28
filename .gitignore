@@ -31,3 +31,5 @@ node_modules
 
 lcov
 .tern-port
+.DS_Store
+package-lock.json
