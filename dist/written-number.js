@@ -148,6 +148,59 @@ module.exports={
 }
 },{}],2:[function(require,module,exports){
 module.exports={
+    "useLongScale": false,
+    "baseSeparator": " ",
+    "unitSeparator": "",
+    "base": {
+      "0": "sıfır",
+      "1": "bir",
+      "2": "iki",
+      "3": "üç",
+      "4": "dörd",
+      "5": "beş",
+      "6": "altı",
+      "7": "yeddi",
+      "8": "səkkiz",
+      "9": "doqquz",
+      "10": "on",
+      "20": "iyirmi",
+      "30": "otuz",
+      "40": "qırx",
+      "50": "əlli",
+      "60": "altmış",
+      "70": "yetmiş",
+      "80": "səksən",
+      "90": "doxsan"
+    },
+    "units" : [
+      { 
+        "singular": "yüz",
+        "avoidPrefixException": [1]
+      },
+      { 
+        "singular": "min",
+        "avoidPrefixException": [1]
+      },
+      "milyon",
+      "milyard",
+      "trilyon",
+      "kvadrilyon",
+      "kentilyon",
+      "sekstilyon",
+      "septilyon",
+      "oktilyon",
+      "nonilyon",
+      "desilyon",
+      "andesilyon",
+      "dodesilyon",
+      "tredesilyon",
+      "katordesilyon",
+      "kendesilyon"
+    ],
+    "unitExceptions": []
+  }
+},{}],3:[function(require,module,exports){
+module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "and ",
@@ -189,7 +242,7 @@ module.exports={
   },
   "unitExceptions": []
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -245,7 +298,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -308,7 +361,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " y ",
@@ -452,7 +505,7 @@ module.exports={
   ]
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -587,7 +640,7 @@ module.exports={
   }
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": "",
@@ -713,7 +766,7 @@ module.exports={
   ]
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -767,7 +820,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": "",
@@ -892,7 +945,7 @@ module.exports={
     ]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " e ",
@@ -999,7 +1052,7 @@ module.exports={
   ]
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -1118,7 +1171,7 @@ module.exports={
   ]
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": " ",
@@ -1135,7 +1188,7 @@ module.exports={
         "8": "восемь",
         "9": "девять",
         "10": "десять",
-        "11": "одиннадцать",
+        "11": "одинадцать",
         "12": "двенадцать",
         "13": "тринадцать",
         "14": "четырнадцать",
@@ -1305,7 +1358,7 @@ module.exports={
     ],
     "unitExceptions": []
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1358,7 +1411,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1546,7 +1599,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1597,16 +1650,17 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "ar", "pt", "fr", "eo", "it", "vi", "tr", "uk", "ru", "id"];
+var languages = ["en", "es", "ar", "az", "pt", "fr", "eo", "it", "vi", "tr", "uk", "ru", "id"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
   ar: require("./i18n/ar.json"),
+  az: require("./i18n/az.json"),
   pt: require("./i18n/pt.json"),
   ptPT: require("./i18n/pt-PT.json"),
   fr: require("./i18n/fr.json"),
@@ -1822,7 +1876,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseC
   return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/ar.json":1,"./i18n/en-indian.json":2,"./i18n/en.json":3,"./i18n/eo.json":4,"./i18n/es.json":5,"./i18n/fr.json":6,"./i18n/hu.json":7,"./i18n/id.json":8,"./i18n/it.json":9,"./i18n/pt-PT.json":10,"./i18n/pt.json":11,"./i18n/ru.json":12,"./i18n/tr.json":13,"./i18n/uk.json":14,"./i18n/vi.json":15,"./util":17}],17:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/az.json":2,"./i18n/en-indian.json":3,"./i18n/en.json":4,"./i18n/eo.json":5,"./i18n/es.json":6,"./i18n/fr.json":7,"./i18n/hu.json":8,"./i18n/id.json":9,"./i18n/it.json":10,"./i18n/pt-PT.json":11,"./i18n/pt.json":12,"./i18n/ru.json":13,"./i18n/tr.json":14,"./i18n/uk.json":15,"./i18n/vi.json":16,"./util":18}],18:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1845,5 +1899,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[16])(16)
+},{}]},{},[17])(17)
 });

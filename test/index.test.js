@@ -618,6 +618,84 @@ describe("written-number", function () {
     });
   });
 
+  describe("writtenNumber(n, { lang: 'az', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "az";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("sıfır");
+      writtenNumber("0.8").should.equal("bir");
+      writtenNumber("2.8").should.equal("üç");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("sıfır");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(0).should.equal("sıfır");
+      writtenNumber(3).should.equal("üç");
+      writtenNumber(6).should.equal("altı");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("on üç");
+      writtenNumber(19).should.equal("on doqquz");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("iyirmi");
+      writtenNumber(25).should.equal("iyirmi beş");
+      writtenNumber(40).should.equal("qırx");
+      writtenNumber(88).should.equal("səksən səkkiz");
+      writtenNumber(73).should.equal("yetmiş üç");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(200).should.equal("iki yüz");
+      writtenNumber(242).should.equal("iki yüz qırx iki");
+      writtenNumber(1234).should.equal(
+        "min iki yüz otuz dörd"
+      );
+      writtenNumber(4323).should.equal(
+        "dörd min üç yüz iyirmi üç"
+      );
+    });
+
+    it("correctly converts numbers > 10000", function () {
+      writtenNumber(4323000).should.equal(
+        "dörd milyon üç yüz iyirmi üç min"
+      );
+      writtenNumber(4323055).should.equal(
+        "dörd milyon üç yüz iyirmi üç min əlli beş"
+      );
+      writtenNumber(1570025).should.equal(
+        "bir milyon beş yüz yetmiş min iyirmi beş"
+      );
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("bir milyard");
+      writtenNumber(2580000000).should.equal(
+        "iki milyard beş yüz səksən milyon"
+      );
+      writtenNumber(1000000000000).should.equal("bir trilyon");
+      writtenNumber(3627000000000).should.equal(
+        "üç trilyon altı yüz iyirmi yeddi milyard"
+      );
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'uk', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "uk";
