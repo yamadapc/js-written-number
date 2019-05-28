@@ -3,7 +3,6 @@ var should = require("should");
 var writtenNumber = require("..");
 
 describe("written-number", function () {
-
   describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "";
@@ -23,6 +22,16 @@ describe("written-number", function () {
     before(function () {
       writtenNumber.defaults.lang = "en";
     });
+
+    it('puts commas in all the right places', function () {
+      writtenNumber(1000).should.equal('one thousand')
+
+      writtenNumber(1201).should.equal('one thousand, two hundred and one')
+
+      writtenNumber(101001).should.equal('one hundred and one thousand and one')
+      writtenNumber(123456).should.equal('one hundred and twenty-three thousand, four hundred and fifty-six')
+      writtenNumber(1123456).should.equal('one million, one hundred and twenty-three thousand, four hundred and fifty-six')
+    })
 
     it("gets exposed", function () {
       should.exist(writtenNumber);
@@ -69,36 +78,49 @@ describe("written-number", function () {
 
     it("correctly converts numbers < 1000", function () {
       writtenNumber(200).should.equal("two hundred");
+      writtenNumber(101).should.equal("one hundred and one");
       writtenNumber(242).should.equal("two hundred and forty-two");
+
+    });
+
+    it("correctly converts numbers < 100000", function () {
       writtenNumber(1234).should.equal(
-        "one thousand two hundred and thirty-four"
+        "one thousand, two hundred and thirty-four"
       );
       writtenNumber(4323).should.equal(
-        "four thousand three hundred and twenty-three"
+        "four thousand, three hundred and twenty-three"
       );
-    });
+      writtenNumber(1000).should.equal("one thousand");
+    })
 
     it("correctly converts numbers > 1000", function () {
       writtenNumber(4323000).should.equal(
-        "four million three hundred twenty-three thousand"
+        "four million, three hundred and twenty-three thousand"
       );
       writtenNumber(4323055).should.equal(
-        "four million three hundred twenty-three thousand and fifty-five"
+        "four million, three hundred and twenty-three thousand and fifty-five"
       );
       writtenNumber(1570025).should.equal(
-        "one million five hundred seventy thousand and twenty-five"
+        "one million, five hundred and seventy thousand and twenty-five"
+      );
+      writtenNumber(100000).should.equal(
+        "one hundred thousand"
       );
     });
 
     it("correctly converts numbers > 1 000 000 000", function () {
       writtenNumber(1000000000).should.equal("one billion");
       writtenNumber(2580000000).should.equal(
-        "two billion five hundred eighty million"
+        "two billion, five hundred and eighty million"
       );
       writtenNumber(1000000000000).should.equal("one trillion");
       writtenNumber(3627000000000).should.equal(
-        "three trillion six hundred twenty-seven billion"
+        "three trillion, six hundred and twenty-seven billion"
       );
+    });
+
+    it("correctly converts 'x hundred and y' cases when they qualify a larger unit - 120000", function () {
+      writtenNumber(120000).should.equal("one hundred and twenty thousand");
     });
   });
 
