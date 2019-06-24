@@ -68,9 +68,9 @@ Currently supported languages are:
 ## Contributing
 
 ### Configure your own language
-Each language has its own unique grammar exceptions.  You can create your own 
-language.json file in the folder "i18n" and give writtenNumber support for it. I 
-don't think the current scheme and logic cover all the cases, but may be cover 
+Each language has its own unique grammar exceptions.  You can create your own
+language.json file in the folder "i18n" and give writtenNumber support for it. I
+don't think the current scheme and logic cover all the cases, but may be cover
 some.
 
 The following parameters have been used for the currently available languages:
@@ -88,6 +88,7 @@ The following parameters have been used for the currently available languages:
 | `alternativeBase` | Object  | Alternative versions of base cardinals numbers for usage with specific units.  These bases will be treated as an extension for the default `base`. | ``` "alternativeBase": {   "feminine": {"1":"одна","2":"дві"} } ```                                                                                                          |
 | `units`           | Array   | A list of number units (string or Object). Gives support to singular, dual an plural units. Check the Object parameters below.                                                |                                                                                                                                                                              |
 | `unitExceptions`  | Object  | Sometimes grammar exceptions affect the base cardinal joined to the unit. You can set specific exceptions to any base cardinal number.             | Converting 1232000 in Spanish:  Without Exception (Wrong):  -> **uno** millón doscientos treinta y dos mil  With Exception:  -> **un** millón doscientos treinta y dos mil   |
+| `cardinalExceptions`  | Object  | For setting exceptions for when individual cardinals are written differently on their own, as compared with how they are written when quantifying units             | 1 => *eins*, 100 => *ein*tausend   |
 
 ### Units parameters
 

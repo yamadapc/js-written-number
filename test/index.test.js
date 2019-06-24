@@ -926,4 +926,61 @@ describe("written-number", function () {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'de', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "de";
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(1).should.equal("eins");
+      writtenNumber(3).should.equal("drei");
+      writtenNumber(8).should.equal("acht");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("dreizehn");
+      writtenNumber(19).should.equal("neunzehn");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("zwanzig");
+      writtenNumber(25).should.equal("fünfundzwanzig");
+      writtenNumber(88).should.equal("achtundachtzig");
+      writtenNumber(73).should.equal("dreiundsiebzig");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(200).should.equal("zweihundert");
+      writtenNumber(242).should.equal("zweihundertzweiundvierzig");
+      writtenNumber(1000).should.equal(
+        "eintausend"
+      );
+      writtenNumber(1234).should.equal(
+        "eintausendzweihundertvierunddreißig"
+      );
+      writtenNumber(4323).should.equal(
+        "viertausenddreihundertdreiundzwanzig"
+      );
+    });
+
+    it("correctly converts numbers > 1000", function () {
+      writtenNumber(4323000).should.equal("vier Millionen dreihundertdreiundzwanzigtausend");
+      writtenNumber(4323055).should.equal(
+        "vier Millionen dreihundertdreiundzwanzigtausendfünfundfünfzig"
+      );
+    });
+
+    // TODO
+    it("correctly converts numbers > 1 000 000 000", function () {
+        writtenNumber(1 * 10 ** 9).should.equal("ein Milliarde");
+        writtenNumber(1000000020).should.equal("ein Milliarde zwanzig");
+
+        writtenNumber(1 * 10 ** 12).should.equal("ein Billion");
+        writtenNumber(1 * 10 ** 15).should.equal("ein Billiarde");
+        writtenNumber(1 * 10 ** 18).should.equal("ein Trillion");
+        writtenNumber(1 * 10 ** 21).should.equal("ein Trilliarde");
+
+      });
+  });
 });
