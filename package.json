@@ -1,9 +1,12 @@
 {
   "name": "written-number",
-  "version": "0.11.0",
+  "version": "1.0.1-beta",
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {
+    "build": "webpack --display-error-details",
+    "lint": "eslint ./",
+    "lint:fix": "npm run lint -- --fix",
     "test": " mocha --require blanket -R mocha-spec-cov-alt"
   },
   "keywords": [
@@ -24,7 +27,11 @@
     "url": "https://github.com/yamadapc/js-written-number"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "blanket": "1.1.7",
+    "clean-webpack-plugin": "^3.0.0",
     "grunt": "^1.0.3",
     "grunt-browserify": "^5.3.0",
     "grunt-cli": "^1.2.0",
@@ -33,7 +40,9 @@
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
-    "should": "^11.2.1"
+    "should": "^11.2.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   },
   "config": {
     "blanket": {
