@@ -5,6 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack --display-error-details",
+    "preinstall:demo": "npm run build",
+    "install:demo": "cd demo && npm i",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
     "test": "nyc mocha --compilers js:@babel/register -R mocha-spec-cov-alt"
@@ -34,6 +36,7 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
