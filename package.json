@@ -7,7 +7,7 @@
     "build": "webpack --display-error-details",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
-    "test": " mocha --compilers js:@babel/register -g 'written-number2' -R mocha-spec-cov-alt"
+    "test": " mocha --compilers js:@babel/register -R mocha-spec-cov-alt"
   },
   "keywords": [
     "written",
@@ -30,14 +30,13 @@
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
-    "blanket": "1.1.7",
     "clean-webpack-plugin": "^3.0.0",
-    "grunt": "^1.0.3",
-    "grunt-browserify": "^5.3.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-uglify": "^2.3.0",
+    "eslint": "^6.0.1",
+    "@babel/register": "^7.5.5",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
@@ -59,8 +58,5 @@
         "lcovOutput": "lcov"
       }
     }
-  },
-  "dependencies": {
-    "@babel/register": "^7.5.5"
   }
 }
