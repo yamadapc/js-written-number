@@ -17,14 +17,29 @@ import {
 } from '../lib/i18n';
 
 describe('written-number', () => {
-  describe('writtenNumber exceptions)', () => {
-    it("throw an error if user didn't pass a language", () => {
+  describe('writtenNumber initialization and setOptions', () => {
+    it("throw an error if user didn't pass a language in constructor", () => {
       (() => new WrittenNumber()).should.throw('WrittenNumber: you need to pass your language object');
     });
 
     it("throw an error if user didn't pass new options for setOptions", () => {
       const Converter = new WrittenNumber({ language: En });
       (() => Converter.setOptions()).should.throw('WrittenNumber: you need to pass options of you want to change it');
+    });
+
+    it("setOptions: if user passed options change it in class", () => {
+      const Converter = new WrittenNumber({ language: En });
+        should.deepEqual(Converter.options, {
+            noAnd: false,
+            alternativeBase: null,
+            language: En,
+        });
+        Converter.setOptions({language: Es, noAnd: true, });
+        should.deepEqual(Converter.options, {
+            language: Es,
+            noAnd: true,
+            alternativeBase: null
+        });
     });
   });
 
