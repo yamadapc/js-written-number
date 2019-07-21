@@ -1,13 +1,7 @@
-"use strict" /* global describe, it */;
-var {mergeFields} = require("../lib/util");
-var should = require("should");
+import {mergeFields} from '../lib/utils';
 
-describe("util", function() {
-  describe(".defaults(target, defaults)", function() {
-    it("gets exposed", function() {
-      should.exist(mergeFields);
-    });
-
+describe("utils", function() {
+  describe(".mergeFields(target, defaults)", function() {
     it("extends into the empty object", function() {
       mergeFields({}, { something: "here" })
         .should.eql({ something: "here" });
