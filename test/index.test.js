@@ -36,9 +36,9 @@ describe('written-number', () => {
         });
         Converter.setOptions({language: Es, noAnd: true, });
         should.deepEqual(Converter.options, {
+            alternativeBase: null,
             language: Es,
             noAnd: true,
-            alternativeBase: null
         });
     });
   });
