@@ -3,7 +3,7 @@
   "description": "Convert numbers to words - their written form",
   "homepage": "https://yamadapc.github.io/js-written-number",
   "main": "./dist/written-number.js",
-  "version": "0.11.0",
+  "version": "1.0.1-beta",
   "keywords": [
     "numbers",
     "words",
