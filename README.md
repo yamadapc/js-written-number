@@ -27,7 +27,7 @@ import {WrittenNumber} from 'written-number';
 import {
     EN, 
     Es
- } from 'written-number/lang';
+ } from 'written-number/i18n';
 
 const Converter = new WrittenNumber({language: EN});
 Converter.convert(1234); // => 'one thousand two hundred and thirty-four'
@@ -40,7 +40,7 @@ Converter.convert(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 - `noAnd` - Defaults to `false`. Determines whether to use a separator. The
   separator is internationalized.
 - `language` - Could be `object`. No default values provided, you need 
-to pass one of languages from 'written-number/lang' or define your own language file.
+to pass one of languages from 'written-number/i18n' or define your own language file.
 
 Currently supported languages are:
 
