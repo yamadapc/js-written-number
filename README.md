@@ -23,48 +23,43 @@ bower install written-number
 
 ## Usage
 ```javascript
-var writtenNumber = require('written-number');
-writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
+import {WrittenNumber} from 'written-number';
+import {
+    EN, 
+    Es
+ } from 'written-number/i18n';
 
-writtenNumber.defaults.lang = 'es';
-writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
+const Converter = new WrittenNumber({language: EN});
+Converter.convert(1234); // => 'one thousand two hundred and thirty-four'
 
-writtenNumber(1234, {lang: 'fr'});   // => 'mille deux cent trente-quatre'
-writtenNumber(1234, {lang: 'es'});   // => 'mil doscientos treinta y cuatro'
-writtenNumber(1234, {lang: 'az'});   // => 'min iki yüz otuz dörd'
-writtenNumber(1234, {lang: 'pt'});   // => 'mil duzentos e trinta e quatro'
-writtenNumber(1234, {lang: 'ar'});   // => 'ألف ومائتان وأربعة وثلاثون'
-writtenNumber(1234, {lang: 'eo'});   // => 'mil ducent tridek kvar'
-writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi bốn'
-writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
-writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
+Converter.setOptions({language: Es});
+Converter.convert(4758); // => 'cuatro mil setecientos cincuenta y ocho'
 ```
 
 ## Options
 - `noAnd` - Defaults to `false`. Determines whether to use a separator. The
   separator is internationalized.
-- `lang` - Could be `string` or `object`. Defaults to `'en'`. Determines which
-  language to use. An i18n configuration object may be passed to support
-  external language definitions.
+- `language` - Could be `object`. No default values provided, you need 
+to pass one of languages from 'written-number/i18n' or define your own language file.
 
 Currently supported languages are:
 
 | Language | `lang` |
 |---------|--------|
-| English | `en` |
-| Portuguese (Brazil) | `pt` |
-| Portuguese (Portugal) | `ptPT` |
-| Spanish | `es` |
-| French | `fr` |
-| Esperanto | `eo` |
-| Vietnamese | `vi` |
-| Arabic | `ar` |
-| Azerbaijan | `az` |
-| Turkish | `tr` |
-| English (Indian) | `enIndian` |
-| Ukrainian | `uk` |
-| Indonesian | `id` |
-| Russian | `ru` |
+| English | `En` |
+| Portuguese (Brazil) | `Pt` |
+| Portuguese (Portugal) | `PtPT` |
+| Spanish | `Es` |
+| French | `Fr` |
+| Esperanto | `Eo` |
+| Vietnamese | `Vi` |
+| Arabic | `Ar` |
+| Azerbaijan | `Az` |
+| Turkish | `Tr` |
+| English (Indian) | `EnIndian` |
+| Ukrainian | `Uk` |
+| Indonesian | `Id` |
+| Russian | `Ru` |
 
 
 ## Contributing

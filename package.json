@@ -1,10 +1,13 @@
 {
   "name": "written-number",
-  "version": "0.11.0",
+  "version": "1.0.1-beta",
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {
-    "test": " mocha --require blanket -R mocha-spec-cov-alt"
+    "build": "webpack --display-error-details",
+    "lint": "eslint ./",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "nyc mocha --compilers js:@babel/register -R mocha-spec-cov-alt"
   },
   "keywords": [
     "written",
@@ -24,30 +27,23 @@
     "url": "https://github.com/yamadapc/js-written-number"
   },
   "devDependencies": {
-    "blanket": "1.1.7",
-    "grunt": "^1.0.3",
-    "grunt-browserify": "^5.3.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-uglify": "^2.3.0",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
-    "should": "^11.2.1"
-  },
-  "config": {
-    "blanket": {
-      "data-cover-never": [
-        "node_modules"
-      ],
-      "pattern": [
-        "lib"
-      ],
-      "spec-cov": {
-        "threshold": 80,
-        "localThreshold": 80,
-        "lcovOutput": "lcov"
-      }
-    }
+    "nyc": "^14.1.1",
+    "should": "^11.2.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   }
 }
