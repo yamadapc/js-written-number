@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const pkg = require('./package.json');
 
@@ -10,7 +11,6 @@ module.exports = (options = {}) => ({
   mode: 'development',
   entry: {
     index: path.resolve(libPath, 'index.js'),
-    lang: path.resolve(libPath, 'i18n/index.js'),
   },
   target: 'web',
   output: {
@@ -34,5 +34,8 @@ module.exports = (options = {}) => ({
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin([
+      { from: path.resolve(libPath, 'i18n'), to: 'i18n' },
+    ]),
   ],
 });
