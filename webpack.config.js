@@ -8,13 +8,14 @@ const distPath = path.resolve(__dirname, 'dist');
 
 module.exports = (options = {}) => ({
   mode: 'development',
-  entry: [
-    path.resolve(libPath, 'index.js'),
-  ],
+  entry: {
+    index: path.resolve(libPath, 'index.js'),
+    lang: path.resolve(libPath, 'i18n/index.js'),
+  },
   target: 'web',
   output: {
     path: options.outputPath || distPath,
-    filename: 'index.js',
+    filename: '[name].js',
     libraryTarget: 'commonjs2',
     library: pkg.name,
   },
