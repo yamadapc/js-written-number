@@ -7,7 +7,7 @@
     "build": "webpack --display-error-details",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
-    "test": " mocha --compilers js:@babel/register -R mocha-spec-cov-alt"
+    "test": " mocha --compilers js:@babel/register -g 'written-number2' -R mocha-spec-cov-alt"
   },
   "keywords": [
     "written",
