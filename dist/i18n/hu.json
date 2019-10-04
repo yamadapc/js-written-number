@@ -1,0 +1,124 @@
+{
+  "useLongScale": true,
+  "baseSeparator": "",
+  "unitSeparator": "és ",
+  "base": {
+    "0": "nulla",
+    "1": "egy",
+    "2": "kettő",
+    "3": "három",
+    "4": "négy",
+    "5": "öt",
+    "6": "hat",
+    "7": "hét",
+    "8": "nyolc",
+    "9": "kilenc",
+    "10": "tíz",
+    "11": "tizenegy",
+    "12": "tizenkettő",
+    "13": "tizenhárom",
+    "14": "tizennégy",
+    "15": "tizenöt",
+    "16": "tizenhat",
+    "17": "tizenhét",
+    "18": "tizennyolc",
+    "19": "tizenkilenc",
+    "20": "húsz",
+    "21": "huszonegy",
+    "22": "huszonkettő",
+    "23": "huszonhárom",
+    "24": "huszonnégy",
+    "25": "huszonöt",
+    "26": "huszonhat",
+    "27": "huszonhét",
+    "28": "huszonnyolc",
+    "29": "huszonkilenc",
+    "30": "harminc",
+    "40": "negyven",
+    "50": "ötven",
+    "60": "hatvan",
+    "70": "hetven",
+    "80": "nyolcvan",
+    "90": "kilencven",
+    "100": "száz",
+    "200": "kétszáz",
+    "300": "háromszáz",
+    "400": "négyszáz",
+    "500": "ötszáz",
+    "600": "hatszáz",
+    "700": "hétszáz",
+    "800": "nyolcszáz",
+    "900": "kilencszáz",
+    "1000": "ezer"
+  },
+  "unitExceptions": {
+    "1": "egy"
+  },
+  "units" : [
+    {
+      "singular": "száz",
+      "useBaseInstead": true,
+      "useBaseException": [1]
+    },
+    {
+      "singular": "ezer",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "millió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "milliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "-billió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "billiárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "trillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "trilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvadrillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvadrilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvintillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "kvintilliárd",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "szextillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "szeptillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "oktillió",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "nonillió",
+      "avoidPrefixException": [1]
+    }
+  ]
+}

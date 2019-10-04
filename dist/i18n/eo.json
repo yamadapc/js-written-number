@@ -1,0 +1,61 @@
+{
+  "useLongScale": false,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "0": "nulo",
+    "1": "unu",
+    "2": "du",
+    "3": "tri",
+    "4": "kvar",
+    "5": "kvin",
+    "6": "ses",
+    "7": "sep",
+    "8": "ok",
+    "9": "naŭ",
+    "10": "dek",
+    "20": "dudek",
+    "30": "tridek",
+    "40": "kvardek",
+    "50": "kvindek",
+    "60": "sesdek",
+    "70": "sepdek",
+    "80": "okdek",
+    "90": "naŭdek",
+    "100": "cent",
+    "200": "ducent",
+    "300": "tricent",
+    "400": "kvarcent",
+    "500": "kvincent",
+    "600": "sescent",
+    "700": "sepcent",
+    "800": "okcent",
+    "900": "naŭcent"
+  },
+  "units" : [
+    {
+      "useBaseInstead": true,
+      "useBaseException": []
+    },
+    {
+      "singular": "mil",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "miliono",
+      "plural": "milionoj",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "miliardo",
+      "plural": "miliardoj",
+      "avoidPrefixException": [1]
+    },
+    {
+      "singular": "biliono",
+      "plural": "bilionoj",
+      "avoidPrefixException": [1]
+    }
+  ],
+  "unitExceptions": []
+}
