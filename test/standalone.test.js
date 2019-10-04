@@ -17,13 +17,13 @@ describe("written-number.standalone", function() {
     });
 
     it("throws an error with invalid or no lang object", function() {
-      should.throws(() => {
+      should.throws(function() {
         writtenNumber(1, { lang: "zzz" });
       }, TypeError);
-      should.throws(() => {
+      should.throws(function() {
         writtenNumber(1);
       }, TypeError);
-      should.throws(() => {
+      should.throws(function() {
         writtenNumber(1, { lang: { wrong: "stuff" } });
       }, TypeError);
     });
