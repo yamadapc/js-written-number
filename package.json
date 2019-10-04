@@ -1,9 +1,11 @@
 {
   "name": "written-number",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack && NODE_ENV=production webpack && webpack --config=webpack.config.standalone.js && NODE_ENV=production webpack --config=webpack.config.standalone.js ",
     "test": " mocha --require blanket -R mocha-spec-cov-alt"
   },
   "keywords": [
@@ -25,15 +27,16 @@
   },
   "devDependencies": {
     "blanket": "1.1.7",
-    "grunt": "^1.0.3",
-    "grunt-browserify": "^5.3.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-uglify": "^2.3.0",
+    "copy-webpack-plugin": "5.0.4",
+    "cross-env": "6.0.3",
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
-    "should": "^11.2.1"
+    "prettier": "1.18.2",
+    "rimraf": "3.0.0",
+    "should": "^11.2.1",
+    "webpack": "4.41.0",
+    "webpack-cli": "3.3.9"
   },
   "config": {
     "blanket": {

@@ -39,6 +39,17 @@ writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi 
 writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
 writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
 ```
+### Standalone version
+If you don't want the overhead of including all the locales.
+```javascript
+var writtenNumber = require('lib/written-number.standalone');
+var en = require('lib/i18n/en');
+writtenNumber(1234, {lang: en}); // => 'one thousand two hundred and thirty-four'
+
+var es = require('lib/i18n/es');
+writtenNumber.defaults.lang = es;
+writtenNumber(4758); // => 'cuatro mil setecientos cincuenta y ocho'
+```
 
 ## Options
 - `noAnd` - Defaults to `false`. Determines whether to use a separator. The
