@@ -109,6 +109,11 @@
   "cardinalExceptions": {
     "1": "eins"
   },
+  "alternativeBase": {
+      "feminine": {
+          "1": "eine"
+      }
+  },
   "units" : [
     {
       "singular": "hundert"
@@ -119,76 +124,91 @@
     {
       "singular": "Million",
       "plural": "Millionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Milliarde",
       "plural": "Milliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Billion",
       "plural": "Billionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Billiarde",
       "plural": "Billiarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Trillion",
       "plural": "Trillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Trilliarde",
       "plural": "Trilliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Quadrillion",
       "plural": "Quadrillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Quadrilliarde",
       "plural": "Quadrilliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Quintillion",
       "plural": "Quintillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Quintilliarde",
       "plural": "Quintilliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Sextillion",
       "plural": "Sextillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Sextilliarde",
       "plural": "Sextilliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Septillion",
       "plural": "Septillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Septilliarde",
       "plural": "Septilliarden",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     },
     {
       "singular": "Octillion",
       "plural": "Octillionen",
+      "useAlternativeBase": "feminine",
       "spaceException": true
     }
   ]

@@ -30,7 +30,7 @@
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-uglify": "^2.3.0",
-    "mocha": "^3.5.3",
+    "mocha": "^6.2.2",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^1.10.0",
     "should": "^11.2.1"

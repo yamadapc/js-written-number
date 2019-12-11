@@ -951,6 +951,7 @@ describe("written-number", function () {
     });
 
     it("correctly converts numbers < 1000", function () {
+      writtenNumber(100).should.equal("einhundert");
       writtenNumber(200).should.equal("zweihundert");
       writtenNumber(242).should.equal("zweihundertzweiundvierzig");
       writtenNumber(1000).should.equal(
@@ -973,13 +974,13 @@ describe("written-number", function () {
 
     // TODO
     it("correctly converts numbers > 1 000 000 000", function () {
-        writtenNumber(1 * 10 ** 9).should.equal("ein Milliarde");
-        writtenNumber(1000000020).should.equal("ein Milliarde zwanzig");
+        writtenNumber(1 * 10 ** 9).should.equal("eine Milliarde");
+        writtenNumber(1000000020).should.equal("eine Milliarde zwanzig");
 
-        writtenNumber(1 * 10 ** 12).should.equal("ein Billion");
-        writtenNumber(1 * 10 ** 15).should.equal("ein Billiarde");
-        writtenNumber(1 * 10 ** 18).should.equal("ein Trillion");
-        writtenNumber(1 * 10 ** 21).should.equal("ein Trilliarde");
+        writtenNumber(1 * 10 ** 12).should.equal("eine Billion");
+        writtenNumber(1 * 10 ** 15).should.equal("eine Billiarde");
+        writtenNumber(1 * 10 ** 18).should.equal("eine Trillion");
+        writtenNumber(1 * 10 ** 21).should.equal("eine Trilliarde");
 
       });
   });
