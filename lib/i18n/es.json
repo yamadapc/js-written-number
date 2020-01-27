@@ -2,6 +2,7 @@
   "useLongScale": true,
   "baseSeparator": " y ",
   "unitSeparator": "",
+  "decimalSeparator": "coma ",
   "base": {
     "0": "cero",
     "1": "uno",
@@ -68,15 +69,19 @@
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un cuatordecillón",
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un quindecillón"
   },
-  "units" : [
+  "units": [
     {
       "singular": "ciento",
       "useBaseInstead": true,
-      "useBaseException": [1]
+      "useBaseException": [
+        1
+      ]
     },
     {
       "singular": "mil",
-      "avoidPrefixException": [1]
+      "avoidPrefixException": [
+        1
+      ]
     },
     {
       "singular": "millón",

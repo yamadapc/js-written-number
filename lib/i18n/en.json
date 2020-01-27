@@ -2,6 +2,7 @@
   "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "and ",
+  "decimalSeparator": "comma ",
   "base": {
     "0": "zero",
     "1": "one",
@@ -32,7 +33,7 @@
     "80": "eighty",
     "90": "ninety"
   },
-  "units" : [
+  "units": [
     "hundred",
     "thousand",
     "million",

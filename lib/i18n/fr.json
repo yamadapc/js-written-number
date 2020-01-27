@@ -2,6 +2,7 @@
   "useLongScale": false,
   "baseSeparator": "-",
   "unitSeparator": "",
+  "decimalSeparator": "virgule ",
   "base": {
     "0": "zéro",
     "1": "un",
@@ -32,16 +33,20 @@
     "80": "quatre-vingt",
     "90": "quatre-vingt-dix"
   },
-  "units" : [
+  "units": [
     {
       "singular": "cent",
       "plural": "cents",
       "avoidInNumberPlural": true,
-      "avoidPrefixException": [1]
+      "avoidPrefixException": [
+        1
+      ]
     },
     {
       "singular": "mille",
-      "avoidPrefixException": [1]
+      "avoidPrefixException": [
+        1
+      ]
     },
     {
       "singular": "million",
