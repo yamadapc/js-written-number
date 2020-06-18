@@ -32,7 +32,7 @@
     "grunt-contrib-uglify": "^2.3.0",
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
-    "mversion": "^1.10.0",
+    "mversion": "^2.0.0",
     "should": "^11.2.1"
   },
   "config": {
