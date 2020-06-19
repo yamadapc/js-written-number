@@ -1,11 +1,11 @@
-"use strict" /* global describe, it, before */;
+"use strict" /* global describe, it, beforeEach */;
 var should = require("should");
 var writtenNumber = require("..");
 
 describe("written-number", function () {
 
   describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "";
     });
 
@@ -20,7 +20,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'en', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "en";
     });
 
@@ -103,7 +103,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'es', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "es";
     });
 
@@ -164,7 +164,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'pt', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "pt";
     });
 
@@ -247,7 +247,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ptPT', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ptPT";
     });
 
@@ -330,7 +330,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'fr', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "fr";
     });
 
@@ -398,7 +398,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'it', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "it";
     });
 
@@ -465,7 +465,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'enIndian', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "enIndian";
     });
 
@@ -541,7 +541,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'tr', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "tr";
     });
 
@@ -619,7 +619,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'az', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "az";
     });
 
@@ -697,7 +697,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'uk', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "uk";
     });
 
@@ -774,7 +774,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ar', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ar";
     });
 
@@ -844,7 +844,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'id', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "id";
     });
 
@@ -901,7 +901,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ru', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ru";
     });
 

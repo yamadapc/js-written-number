@@ -4,7 +4,7 @@
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {
-    "test": " mocha --require blanket -R mocha-spec-cov-alt"
+    "test": "jest --coverage"
   },
   "keywords": [
     "written",
@@ -30,6 +30,7 @@
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-uglify": "^2.3.0",
+    "jest": "^26.0.1",
     "mocha": "^3.5.3",
     "mocha-spec-cov-alt": "^1.1.1",
     "mversion": "^2.0.0",
@@ -47,6 +48,16 @@
         "threshold": 80,
         "localThreshold": 80,
         "lcovOutput": "lcov"
+      }
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
       }
     }
   }
