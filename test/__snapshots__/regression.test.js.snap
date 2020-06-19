@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Regression tests ar has not changed from previous versions 1`] = `"924a51d6c4603332e8d61a1c75871324"`;
+
+exports[`Regression tests ar has not changed from previous versions lower to 1k 1`] = `"52412f0236f530be5e0d9f052cd10f77"`;
+
+exports[`Regression tests ar has not changed from previous versions lower to 10 1`] = `"4fbc9dde6b0382b3fc31aec150922e54"`;
+
+exports[`Regression tests ar has not changed from previous versions lower to 10k 1`] = `"4c192782e3892a130406309401e27fea"`;
+
+exports[`Regression tests ar has not changed from previous versions lower to 100 1`] = `"7e0e22aefc7890ac6be74e5588066716"`;
+
+exports[`Regression tests ar has not changed from previous versions lower to 100k 1`] = `"90ba0d552f9e2fbce3be6fb9c3c32f89"`;
+
+exports[`Regression tests az has not changed from previous versions 1`] = `"057d65e65ded54a1437192789ed58d44"`;
+
+exports[`Regression tests az has not changed from previous versions lower to 1k 1`] = `"7c6becd66a5afd2f58318f1df87ccd39"`;
+
+exports[`Regression tests az has not changed from previous versions lower to 10 1`] = `"62785e8f03532c454e97b86d966aa3a0"`;
+
+exports[`Regression tests az has not changed from previous versions lower to 10k 1`] = `"5579260e110c4683410475bca237c257"`;
+
+exports[`Regression tests az has not changed from previous versions lower to 100 1`] = `"daaa2237a342885b97db91bbb5480e2f"`;
+
+exports[`Regression tests az has not changed from previous versions lower to 100k 1`] = `"55ae51ed89ce785230adb1878fe25e61"`;
+
+exports[`Regression tests en has not changed from previous versions 1`] = `"5ccb3a57ba12a313e52f77f42987cb52"`;
+
+exports[`Regression tests en has not changed from previous versions lower to 1k 1`] = `"7bb87f3b1e812541ebecc045a16ffa92"`;
+
+exports[`Regression tests en has not changed from previous versions lower to 10 1`] = `"04ad6442af02b7007612f65b12fda2ce"`;
+
+exports[`Regression tests en has not changed from previous versions lower to 10k 1`] = `"5a8eba028083f80447c0b1eac1be908a"`;
+
+exports[`Regression tests en has not changed from previous versions lower to 100 1`] = `"a6d1ec27c528112b64929b22d6c84237"`;
+
+exports[`Regression tests en has not changed from previous versions lower to 100k 1`] = `"303ff93e344df72dcb8e3a4f6a9c69c8"`;
+
+exports[`Regression tests enIndian has not changed from previous versions 1`] = `"38dba55a8919c77d7c2a4a847b645900"`;
+
+exports[`Regression tests enIndian has not changed from previous versions lower to 1k 1`] = `"7bb87f3b1e812541ebecc045a16ffa92"`;
+
+exports[`Regression tests enIndian has not changed from previous versions lower to 10 1`] = `"04ad6442af02b7007612f65b12fda2ce"`;
+
+exports[`Regression tests enIndian has not changed from previous versions lower to 10k 1`] = `"5a8eba028083f80447c0b1eac1be908a"`;
+
+exports[`Regression tests enIndian has not changed from previous versions lower to 100 1`] = `"a6d1ec27c528112b64929b22d6c84237"`;
+
+exports[`Regression tests enIndian has not changed from previous versions lower to 100k 1`] = `"303ff93e344df72dcb8e3a4f6a9c69c8"`;
+
+exports[`Regression tests eo has not changed from previous versions 1`] = `"d7b53525bfeeaec8cc3b57dd80e5d3a5"`;
+
+exports[`Regression tests eo has not changed from previous versions lower to 1k 1`] = `"6d47e087431cf1b7b0729e7ffa50be90"`;
+
+exports[`Regression tests eo has not changed from previous versions lower to 10 1`] = `"1f8035609b915ae705c21a583e2b8524"`;
+
+exports[`Regression tests eo has not changed from previous versions lower to 10k 1`] = `"fcb39b0f68b725c25e469f51f8b634b7"`;
+
+exports[`Regression tests eo has not changed from previous versions lower to 100 1`] = `"4c4b42bdc54ad3a9c1c2d3843dd962b3"`;
+
+exports[`Regression tests eo has not changed from previous versions lower to 100k 1`] = `"e3ad8bdccd6a240879befee7900f1482"`;
+
+exports[`Regression tests es has not changed from previous versions 1`] = `"a2364f4b3c5a037cc31a6b3da5bb2e40"`;
+
+exports[`Regression tests es has not changed from previous versions lower to 1k 1`] = `"b3346b1bf121308d2389cf01ba371340"`;
+
+exports[`Regression tests es has not changed from previous versions lower to 10 1`] = `"3b571888fd1af502476c24b33fa01628"`;
+
+exports[`Regression tests es has not changed from previous versions lower to 10k 1`] = `"c32d98c7014e3870147c4b2aab376889"`;
+
+exports[`Regression tests es has not changed from previous versions lower to 100 1`] = `"0b08df0dfb4262007ee2a0708b20435e"`;
+
+exports[`Regression tests es has not changed from previous versions lower to 100k 1`] = `"14715f954af94dec38c35f615163d833"`;
+
+exports[`Regression tests fr has not changed from previous versions 1`] = `"bc3559fc92f3a8e63fcebe98cb76f66b"`;
+
+exports[`Regression tests fr has not changed from previous versions lower to 1k 1`] = `"59dc725d413c55f0b18de0a69aa96a9d"`;
+
+exports[`Regression tests fr has not changed from previous versions lower to 10 1`] = `"0568f1601007bcc526d2b29dec223260"`;
+
+exports[`Regression tests fr has not changed from previous versions lower to 10k 1`] = `"eed00954305a1845e6eb94c638799507"`;
+
+exports[`Regression tests fr has not changed from previous versions lower to 100 1`] = `"c0bf57a4390089a5579863021f7c7ed1"`;
+
+exports[`Regression tests fr has not changed from previous versions lower to 100k 1`] = `"f9254ee09e8cb003f830e973b8bf4677"`;
+
+exports[`Regression tests hu has not changed from previous versions 1`] = `"ea75531296184eacef0f72a016ba63ef"`;
+
+exports[`Regression tests hu has not changed from previous versions lower to 1k 1`] = `"e10e4415110fb397e745d1364bb72971"`;
+
+exports[`Regression tests hu has not changed from previous versions lower to 10 1`] = `"3d100fa7bd2199895d6f8f5ec3e72cc9"`;
+
+exports[`Regression tests hu has not changed from previous versions lower to 10k 1`] = `"b00d7cef4ec3e0766aa805060fcac80b"`;
+
+exports[`Regression tests hu has not changed from previous versions lower to 100 1`] = `"6ae7e49c7faa63e68da68c04dbc4be62"`;
+
+exports[`Regression tests hu has not changed from previous versions lower to 100k 1`] = `"2fc23db52ef9b1e16ef895c8f6aa9e51"`;
+
+exports[`Regression tests id has not changed from previous versions 1`] = `"66535dbb24eaa627ddfe3dad6e9c8a00"`;
+
+exports[`Regression tests id has not changed from previous versions lower to 1k 1`] = `"b5f7861f1fbc70cc94b5108d4d992cc3"`;
+
+exports[`Regression tests id has not changed from previous versions lower to 10 1`] = `"8d7b36e21d1092c613d523e0f0ad8d87"`;
+
+exports[`Regression tests id has not changed from previous versions lower to 10k 1`] = `"d03c0a79ea60a26b6e1a63a788d3d4c1"`;
+
+exports[`Regression tests id has not changed from previous versions lower to 100 1`] = `"d1613fde644cf17fc216314106c0bc9a"`;
+
+exports[`Regression tests id has not changed from previous versions lower to 100k 1`] = `"f871062dedf4e77f6aee879df12b43f4"`;
+
+exports[`Regression tests it has not changed from previous versions 1`] = `"1206492775045ef2c787405f800f703b"`;
+
+exports[`Regression tests it has not changed from previous versions lower to 1k 1`] = `"6896d8368c1c8fa13193492c0afa7ee4"`;
+
+exports[`Regression tests it has not changed from previous versions lower to 10 1`] = `"74971e66d22df2e6b9d8788b3058218c"`;
+
+exports[`Regression tests it has not changed from previous versions lower to 10k 1`] = `"d70cf3bfe2d12ceddcdc357e8bf5529e"`;
+
+exports[`Regression tests it has not changed from previous versions lower to 100 1`] = `"22b43d524e994f32f46e64d02675e16a"`;
+
+exports[`Regression tests it has not changed from previous versions lower to 100k 1`] = `"21fe4e06390022fb26453da17f03f070"`;
+
+exports[`Regression tests pt has not changed from previous versions 1`] = `"0c1b5d098e24e9b659b4bc40bfe711d7"`;
+
+exports[`Regression tests pt has not changed from previous versions lower to 1k 1`] = `"f62197c91970a3c3211992b6bd3b0ad3"`;
+
+exports[`Regression tests pt has not changed from previous versions lower to 10 1`] = `"ad9f1c88b4f639b563544a7e3ea2b020"`;
+
+exports[`Regression tests pt has not changed from previous versions lower to 10k 1`] = `"eaaf0108a4d4862f04f88d723d8f56b9"`;
+
+exports[`Regression tests pt has not changed from previous versions lower to 100 1`] = `"8b2089a0ca25cb7e341851d501985986"`;
+
+exports[`Regression tests pt has not changed from previous versions lower to 100k 1`] = `"b24409faeb1b1df1a57e9e4a30209fce"`;
+
+exports[`Regression tests ptPT has not changed from previous versions 1`] = `"181f3852134a122367ee846e7fdd1e6f"`;
+
+exports[`Regression tests ptPT has not changed from previous versions lower to 1k 1`] = `"cb124ec6491b66093195a416c1d9392d"`;
+
+exports[`Regression tests ptPT has not changed from previous versions lower to 10 1`] = `"ad9f1c88b4f639b563544a7e3ea2b020"`;
+
+exports[`Regression tests ptPT has not changed from previous versions lower to 10k 1`] = `"f0f978b3c681b5565df6ee9e3c7f30ca"`;
+
+exports[`Regression tests ptPT has not changed from previous versions lower to 100 1`] = `"61c7e5e53ebbd6d626344b75a9662c18"`;
+
+exports[`Regression tests ptPT has not changed from previous versions lower to 100k 1`] = `"ca5ee5d18fc82fa4f33596641d393101"`;
+
+exports[`Regression tests ru has not changed from previous versions 1`] = `"44ec4471107763047c663ed5e5a34f47"`;
+
+exports[`Regression tests ru has not changed from previous versions lower to 1k 1`] = `"3c8aaefa7c55a923b8dc98f5a491a729"`;
+
+exports[`Regression tests ru has not changed from previous versions lower to 10 1`] = `"89878054aab9792048ade1f11b9ff6ae"`;
+
+exports[`Regression tests ru has not changed from previous versions lower to 10k 1`] = `"806220425617fedf591346774ee92f05"`;
+
+exports[`Regression tests ru has not changed from previous versions lower to 100 1`] = `"1c1177ef278003161c0e0d7acd79749b"`;
+
+exports[`Regression tests ru has not changed from previous versions lower to 100k 1`] = `"c80e26ecfd9aed4d034763b3eda3b233"`;
+
+exports[`Regression tests tr has not changed from previous versions 1`] = `"f9fc7edabe00ac9ae0f0b6950584984b"`;
+
+exports[`Regression tests tr has not changed from previous versions lower to 1k 1`] = `"3082de201a3b4a76882d21315aa65eae"`;
+
+exports[`Regression tests tr has not changed from previous versions lower to 10 1`] = `"b2099daae82346c13efc5b2246389a99"`;
+
+exports[`Regression tests tr has not changed from previous versions lower to 10k 1`] = `"eb8e2deddefcfe51ad1546280e6841a4"`;
+
+exports[`Regression tests tr has not changed from previous versions lower to 100 1`] = `"3211e1486b34567f378160e8c15fe1cc"`;
+
+exports[`Regression tests tr has not changed from previous versions lower to 100k 1`] = `"8169d07a22cfb9374d1604c13f475cdb"`;
+
+exports[`Regression tests uk has not changed from previous versions 1`] = `"f819361492de1894f20af7891d1a7fc4"`;
+
+exports[`Regression tests uk has not changed from previous versions lower to 1k 1`] = `"5d63eea3457d4d5b7cae175e4225177b"`;
+
+exports[`Regression tests uk has not changed from previous versions lower to 10 1`] = `"fbc093a1d445c0376098a3bf52de487a"`;
+
+exports[`Regression tests uk has not changed from previous versions lower to 10k 1`] = `"1384bb2cdb7218aab6039512affc61fd"`;
+
+exports[`Regression tests uk has not changed from previous versions lower to 100 1`] = `"f3832fa279d791dd0906cae677ac790a"`;
+
+exports[`Regression tests uk has not changed from previous versions lower to 100k 1`] = `"7491d43e24dfa1ee6d0d8dbca5fbd4e9"`;
+
+exports[`Regression tests vi has not changed from previous versions 1`] = `"82486955f07db2ead51d0857c57d70a4"`;
+
+exports[`Regression tests vi has not changed from previous versions lower to 1k 1`] = `"7e706ad25aa3b6771cbb8b06ea0a0a1f"`;
+
+exports[`Regression tests vi has not changed from previous versions lower to 10 1`] = `"efb0d6fb4d1e25542dbd536db37de3e7"`;
+
+exports[`Regression tests vi has not changed from previous versions lower to 10k 1`] = `"f1c864e75f17e2986421646a0b54ab8a"`;
+
+exports[`Regression tests vi has not changed from previous versions lower to 100 1`] = `"da46f1ca94c06eefcdcf7256ba2b4c1a"`;
+
+exports[`Regression tests vi has not changed from previous versions lower to 100k 1`] = `"210fec7058b7a4978fc5445e74bde050"`;
