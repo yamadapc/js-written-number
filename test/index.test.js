@@ -142,6 +142,7 @@ describe("written-number", function () {
       writtenNumber(1234).should.equal("mil doscientos treinta y cuatro");
       writtenNumber(4323).should.equal("cuatro mil trescientos veintitrés");
       writtenNumber(242).should.equal("doscientos cuarenta y dos");
+      writtenNumber(2100).should.equal("dos mil cien");
     });
 
     it("correctly converts numbers > 1000", function () {
