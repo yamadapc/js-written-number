@@ -3,17 +3,21 @@ var should = require("should");
 var writtenNumber = require("..");
 
 describe("written-number", function () {
+  describe("broken default gets written", function () {
+    it("corrects back to english", function () {
+      writtenNumber.defaults.lang = 12398123
+      writtenNumber(1, { lang: 1234 }).should.equal("one");
+      writtenNumber.defaults.lang.should.equal('en');
+    });
+  });
+
+  describe("writtenNumber(n, { lang: 1234, ... })", function () {
+    it("defaults to english on non string language", function () {
+      writtenNumber(1, { lang: 1234 }).should.equal("one");
+    });
+  });
 
   describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
-    beforeEach(function () {
-      writtenNumber.defaults.lang = "zzz";
-    });
-
-    it("gets exposed", function () {
-      should.exist(writtenNumber);
-      writtenNumber.should.be.instanceof(Function);
-    });
-
     it("defaults to english on wrong language", function () {
       writtenNumber(1, { lang: 'zzz' }).should.equal("one");
     });
