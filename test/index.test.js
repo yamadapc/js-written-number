@@ -6,7 +6,7 @@ describe("written-number", function () {
 
   describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
     beforeEach(function () {
-      writtenNumber.defaults.lang = "";
+      writtenNumber.defaults.lang = "zzz";
     });
 
     it("gets exposed", function () {
