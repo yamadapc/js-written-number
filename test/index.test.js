@@ -51,6 +51,7 @@ describe("written-number", function () {
 
     it("correctly converts numbers < 10", function () {
       writtenNumber(1000000000).should.equal("one billion");
+      writtenNumber(0).should.equal("zero");
       writtenNumber(3).should.equal("three");
       writtenNumber(8).should.equal("eight");
     });
@@ -107,7 +108,7 @@ describe("written-number", function () {
       writtenNumber.defaults.lang = "es";
     });
 
-    it("gets exposed", function () {
+    it("gets exposed",  function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
