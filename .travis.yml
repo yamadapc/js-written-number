@@ -1,13 +1,9 @@
 language: node_js
 node_js:
   - 'node'
-  - '8'
-  - '6'
-  - '5'
-  - '4'
-  - '0.12'
-  - '0.11'
-  - '0.10'
+  - '12'
+  - '13'
+  - '14'
 after_script:
   - npm i coveralls
-  - ./node_modules/coveralls/bin/coveralls.js < lcov
+  - ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info

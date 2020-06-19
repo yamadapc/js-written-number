@@ -1,26 +1,30 @@
-"use strict" /* global describe, it, before */;
+"use strict" /* global describe, it, beforeEach */;
 var should = require("should");
 var writtenNumber = require("..");
 
 describe("written-number", function () {
+  describe("broken default gets written", function () {
+    it("corrects back to english", function () {
+      writtenNumber.defaults.lang = 12398123
+      writtenNumber(1, { lang: 1234 }).should.equal("one");
+      writtenNumber.defaults.lang.should.equal('en');
+    });
+  });
+
+  describe("writtenNumber(n, { lang: 1234, ... })", function () {
+    it("defaults to english on non string language", function () {
+      writtenNumber(1, { lang: 1234 }).should.equal("one");
+    });
+  });
 
   describe("writtenNumber(n, { lang: 'zzz', ... })", function () {
-    before(function () {
-      writtenNumber.defaults.lang = "";
-    });
-
-    it("gets exposed", function () {
-      should.exist(writtenNumber);
-      writtenNumber.should.be.instanceof(Function);
-    });
-
     it("defaults to english on wrong language", function () {
       writtenNumber(1, { lang: 'zzz' }).should.equal("one");
     });
   });
 
   describe("writtenNumber(n, { lang: 'en', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "en";
     });
 
@@ -51,6 +55,7 @@ describe("written-number", function () {
 
     it("correctly converts numbers < 10", function () {
       writtenNumber(1000000000).should.equal("one billion");
+      writtenNumber(0).should.equal("zero");
       writtenNumber(3).should.equal("three");
       writtenNumber(8).should.equal("eight");
     });
@@ -103,11 +108,11 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'es', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "es";
     });
 
-    it("gets exposed", function () {
+    it("gets exposed",  function () {
       should.exist(writtenNumber);
       writtenNumber.should.be.instanceof(Function);
     });
@@ -164,7 +169,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'pt', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "pt";
     });
 
@@ -247,7 +252,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ptPT', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ptPT";
     });
 
@@ -330,7 +335,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'fr', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "fr";
     });
 
@@ -398,7 +403,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'it', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "it";
     });
 
@@ -465,7 +470,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'enIndian', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "enIndian";
     });
 
@@ -541,7 +546,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'tr', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "tr";
     });
 
@@ -619,7 +624,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'az', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "az";
     });
 
@@ -697,7 +702,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'uk', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "uk";
     });
 
@@ -774,7 +779,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ar', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ar";
     });
 
@@ -844,7 +849,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'id', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "id";
     });
 
@@ -901,7 +906,7 @@ describe("written-number", function () {
   });
 
   describe("writtenNumber(n, { lang: 'ru', ... })", function () {
-    before(function () {
+    beforeEach(function () {
       writtenNumber.defaults.lang = "ru";
     });
 
