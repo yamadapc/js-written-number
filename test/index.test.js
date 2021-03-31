@@ -982,4 +982,82 @@ describe("written-number", function () {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'ky', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "ky";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("нөл");
+      writtenNumber("0.8").should.equal("бир");
+      writtenNumber("2.8").should.equal("үч");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("нөл");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(0).should.equal("нөл");
+      writtenNumber(3).should.equal("үч");
+      writtenNumber(6).should.equal("алты");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("он үч");
+      writtenNumber(19).should.equal("он тогуз");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("жыйырма");
+      writtenNumber(25).should.equal("жыйырма беш");
+      writtenNumber(40).should.equal("кырк");
+      writtenNumber(88).should.equal("сексен сегиз");
+      writtenNumber(73).should.equal("жетимиш үч");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(200).should.equal("эки жүз");
+      writtenNumber(242).should.equal("эки жүз кырк эки");
+      writtenNumber(1234).should.equal(
+          "миң эки жүз отуз төрт"
+      );
+      writtenNumber(4323).should.equal(
+          "төрт миң үч жүз жыйырма үч"
+      );
+    });
+
+    it("correctly converts numbers > 10000", function () {
+      writtenNumber(4323000).should.equal(
+          "төрт миллион үч жүз жыйырма үч миң"
+      );
+      writtenNumber(4323055).should.equal(
+          "төрт миллион үч жүз жыйырма үч миң элүү беш"
+      );
+      writtenNumber(1570025).should.equal(
+          "бир миллион беш жүз жетимиш миң жыйырма беш"
+      );
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("бир миллиард");
+      writtenNumber(2580000000).should.equal(
+          "эки миллиард беш жүз сексен миллион"
+      );
+      writtenNumber(1000000000000).should.equal("бир триллион");
+      writtenNumber(3627000000000).should.equal(
+          "үч триллион алты жүз жыйырма жети миллиард"
+      );
+    });
+  });
 });
