@@ -65,6 +65,8 @@ Currently supported languages are:
 | Ukrainian | `uk` |
 | Indonesian | `id` |
 | Russian | `ru` |
+| Chinese (Traditional) | `zhTW` |
+| Chinese (Simplified) | `zhCN` |
 
 
 ## Contributing
@@ -83,13 +85,15 @@ The following parameters have been used for the currently available languages:
 | Parameter       | Type    | Description                                                                                                                                        | Examples                                                                                                                                                                     |
 |-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `useLongScale`    | boolean | Indicates if it uses [long or short scale](http://en.wikipedia.org/wiki/Long_and_short_scales).                                                    | This differs the meaning of the words `billion`, `trillion` and so on.                                                                                                       |
-| `baseSeparator`   | string  | Separates the base cardinal numbers.                                                                                                               | 29 -> twenty`-`eight.  Spanish uses the connector " y "                                                                                                                      |
+| `baseSeparator`   | string  | Separates the base cardinal numbers.                                                                                                               | 29 -> twenty`-`eight. Spanish uses the connector " y "                                                                                                                       |
 | `unitSeparator`   | string  | Separates the units from the last base cardinal numbers.                                                                                           | 1234 -> one thousand two hundred **and** thirty-four                                                                                                                         |
+| `joinSeparator`   | string  | Separates all words, default is `" "`                                                                                                              | 100 -> one hundred. Chinese has no spaces, so it uses the connector `""`                                                                                                     |
 | `allSeparator`    | string  | Separates all cardinals, not only the last one.                                                                                                    | 1125 -> ألف **و**مائة **و**خمسة **و**عشرون                                                                                                                                   |
 | `base`            | Object  | Base cardinals numbers.  Numbers that have unique names and are used to build others.                                                              |                                                                                                                                                                              |
 | `alternativeBase` | Object  | Alternative versions of base cardinals numbers for usage with specific units.  These bases will be treated as an extension for the default `base`. | ``` "alternativeBase": {   "feminine": {"1":"одна","2":"дві"} } ```                                                                                                          |
-| `units`           | Array   | A list of number units (string or Object). Gives support to singular, dual an plural units. Check the Object parameters below.                                                |                                                                                                                                                                              |
+| `units`           | Array   | A list of number units (string or Object). Gives support to singular, dual an plural units. Check the Object parameters below.                     |                                                                                                                                                                              |
 | `unitExceptions`  | Object  | Sometimes grammar exceptions affect the base cardinal joined to the unit. You can set specific exceptions to any base cardinal number.             | Converting 1232000 in Spanish:  Without Exception (Wrong):  -> **uno** millón doscientos treinta y dos mil  With Exception:  -> **un** millón doscientos treinta y dos mil   |
+| `prependZero`     | boolean | If `true`, all contiguous strings of 0s (except leading and trailing) are replaced by one "zero" word before the following number word.            | 102003 -> 十萬<u>零</u>二千<u>零</u>三                                                                                                                                                     |
 
 ### Units parameters
 
