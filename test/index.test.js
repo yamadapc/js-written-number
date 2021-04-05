@@ -982,4 +982,264 @@ describe("written-number", function () {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'zhTW', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "zhTW";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("negative numbers return \"\"", function () {
+      writtenNumber(-3).should.equal("");
+      writtenNumber(-5).should.equal("");
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("零");
+      writtenNumber("0.8").should.equal("一");
+      writtenNumber("2.8").should.equal("三");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1000000000.123").should.equal("十億");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("零");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(3).should.equal("三");
+      writtenNumber(8).should.equal("八");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(10).should.equal("十");
+      writtenNumber(11).should.equal("十一");
+      writtenNumber(13).should.equal("十三");
+      writtenNumber(20).should.equal("二十");
+      writtenNumber(23).should.equal("二十三");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(100).should.equal("一百");
+      writtenNumber(200).should.equal("二百");
+      writtenNumber(321).should.equal("三百二十一");
+      writtenNumber(417).should.equal("四百一十七");
+      writtenNumber(501).should.equal("五百零一");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(1000).should.equal("一千");
+      writtenNumber(2003).should.equal("二千零三");
+      writtenNumber(3210).should.equal("三千二百一十");
+      writtenNumber(4011).should.equal("四千零一十一");
+      writtenNumber(5432).should.equal("五千四百三十二");
+    });
+
+    it("correctly converts numbers < 100 000 000", function () {
+      writtenNumber(10000).should.equal("一萬");
+      writtenNumber(20003).should.equal("二萬零三");
+      writtenNumber(32100).should.equal("三萬二千一百");
+      writtenNumber(43210).should.equal("四萬三千二百一十");
+      writtenNumber(54302).should.equal("五萬四千三百零二");
+      writtenNumber(60606).should.equal("六萬零六百零六");
+      writtenNumber(70600).should.equal("七萬零六百");
+      writtenNumber(100000).should.equal("十萬");
+      writtenNumber(110000).should.equal("十一萬");
+      writtenNumber(210003).should.equal("二十一萬零三");
+      writtenNumber(1110000).should.equal("一百一十一萬");
+      writtenNumber(1010101).should.equal("一百零一萬零一百零一");
+      writtenNumber(11011011).should.equal(
+        "一千一百零一萬一千零一十一"
+      );
+      writtenNumber(20304050).should.equal(
+        "二千零三十萬零四千零五十"
+      );
+    });
+
+    it("correctly converts numbers < 1 000 000 000 000", function () {
+      writtenNumber(100000000).should.equal("一億");
+      writtenNumber(200000003).should.equal("二億零三");
+      writtenNumber(321000000).should.equal("三億二千一百萬");
+      writtenNumber(432100000).should.equal("四億三千二百一十萬");
+      writtenNumber(543020000).should.equal("五億四千三百零二萬");
+      writtenNumber(606060606).should.equal(
+        "六億零六百零六萬零六百零六"
+      );
+      writtenNumber(110110110).should.equal(
+        "一億一千零一十一萬零一百一十"
+      );
+      writtenNumber(111111111).should.equal(
+        "一億一千一百一十一萬一千一百一十一"
+      );
+      writtenNumber(1000000000).should.equal("十億");
+      writtenNumber(1100000000).should.equal("十一億");
+      writtenNumber(11100000000).should.equal("一百一十一億");
+      writtenNumber(101100000000).should.equal("一千零一十一億");
+      writtenNumber(101101101011).should.equal(
+        "一千零一十一億零一百一十萬零一千零一十一"
+      );
+    });
+
+    it("correctly converts numbers >= 1 000 000 000 000", function () {
+      writtenNumber(1000000000000).should.equal("一兆");
+      writtenNumber(2000000000003).should.equal("二兆零三");
+      writtenNumber(3210000000000).should.equal("三兆二千一百億");
+      writtenNumber(4321000000000).should.equal("四兆三千二百一十億");
+      writtenNumber(5430200000000).should.equal("五兆四千三百零二億");
+      writtenNumber(6060606060606).should.equal(
+        "六兆零六百零六億零六百零六萬零六百零六"
+      );
+      writtenNumber(1011011011011).should.equal(
+        "一兆零一百一十億零一千一百零一萬一千零一十一"
+      );
+      writtenNumber(1111111111111).should.equal(
+        "一兆一千一百一十一億一千一百一十一萬一千一百一十一"
+      );
+      writtenNumber(10000000000000).should.equal("十兆");
+      writtenNumber(11000000000000).should.equal("十一兆");
+      writtenNumber(111000000000000).should.equal("一百一十一兆");
+      writtenNumber(1011000000000000).should.equal("一千零一十一兆");
+      writtenNumber(1011011010110011).should.equal(
+        "一千零一十一兆零一百一十億零一千零一十一萬零一十一"
+      );
+    });
+  });
+
+  describe("writtenNumber(n, { lang: 'zhCN', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "zhCN";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("negative numbers return \"\"", function () {
+      writtenNumber(-3).should.equal("");
+      writtenNumber(-5).should.equal("");
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("〇");
+      writtenNumber("0.8").should.equal("一");
+      writtenNumber("2.8").should.equal("三");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1000000000.123").should.equal("十亿");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("〇");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(3).should.equal("三");
+      writtenNumber(8).should.equal("八");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(10).should.equal("十");
+      writtenNumber(11).should.equal("十一");
+      writtenNumber(13).should.equal("十三");
+      writtenNumber(20).should.equal("二十");
+      writtenNumber(23).should.equal("二十三");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(100).should.equal("一百");
+      writtenNumber(200).should.equal("二百");
+      writtenNumber(321).should.equal("三百二十一");
+      writtenNumber(417).should.equal("四百一十七");
+      writtenNumber(501).should.equal("五百〇一");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(1000).should.equal("一千");
+      writtenNumber(2003).should.equal("二千〇三");
+      writtenNumber(3210).should.equal("三千二百一十");
+      writtenNumber(4011).should.equal("四千〇一十一");
+      writtenNumber(5432).should.equal("五千四百三十二");
+    });
+
+    it("correctly converts numbers < 100 000 000", function () {
+      writtenNumber(10000).should.equal("一万");
+      writtenNumber(20003).should.equal("二万〇三");
+      writtenNumber(32100).should.equal("三万二千一百");
+      writtenNumber(43210).should.equal("四万三千二百一十");
+      writtenNumber(54302).should.equal("五万四千三百〇二");
+      writtenNumber(60606).should.equal("六万〇六百〇六");
+      writtenNumber(70600).should.equal("七万〇六百");
+      writtenNumber(100000).should.equal("十万");
+      writtenNumber(110000).should.equal("十一万");
+      writtenNumber(210003).should.equal("二十一万〇三");
+      writtenNumber(1110000).should.equal("一百一十一万");
+      writtenNumber(1010101).should.equal("一百〇一万〇一百〇一");
+      writtenNumber(11011011).should.equal(
+        "一千一百〇一万一千〇一十一"
+      );
+      writtenNumber(20304050).should.equal(
+        "二千〇三十万〇四千〇五十"
+      );
+    });
+
+    it("correctly converts numbers < 1 000 000 000 000", function () {
+      writtenNumber(100000000).should.equal("一亿");
+      writtenNumber(200000003).should.equal("二亿〇三");
+      writtenNumber(321000000).should.equal("三亿二千一百万");
+      writtenNumber(432100000).should.equal("四亿三千二百一十万");
+      writtenNumber(543020000).should.equal("五亿四千三百〇二万");
+      writtenNumber(606060606).should.equal(
+        "六亿〇六百〇六万〇六百〇六"
+      );
+      writtenNumber(110110110).should.equal(
+        "一亿一千〇一十一万〇一百一十"
+      );
+      writtenNumber(111111111).should.equal(
+        "一亿一千一百一十一万一千一百一十一"
+      );
+      writtenNumber(1000000000).should.equal("十亿");
+      writtenNumber(1100000000).should.equal("十一亿");
+      writtenNumber(11100000000).should.equal("一百一十一亿");
+      writtenNumber(101100000000).should.equal("一千〇一十一亿");
+      writtenNumber(101101101011).should.equal(
+        "一千〇一十一亿〇一百一十万〇一千〇一十一"
+      );
+    });
+
+    it("correctly converts numbers >= 1 000 000 000 000", function () {
+      writtenNumber(1000000000000).should.equal("一万亿");
+      writtenNumber(2000000000003).should.equal("二万亿〇三");
+      writtenNumber(3210000000000).should.equal("三万二千一百亿");
+      writtenNumber(4321000000000).should.equal("四万三千二百一十亿");
+      writtenNumber(5430200000000).should.equal("五万四千三百〇二亿");
+      writtenNumber(6060606060606).should.equal(
+        "六万〇六百〇六亿〇六百〇六万〇六百〇六"
+      );
+      writtenNumber(1011011011011).should.equal(
+        "一万〇一百一十亿〇一千一百〇一万一千〇一十一"
+      );
+      writtenNumber(1111111111111).should.equal(
+        "一万一千一百一十一亿一千一百一十一万一千一百一十一"
+      );
+      writtenNumber(10000000000000).should.equal("十万亿");
+      writtenNumber(11000000000000).should.equal("十一万亿");
+      writtenNumber(21000000000000).should.equal("二十一万亿");
+      // More digits than this is basically encroaching on
+      // the limits of the simplified number system (which has
+      // no word for trillion). Testing more digits than this
+      // fails, so I'll leave it there. Note that the more
+      // digits do work on the traditional number system,
+      // which does have a word for trillion.
+    });
+  });
 });
