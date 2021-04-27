@@ -947,6 +947,154 @@ module.exports={
 
 },{}],11:[function(require,module,exports){
 module.exports={
+  "useLongScale": false,
+  "baseSeparator": "",
+  "unitSeparator": "",
+  "allSeparator": "و ",
+  "base": {
+    "0": "سفر",
+    "1": "یەک",
+    "2": "دوو",
+    "3": "سێ",
+    "4": "چوار",
+    "5": "پێنج",
+    "6": "شەش",
+    "7": "حەفت",
+    "8": "هەشت",
+    "9": "نۆ",
+
+    "10": "دە",
+    "11": "یازدە",
+    "12": "دوازدە",
+    "13": "سێزدە",
+    "14": "چواردە",
+    "15": "پازدە",
+    "16": "شازدە",
+    "17": "حەڤدە",
+    "18": "هەژدە",
+    "19": "نۆزدە",
+
+    "20": "بیست",
+    "21": "بیست و یەک",
+    "22": "بیست و دوو",
+    "23": "بیست و سێ",
+    "24": "بیست و چوار",
+    "25": "بیست و پێنج",
+    "26": "بیست و شەش",
+    "27": "بیست و حەفت",
+    "28": "بیست و هەشت",
+    "29": "بیست و نۆ",
+    
+    "30": "سی",    
+    "31": "سی و یەک",
+    "32": "سی و دوو",
+    "33": "سی و سێ",
+    "34": "سی و چوار",
+    "35": "سی و پێنج",
+    "36": "سی و شەش",
+    "37": "سی و حەفت",
+    "38": "سی و هەشت",
+    "39": "سی و نۆ",
+
+    "40": "چل",
+    "41": "چل و یەک",
+    "42": "چل و دوو",
+    "43": "چل و سێ",
+    "44": "چل و چوار",
+    "45": "چل و پێنج",
+    "46": "چل و شەش",
+    "47": "چل و حەفت",
+    "48": "چل و هەشت",
+    "49": "چل و نۆ",
+
+    "50": "پەنجا",
+    "51": "پەنجا و یەک",
+    "52": "پەنجا و دوو",
+    "53": "پەنجا و سێ",
+    "54": "پەنجا و چوار",
+    "55": "پەنجا و پێنج",
+    "56": "پەنجا و شەش",
+    "57": "پەنجا و حەفت",
+    "58": "پەنجا و هەشت",
+    "59": "پەنجا و نۆ",
+
+    "60": "شەست",
+    "61": "شەست و یەک",
+    "62": "شەست و دوو",
+    "63": "شەست و سێ",
+    "64": "شەست و چوار",
+    "65": "شەست و پێنج",
+    "66": "شەست و شەش",
+    "67": "شەست و حەفت",
+    "68": "شەست و هەشت",
+    "69": "شەست و نۆ",
+
+    "70": "حەفتا",
+    "71": "حەفتا و یەک",
+    "72": "حەفتا و دوو",
+    "73": "حەفتا و سێ",
+    "74": "حەفتا و چوار",
+    "75": "حەفتا و پێنج",
+    "76": "حەفتا و شەش",
+    "77": "حەفتا و حەفت",
+    "78": "حەفتا و هەشت",
+    "79": "حەفتا و نۆ",
+
+    "80": "هەشتا",
+    "81": "هەشتا و یەک",
+    "82": "هەشتا و دوو",
+    "83": "هەشتا و سێ",
+    "84": "هەشتا و چوار",
+    "85": "هەشتا و پێنج",
+    "86": "هەشتا و شەش",
+    "87": "هەشتا و حەفت",
+    "88": "هەشتا و هەشت",
+    "89": "هەشتا و نۆ",
+    
+    "90": "نۆوەد",
+    "91": "نۆوەد و یەک",
+    "92": "نۆوەد و دوو",
+    "93": "نۆوەد و سێ",
+    "94": "نۆوەد و چوار",
+    "95": "نۆوەد و پێنج",
+    "96": "نۆوەد و شەش",
+    "97": "نۆوەد و حەفت",
+    "98": "نۆوەد و هەشت",
+    "99": "نۆوەد و نۆ",
+
+    "200": "دوو سەد",
+    "300": "سێ سەد",
+    "400": "چوار سەد",
+    "500": "پێنج سەد",
+    "600": "شەش سەد",
+    "700": "حەفت سەد",
+    "800": "هەشت سەد",
+    "900": "نۆ سەد"
+  },
+  "units" : [
+    {"singular":"سەد", "useBaseInstead": true, "useBaseException": [1]},
+    {"singular":"هەزار", "dual":"دوو هەزار", "plural":"هەزار", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+    {"singular":"ملیۆن", "dual":"دوو ملیۆن", "plural":"ملیۆن", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+    {"singular":"مليار", "dual":"دوو ملیار", "plural":"ملیار", "restrictedPlural": true, "avoidPrefixException": [1, 2]},
+
+    {"singular":"تريليۆن", "avoidPrefixException": [1]},
+    {"singular":"كوادريليۆن", "avoidPrefixException": [1]},
+    {"singular":"كوينتليۆن", "avoidPrefixException": [1]},
+    {"singular":"سكستليۆن", "avoidPrefixException": [1]},
+    {"singular":"سبتيلليۆن", "avoidPrefixException": [1]},
+    {"singular":"أوكتيليۆن", "avoidPrefixException": [1]},
+    {"singular":"نونيلليۆن", "avoidPrefixException": [1]},
+    {"singular":"دشيليۆن", "avoidPrefixException": [1]},
+    {"singular":"أوندشيلليۆن", "avoidPrefixException": [1]},
+    {"singular":"دودشيليۆن", "avoidPrefixException": [1]},
+    {"singular":"تريدشيليۆن", "avoidPrefixException": [1]},
+    {"singular":"كواتوردشيليۆن", "avoidPrefixException": [1]},
+    {"singular":"كويندشيليۆن" , "avoidPrefixException": [1]}
+  ],
+  "unitExceptions": {}
+}
+},{}],12:[function(require,module,exports){
+module.exports={
   "useLongScale": true,
   "baseSeparator": " e ",
   "unitSeparator": "e ",
@@ -1052,7 +1200,7 @@ module.exports={
   ]
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -1171,7 +1319,7 @@ module.exports={
   ]
 }
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": " ",
@@ -1358,7 +1506,7 @@ module.exports={
     ],
     "unitExceptions": []
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1411,7 +1559,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1599,7 +1747,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1650,12 +1798,12 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
 
-var languages = ["en", "es", "ar", "az", "pt", "fr", "eo", "it", "vi", "tr", "uk", "ru", "id"];
+var languages = ["en", "es", "ar", "az", "pt", "fr", "eo", "it", "vi", "tr", "uk", "ru", "id","ku"];
 var i18n = {
   en: require("./i18n/en.json"),
   es: require("./i18n/es.json"),
@@ -1672,7 +1820,8 @@ var i18n = {
   enIndian: require("./i18n/en-indian.json"),
   uk: require("./i18n/uk.json"),
   ru: require("./i18n/ru.json"),
-  id: require("./i18n/id.json")
+  id: require("./i18n/id.json"),
+  ku: require("./i18n/ku.json")
 };
 exports.i18n = i18n;
 
@@ -1876,7 +2025,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseC
   return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/ar.json":1,"./i18n/az.json":2,"./i18n/en-indian.json":3,"./i18n/en.json":4,"./i18n/eo.json":5,"./i18n/es.json":6,"./i18n/fr.json":7,"./i18n/hu.json":8,"./i18n/id.json":9,"./i18n/it.json":10,"./i18n/pt-PT.json":11,"./i18n/pt.json":12,"./i18n/ru.json":13,"./i18n/tr.json":14,"./i18n/uk.json":15,"./i18n/vi.json":16,"./util":18}],18:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/az.json":2,"./i18n/en-indian.json":3,"./i18n/en.json":4,"./i18n/eo.json":5,"./i18n/es.json":6,"./i18n/fr.json":7,"./i18n/hu.json":8,"./i18n/id.json":9,"./i18n/it.json":10,"./i18n/ku.json":11,"./i18n/pt-PT.json":12,"./i18n/pt.json":13,"./i18n/ru.json":14,"./i18n/tr.json":15,"./i18n/uk.json":16,"./i18n/vi.json":17,"./util":19}],19:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1899,5 +2048,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[17])(17)
+},{}]},{},[18])(18)
 });
