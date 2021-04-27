@@ -38,6 +38,7 @@ writtenNumber(1234, {lang: 'eo'});   // => 'mil ducent tridek kvar'
 writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi bốn'
 writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
 writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
+writtenNumber(1234, {lang: 'ku'});   // => 'هەزار و دووسەد و سی و چوار'
 ```
 
 ## Options
@@ -65,6 +66,7 @@ Currently supported languages are:
 | Ukrainian | `uk` |
 | Indonesian | `id` |
 | Russian | `ru` |
+| Kurdish (Sorani) | `ku` |
 
 
 ## Contributing

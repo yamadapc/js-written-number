@@ -982,4 +982,74 @@ describe("written-number", function () {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'ku', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "ku";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("سفر");
+      writtenNumber("0.8").should.equal("یەک");
+      writtenNumber("2.8").should.equal("سێ");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("سفر");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(0).should.equal("سفر");
+      writtenNumber(3).should.equal("سێ");
+      writtenNumber(6).should.equal("شەش");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(11).should.equal("یازدە");
+      writtenNumber(13).should.equal("سێزدە");
+      writtenNumber(19).should.equal("نۆزدە");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("بیست");
+      writtenNumber(25).should.equal("بیست و پێنج");
+      writtenNumber(40).should.equal("چل");
+      writtenNumber(88).should.equal("هەشتا و هەشت");
+      writtenNumber(73).should.equal("حەفتا و سێ");
+      writtenNumber(99).should.equal("نۆوەد و نۆ");
+    });
+
+    it("correctly converts numbers < 10000", function () {
+      writtenNumber(200).should.equal("دوو سەد");
+      writtenNumber(310).should.equal("سێ سەد و دە");
+      writtenNumber(242).should.equal("دوو سەد و چل و دوو");
+      writtenNumber(1234).should.equal("هەزار و دوو سەد و سی و چوار");
+      writtenNumber(3000).should.equal("سێ هەزار");
+      writtenNumber(4323).should.equal("چوار هەزار و سێ سەد و بیست و سێ");
+    });
+
+    it("correctly converts numbers > 10000", function () {
+      writtenNumber(10000).should.equal("دە هەزار");
+      writtenNumber(11000).should.equal("یازدە هەزار");
+      writtenNumber(4323000).should.equal("چوار ملیۆن و سێ سەد و بیست و سێ هەزار");
+      writtenNumber(4323055).should.equal("چوار ملیۆن و سێ سەد و بیست و سێ هەزار و پەنجا و پێنج");
+      writtenNumber(1570025).should.equal("ملیۆن و پێنج سەد و حەفتا هەزار و بیست و پێنج");
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("مليار");
+      writtenNumber(2580000000).should.equal("دوو ملیار و پێنج سەد و هەشتا ملیۆن");
+      writtenNumber(1000000000000).should.equal("تريليۆن");
+      writtenNumber(3627000000000).should.equal("سێ تريليۆن و شەش سەد و بیست و حەفت مليار");
+    });
+  });
 });
