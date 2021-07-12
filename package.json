@@ -1,6 +1,6 @@
 {
   "name": "written-number",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Convert numbers to words - their written form.",
   "main": "lib/index.js",
   "scripts": {

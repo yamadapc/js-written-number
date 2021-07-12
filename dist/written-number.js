@@ -436,7 +436,8 @@ module.exports={
     {
       "singular": "ciento",
       "useBaseInstead": true,
-      "useBaseException": [1]
+      "useBaseException": [1],
+      "useBaseExceptionWhenNoTrailingNumbers": true
     },
     {
       "singular": "mil",
