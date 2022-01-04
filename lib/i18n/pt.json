@@ -43,16 +43,26 @@
     "900": "novecentos",
     "1000": "mil"
   },
-  "unitExceptions": {
-    "1": "um"
+  "alternativeBase": {
+    "feminine": {
+      "1": "uma",
+      "2": "duas",
+      "200": "duzentas",
+      "300": "trezentas",
+      "400": "quatrocentas",
+      "500": "quinhentas",
+      "600": "seiscentas",
+      "700": "setecentas",
+      "800": "oitocentas",
+      "900": "novecentas"
+    }
   },
-  "units" : [
+  "unitExceptions": [],
+  "units": [
     {
       "singular": "cento",
       "useBaseInstead": true,
-      "useBaseException": [
-        1
-      ],
+      "useBaseException": [1],
       "useBaseExceptionWhenNoTrailingNumbers": true,
       "andException": true
     },
