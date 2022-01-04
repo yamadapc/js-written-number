@@ -1,0 +1,170 @@
+{
+  "useLongScale": true,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "1": "primeiro",
+    "2": "segundo",
+    "3": "terceiro",
+    "4": "quarto",
+    "5": "quinto",
+    "6": "sexto",
+    "7": "sétimo",
+    "8": "oitavo",
+    "9": "nono",
+    "10": "décimo",
+    "11": "décimo primeiro",
+    "12": "décimo segundo",
+    "13": "décimo terceiro",
+    "14": "décimo quarto",
+    "15": "décimo quinto",
+    "16": "décimo sexto",
+    "17": "décimo sétimo",
+    "18": "décimo oitavo",
+    "19": "décimo nono",
+    "20": "vigésimo",
+    "21": "vigésimo primeiro",
+    "22": "vigésimo segundo",
+    "23": "vigésimo terceiro",
+    "24": "vigésimo quarto",
+    "25": "vigésimo quinto",
+    "26": "vigésimo sexto",
+    "27": "vigésimo sétimo",
+    "28": "vigésimo oitavo",
+    "29": "vigésimo nono",
+    "30": "trigésimo",
+    "40": "quadragésimo",
+    "50": "quinquagésimo",
+    "60": "sexagésimo",
+    "70": "septuagésimo",
+    "80": "octogésimo",
+    "90": "nonagésimo",
+    "100": "centésimo",
+    "200": "ducentésimo",
+    "300": "trecentésimo",
+    "400": "quadrigentésimo",
+    "500": "quingentésimo",
+    "600": "sexcentésimo",
+    "700": "setingentésimo",
+    "800": "octingentésimo",
+    "900": "nongentésimo",
+    "1000": "milésimo"
+  },
+  "unitExceptions": {},
+  "alternativeBase": {
+    "feminine": {
+      "1": "primeira",
+      "2": "segunda",
+      "3": "terceira",
+      "4": "quarta",
+      "5": "quinta",
+      "6": "sexta",
+      "7": "sétima",
+      "8": "oitava",
+      "9": "nona",
+      "10": "décima",
+      "11": "décima primeira",
+      "12": "décima segunda",
+      "13": "décima terceira",
+      "14": "décima quarta",
+      "15": "décima quinta",
+      "16": "décima sexta",
+      "17": "décima sétima",
+      "18": "décima oitava",
+      "19": "décima nona",
+      "20": "vigésima",
+      "21": "vigésima primeira",
+      "22": "vigésima segunda",
+      "23": "vigésima terceira",
+      "24": "vigésima quarta",
+      "25": "vigésima quinta",
+      "26": "vigésima sexta",
+      "27": "vigésima sétima",
+      "28": "vigésima oitava",
+      "29": "vigésima nona",
+      "30": "trigésima",
+      "40": "quadragésima",
+      "50": "quinquagésima",
+      "60": "sexagésima",
+      "70": "septuagésima",
+      "80": "octogésima",
+      "90": "nonagésima",
+      "100": "centésima",
+      "200": "ducentésima",
+      "300": "trecentésima",
+      "400": "quadrigentésima",
+      "500": "quingentésima",
+      "600": "sexcentésima",
+      "700": "setingentésima",
+      "800": "octingentésima",
+      "900": "nongentésima",
+      "1000": "milésima"
+    }
+  },
+  "units": [
+    {
+      "singular": "cento",
+      "useBaseInstead": true,
+      "useBaseException": [1],
+      "useBaseExceptionWhenNoTrailingNumbers": true,
+      "andException": true
+    },
+    {
+      "singular": "mil",
+      "avoidPrefixException": [1],
+      "andException": true
+    },
+    {
+      "singular": "milhão",
+      "plural": "milhões"
+    },
+    {
+      "singular": "bilhão",
+      "plural": "bilhões"
+    },
+    {
+      "singular": "trilhão",
+      "plural": "trilhões"
+    },
+    {
+      "singular": "quadrilhão",
+      "plural": "quadrilhão"
+    },
+    {
+      "singular": "quintilhão",
+      "plural": "quintilhões"
+    },
+    {
+      "singular": "sextilhão",
+      "plural": "sextilhões"
+    },
+    {
+      "singular": "septilhão",
+      "plural": "septilhões"
+    },
+    {
+      "singular": "octilhão",
+      "plural": "octilhões"
+    },
+    {
+      "singular": "nonilhão",
+      "plural": "nonilhões"
+    },
+    {
+      "singular": "decilhão",
+      "plural": "decilhões"
+    },
+    {
+      "singular": "undecilhão",
+      "plural": "undecilhões"
+    },
+    {
+      "singular": "doudecilhão",
+      "plural": "doudecilhões"
+    },
+    {
+      "singular": "tredecilhão",
+      "plural": "tredecilhões"
+    }
+  ]
+}

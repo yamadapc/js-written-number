@@ -166,6 +166,43 @@ describe("written-number", function () {
     });
   });
 
+  // ES ordinals
+  describe("writtenNumber(n, { lang: 'es', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "es";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("primero");
+      writtenNumber(3).should.equal("tercero");
+      writtenNumber(8).should.equal("octavo");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("decimotercero");
+      writtenNumber(19).should.equal("decimonoveno");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("vigésimo");
+      writtenNumber(25).should.equal("vigésimo quinto");
+      writtenNumber(56).should.equal("quincuagésimo sexto");
+      writtenNumber(88).should.equal("octogésimo octavo");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centésimo");
+      writtenNumber(200).should.equal("ducentésimo");
+      writtenNumber(900).should.equal("noningentésimo");
+      writtenNumber(1000).should.equal("milésimo");
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'pt', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "pt";
@@ -329,6 +366,43 @@ describe("written-number", function () {
       writtenNumber(3627000000000).should.equal(
         "três biliões seiscentos e vinte e sete mil milhões"
       );
+    });
+  });
+
+  // PT ordinals
+  describe("writtenNumber(n, { lang: 'pt', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "pt";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("primeiro");
+      writtenNumber(3).should.equal("terceiro");
+      writtenNumber(8).should.equal("oitavo");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("décimo terceiro");
+      writtenNumber(19).should.equal("décimo nono");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("vigésimo");
+      writtenNumber(25).should.equal("vigésimo quinto");
+      writtenNumber(56).should.equal("quinquagésimo sexto");
+      writtenNumber(88).should.equal("octogésimo oitavo");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centésimo");
+      writtenNumber(200).should.equal("ducentésimo");
+      writtenNumber(900).should.equal("nongentésimo");
+      writtenNumber(1000).should.equal("milésimo");
     });
   });
 
