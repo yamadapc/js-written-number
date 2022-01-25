@@ -1124,4 +1124,12 @@ describe("written-number", function () {
       );
     });
   });
+
+    // ES feminine numbers
+    describe("fallbacks", function () {
+      it("should fallback to 'base' in case of missing 'alternativeBase'", function () {
+        writtenNumber(4, { lang: 'pt', alternativeBase: 'masculine' }).should.equal("quatro");
+      });
+    });
+
 });
