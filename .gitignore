@@ -35,3 +35,4 @@ lcov
 package-lock.json
 .idea
 yarn.lock
+.history/

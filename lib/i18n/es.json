@@ -51,6 +51,22 @@
     "900": "novecientos",
     "1000": "mil"
   },
+  "alternativeBase": {
+    "feminine": {
+      "1": "una",
+      "200": "doscientas",
+      "300": "trescientas",
+      "400": "cuatrocientas",
+      "500": "quinientas",
+      "600": "seiscientas",
+      "700": "setecientas",
+      "800": "ochocientas",
+      "900": "novecientas"
+    },
+    "masculine": {
+      "1": "un"
+    }
+  },
   "unitExceptions": {
     "1000000": "un millón",
     "1000000000000": "un billón",
@@ -68,7 +84,7 @@
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un cuatordecillón",
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un quindecillón"
   },
-  "units" : [
+  "units": [
     {
       "singular": "ciento",
       "useBaseInstead": true,

@@ -166,6 +166,83 @@ describe("written-number", function () {
     });
   });
 
+  // ES ordinals
+  describe("writtenNumber(n, { lang: 'es', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "es";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("primero");
+      writtenNumber(3).should.equal("tercero");
+      writtenNumber(8).should.equal("octavo");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("decimotercero");
+      writtenNumber(19).should.equal("decimonoveno");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("vigésimo");
+      writtenNumber(25).should.equal("vigésimo quinto");
+      writtenNumber(56).should.equal("quincuagésimo sexto");
+      writtenNumber(88).should.equal("octogésimo octavo");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centésimo");
+      writtenNumber(200).should.equal("ducentésimo");
+      writtenNumber(900).should.equal("noningentésimo");
+      writtenNumber(1000).should.equal("milésimo");
+    });
+  });
+
+  // ES feminine numbers
+  describe("writtenNumber(n, { lang: 'es', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "es";
+      writtenNumber.defaults.alternativeBase = "feminine";
+    });
+
+    after(function () {
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts feminine numbers", function () {
+      writtenNumber(1).should.equal("una");
+      writtenNumber(200).should.equal("doscientas");
+      writtenNumber(300).should.equal("trescientas");
+      writtenNumber(400).should.equal("cuatrocientas");
+      writtenNumber(500).should.equal("quinientas");
+      writtenNumber(600).should.equal("seiscientas");
+      writtenNumber(700).should.equal("setecientas");
+      writtenNumber(800).should.equal("ochocientas");
+      writtenNumber(900).should.equal("novecientas");
+    });
+  });
+
+  // ES masculine numbers
+  describe("writtenNumber(n, { lang: 'es', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "es";
+      writtenNumber.defaults.alternativeBase = "masculine";
+    });
+
+    after(function () {
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts masculine form of uno", function () {
+      writtenNumber(1).should.equal("un");
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'pt', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "pt";
@@ -329,6 +406,68 @@ describe("written-number", function () {
       writtenNumber(3627000000000).should.equal(
         "três biliões seiscentos e vinte e sete mil milhões"
       );
+    });
+  });
+
+  // PT ordinals
+  describe("writtenNumber(n, { lang: 'pt', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "pt";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("primeiro");
+      writtenNumber(3).should.equal("terceiro");
+      writtenNumber(8).should.equal("oitavo");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("décimo terceiro");
+      writtenNumber(19).should.equal("décimo nono");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("vigésimo");
+      writtenNumber(25).should.equal("vigésimo quinto");
+      writtenNumber(56).should.equal("quinquagésimo sexto");
+      writtenNumber(88).should.equal("octogésimo oitavo");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centésimo");
+      writtenNumber(200).should.equal("ducentésimo");
+      writtenNumber(900).should.equal("nongentésimo");
+      writtenNumber(1000).should.equal("milésimo");
+    });
+  });
+
+  // PT feminine numbers
+  describe("writtenNumber(n, { lang: 'pt', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "pt";
+      writtenNumber.defaults.alternativeBase = "feminine";
+    });
+
+    after(function () {
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts feminine forms", function () {
+      writtenNumber(1).should.equal("uma");
+      writtenNumber(2).should.equal("duas");
+      writtenNumber(200).should.equal("duzentas");
+      writtenNumber(300).should.equal("trezentas");
+      writtenNumber(400).should.equal("quatrocentas");
+      writtenNumber(500).should.equal("quinhentas");
+      writtenNumber(600).should.equal("seiscentas");
+      writtenNumber(700).should.equal("setecentas");
+      writtenNumber(800).should.equal("oitocentas");
+      writtenNumber(900).should.equal("novecentas");
     });
   });
 
@@ -985,4 +1124,12 @@ describe("written-number", function () {
       );
     });
   });
+
+    // ES feminine numbers
+    describe("fallbacks", function () {
+      it("should fallback to 'base' in case of missing 'alternativeBase'", function () {
+        writtenNumber(4, { lang: 'pt', alternativeBase: 'masculine' }).should.equal("quatro");
+      });
+    });
+
 });
