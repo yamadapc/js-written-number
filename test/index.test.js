@@ -1,4 +1,5 @@
 "use strict" /* global describe, it, before */;
+global._$jscoverage = {};
 var should = require("should");
 var writtenNumber = require("..");
 
@@ -166,6 +167,71 @@ describe("written-number", function () {
     });
   });
 
+  // ES feminine numbers
+  describe("writtenNumber(n, { lang: 'es' })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "es";
+      writtenNumber.defaults.alternativeBase = "feminine";
+    });
+
+    after(function () {
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts feminine numbers", function () {
+      writtenNumber(1).should.equal("una");
+      writtenNumber(200).should.equal("doscientas");
+      writtenNumber(300).should.equal("trescientas");
+      writtenNumber(400).should.equal("cuatrocientas");
+      writtenNumber(500).should.equal("quinientas");
+      writtenNumber(600).should.equal("seiscientas");
+      writtenNumber(700).should.equal("setecientas");
+      writtenNumber(800).should.equal("ochocientas");
+      writtenNumber(900).should.equal("novecientas");
+    });
+  });
+
+    // ES masculine numbers
+    describe("writtenNumber(n, { lang: 'es' })", function () {
+      before(function () {
+        writtenNumber.defaults.lang = "es";
+        writtenNumber.defaults.alternativeBase = "masculine";
+      });
+  
+      after(function () {
+        writtenNumber.defaults.alternativeBase = null;
+      });
+  
+      it("correctly converts masculine form of uno", function () {
+        writtenNumber(1).should.equal("un");
+      });
+    });
+
+      // PT feminine numbers
+      describe("writtenNumber(n, { lang: 'pt' })", function () {
+        before(function () {
+          writtenNumber.defaults.lang = "pt";
+          writtenNumber.defaults.alternativeBase = "feminine";
+        });
+    
+        after(function () {
+          writtenNumber.defaults.alternativeBase = null;
+        });
+    
+        it("correctly converts feminine forms", function () {
+          writtenNumber(1).should.equal("uma");
+          writtenNumber(2).should.equal("duas");
+          writtenNumber(200).should.equal("duzentas");
+          writtenNumber(300).should.equal("trezentas");
+          writtenNumber(400).should.equal("quatrocentas");
+          writtenNumber(500).should.equal("quinhentas");
+          writtenNumber(600).should.equal("seiscentas");
+          writtenNumber(700).should.equal("setecentas");
+          writtenNumber(800).should.equal("oitocentas");
+          writtenNumber(900).should.equal("novecentas");
+        });
+      });
+
   // ES ordinals
   describe("writtenNumber(n, { lang: 'es', asOrdinal: true, ... })", function () {
     before(function () {
@@ -203,49 +269,47 @@ describe("written-number", function () {
     });
   });
 
-  // ES feminine numbers
-  describe("writtenNumber(n, { lang: 'es', ... })", function () {
+  // Italian ordinals
+   describe("writtenNumber(n, { lang: 'it', asOrdinal: true, ... })", function () {
     before(function () {
-      writtenNumber.defaults.lang = "es";
-      writtenNumber.defaults.alternativeBase = "feminine";
+      writtenNumber.defaults.lang = "it";
+      writtenNumber.defaults.asOrdinal = true;
     });
 
     after(function () {
-      writtenNumber.defaults.alternativeBase = null;
+      writtenNumber.defaults.asOrdinal = false;
     });
 
-    it("correctly converts feminine numbers", function () {
-      writtenNumber(1).should.equal("una");
-      writtenNumber(200).should.equal("doscientas");
-      writtenNumber(300).should.equal("trescientas");
-      writtenNumber(400).should.equal("cuatrocientas");
-      writtenNumber(500).should.equal("quinientas");
-      writtenNumber(600).should.equal("seiscientas");
-      writtenNumber(700).should.equal("setecientas");
-      writtenNumber(800).should.equal("ochocientas");
-      writtenNumber(900).should.equal("novecientas");
-    });
-  });
-
-  // ES masculine numbers
-  describe("writtenNumber(n, { lang: 'es', ... })", function () {
-    before(function () {
-      writtenNumber.defaults.lang = "es";
-      writtenNumber.defaults.alternativeBase = "masculine";
+    it("correctly converts IT ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("primo");
+      writtenNumber(3).should.equal("terzo");
+      writtenNumber(8).should.equal("ottavo");
     });
 
-    after(function () {
-      writtenNumber.defaults.alternativeBase = null;
+    it("correctly converts IT ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("tredicesimo");
+      writtenNumber(19).should.equal("diciannovesimo");
     });
 
-    it("correctly converts masculine form of uno", function () {
-      writtenNumber(1).should.equal("un");
+    it("correctly converts IT ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("ventesimo");
+      writtenNumber(25).should.equal("venticinquesimo");
+      writtenNumber(56).should.equal("cinquantaseiesimo");
+      writtenNumber(88).should.equal("ottantottesimo");
+    });
+
+    it("correctly converts IT ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centesimo");
+      writtenNumber(200).should.equal("duecentesimo");
+      writtenNumber(900).should.equal("novecentesimo");
+      writtenNumber(1000).should.equal("millesimo");
     });
   });
 
   describe("writtenNumber(n, { lang: 'pt', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "pt";
+      writtenNumber.defaults.alternativeBase = null;
     });
 
     it("gets exposed", function () {
@@ -446,31 +510,6 @@ describe("written-number", function () {
     });
   });
 
-  // PT feminine numbers
-  describe("writtenNumber(n, { lang: 'pt', ... })", function () {
-    before(function () {
-      writtenNumber.defaults.lang = "pt";
-      writtenNumber.defaults.alternativeBase = "feminine";
-    });
-
-    after(function () {
-      writtenNumber.defaults.alternativeBase = null;
-    });
-
-    it("correctly converts feminine forms", function () {
-      writtenNumber(1).should.equal("uma");
-      writtenNumber(2).should.equal("duas");
-      writtenNumber(200).should.equal("duzentas");
-      writtenNumber(300).should.equal("trezentas");
-      writtenNumber(400).should.equal("quatrocentas");
-      writtenNumber(500).should.equal("quinhentas");
-      writtenNumber(600).should.equal("seiscentas");
-      writtenNumber(700).should.equal("setecentas");
-      writtenNumber(800).should.equal("oitocentas");
-      writtenNumber(900).should.equal("novecentas");
-    });
-  });
-
   describe("writtenNumber(n, { lang: 'fr', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "fr";
@@ -542,6 +581,7 @@ describe("written-number", function () {
   describe("writtenNumber(n, { lang: 'it', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "it";
+      writtenNumber.defaults.asOrdinal = false;
     });
 
     it("gets exposed", function () {
@@ -1124,12 +1164,4 @@ describe("written-number", function () {
       );
     });
   });
-
-    // ES feminine numbers
-    describe("fallbacks", function () {
-      it("should fallback to 'base' in case of missing 'alternativeBase'", function () {
-        writtenNumber(4, { lang: 'pt', alternativeBase: 'masculine' }).should.equal("quatro");
-      });
-    });
-
 });

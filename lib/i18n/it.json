@@ -62,14 +62,22 @@
         "108": "centootto",
         "180": "centottanta",
         "201": "duecentuno",
-        "301": "tre­cent­uno",
-        "401": "quattro­cent­uno",
-        "501": "cinque­cent­uno",
-        "601": "sei­cent­uno",
-        "701": "sette­cent­uno",
-        "801": "otto­cent­uno",
-        "901": "nove­cent­uno"
-    },
+        "301": "trecentuno",
+        "401": "quattrocentuno",
+        "501": "cinquecentuno",
+        "601": "seicentuno",
+        "701": "settecentuno",
+        "801": "ottocentuno",
+        "901": "novecentuno"
+    }, 
+    "alternativeBase": {
+        "feminine": {
+          "1": "una"
+        },
+        "masculine": {
+          "1": "uno"
+        }
+      },
     "unitExceptions": {
         "1": "un"
     },

@@ -364,6 +364,121 @@ module.exports={
 },{}],6:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "1": "primero",
+    "2": "segundo",
+    "3": "tercero",
+    "4": "cuarto",
+    "5": "quinto",
+    "6": "sexto",
+    "7": "séptimo",
+    "8": "octavo",
+    "9": "noveno",
+    "10": "décimo",
+    "11": "undécimo",
+    "12": "duodécimo",
+    "13": "decimotercero",
+    "14": "decimocuarto",
+    "15": "decimoquinto",
+    "16": "decimosexto",
+    "17": "decimoséptimo",
+    "18": "decimoctavo",
+    "19": "decimonoveno",
+    "20": "vigésimo",
+    "21": "vigésimo primero",
+    "22": "vigésimo segundo",
+    "23": "vigésimo tercero",
+    "24": "vigésimo cuarto",
+    "25": "vigésimo quinto",
+    "26": "vigésimo sexto",
+    "27": "vigésimo séptimo",
+    "28": "vigésimo octavo",
+    "29": "vigésimo noveno",
+    "30": "trigésimo",
+    "40": "cuadragésimo",
+    "50": "quincuagésimo",
+    "60": "sexagésimo",
+    "70": "septuagésimo",
+    "80": "octogésimo",
+    "90": "nonagésimo",
+    "100": "centésimo",
+    "200": "ducentésimo",
+    "300": "tricentésimo",
+    "400": "cuadringentésimo",
+    "500": "quingentésimo",
+    "600": "sexcentésimo",
+    "700": "septingentésimo",
+    "800": "octingésimo",
+    "900": "noningentésimo",
+    "1000": "milésimo"
+  },
+  "unitExceptions": {},
+  "alternativeBase": {
+    "feminine": {
+      "1": "primera",
+      "2": "segunda",
+      "3": "tercera",
+      "4": "cuarta",
+      "5": "quinta",
+      "6": "sexta",
+      "7": "séptima",
+      "8": "octava",
+      "9": "novena",
+      "10": "décima",
+      "11": "undécima",
+      "12": "duodécima",
+      "13": "decimotercera",
+      "14": "decimocuarta",
+      "15": "decimoquinta",
+      "16": "decimosexta",
+      "17": "decimoséptima",
+      "18": "decimoctava",
+      "19": "decimonovena",
+      "20": "vigésima",
+      "21": "vigésima primera",
+      "22": "vigésima segunda",
+      "23": "vigésima tercera",
+      "24": "vigésima cuarta",
+      "25": "vigésima quinta",
+      "26": "vigésima sexta",
+      "27": "vigésima séptima",
+      "28": "vigésima octava",
+      "29": "vigésima novena",
+      "30": "trigésima",
+      "40": "cuadragésima",
+      "50": "quincuagésima",
+      "60": "sexagésima",
+      "70": "septuagésima",
+      "80": "octogésima",
+      "90": "nonagésima",
+      "100": "centésima",
+      "200": "ducentésima",
+      "300": "tricentésima",
+      "400": "cuadringentésima",
+      "500": "quingentésima",
+      "600": "sexcentésima",
+      "700": "septingentésima",
+      "800": "octingésima",
+      "900": "noningentésima",
+      "1000": "milésima"
+    },
+    "masculine": {
+      "1": "primer",
+      "3": "tercer"
+    }
+  },
+  "units": [
+    "centésimo",
+    "milésimo",
+    "millonésimo"
+  ]
+}
+
+},{}],7:[function(require,module,exports){
+module.exports={
+  "useLongScale": true,
   "baseSeparator": " y ",
   "unitSeparator": "",
   "base": {
@@ -415,6 +530,22 @@ module.exports={
     "900": "novecientos",
     "1000": "mil"
   },
+  "alternativeBase": {
+    "feminine": {
+      "1": "una",
+      "200": "doscientas",
+      "300": "trescientas",
+      "400": "cuatrocientas",
+      "500": "quinientas",
+      "600": "seiscientas",
+      "700": "setecientas",
+      "800": "ochocientas",
+      "900": "novecientas"
+    },
+    "masculine": {
+      "1": "un"
+    }
+  },
   "unitExceptions": {
     "1000000": "un millón",
     "1000000000000": "un billón",
@@ -432,7 +563,7 @@ module.exports={
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un cuatordecillón",
     "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": "un quindecillón"
   },
-  "units" : [
+  "units": [
     {
       "singular": "ciento",
       "useBaseInstead": true,
@@ -506,7 +637,7 @@ module.exports={
   ]
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": "-",
@@ -641,7 +772,7 @@ module.exports={
   }
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": "",
@@ -767,7 +898,7 @@ module.exports={
   ]
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -821,7 +952,255 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
+module.exports={
+    "useLongScale": true,
+    "baseSeparator": " ",
+    "unitSeparator": "",
+    "base": {
+      "1": "primo",
+      "2": "secondo",
+      "3": "terzo",
+      "4": "quarto",
+      "5": "quinto",
+      "6": "sesto",
+      "7": "settimo",
+      "8": "ottavo",
+      "9": "nono",
+      "10": "decimo",
+      "11": "undicesimo",
+      "12": "dodicesimo",
+      "13": "tredicesimo",
+      "14": "quattordicesimo",
+      "15": "quindicesimo",
+      "16": "sedicesimo",
+      "17": "diciassettesimo",
+      "18": "diciottesimo",
+      "19": "diciannovesimo",
+      "20": "ventesimo",
+      "21": "ventunesimo",
+      "22": "ventiduesimo",
+      "23": "ventitreesimo",
+      "24": "ventiquattresimo",
+      "25": "venticinquesimo",
+      "26": "ventiseiesimo",
+      "27": "ventisettesimo",
+      "28": "ventottesimo",
+      "29": "ventinovesimo",
+      "30": "trentesimo",
+      "31": "trentunesimo",
+      "32": "trentaduesimo",
+      "33": "trentatreesimo",
+      "34": "trentaquattresimo",
+      "35": "trentacinquesimo",
+      "36": "trentaseiesimo",
+      "37": "trentasettesimo",
+      "38": "trentottesimo",
+      "39": "trentanovesimo",
+      "40": "quarantesimo",
+      "41": "quarantunesimo",
+      "42": "quarantaduesimo",
+      "43": "quarantatreesimo",
+      "44": "quarantaquattresimo",
+      "45": "quarantacinquesimo",
+      "46": "quarantaseiesimo",
+      "47": "quarantasettesimo",
+      "48": "quarantottesimo",
+      "49": "quarantanovesimo",
+      "50": "cinquantesimo",
+      "51": "cinquantunesimo",
+      "52": "cinquantaduesimo",
+      "53": "cinquantatreesimo",
+      "54": "cinquantaquattresimo",
+      "55": "cinquantacinquesimo",
+      "56": "cinquantaseiesimo",
+      "57": "cinquantasettesimo",
+      "58": "cinquantottesimo",
+      "59": "cinquantanovesimo",
+      "60": "sessantesimo",
+      "61": "sessantunesimo",
+      "62": "sessantaduesimo",
+      "63": "sessantatreesimo",
+      "64": "sessantaquattresimo",
+      "65": "sessantacinquesimo",
+      "66": "sessantaseiesimo",
+      "67": "sessantasettesimo",
+      "68": "sessantottesimo",
+      "69": "sessantanovesimo",
+      "70": "settantesimo",
+      "71": "settantunesimo",
+      "72": "settantaduesimo",
+      "73": "settantatreesimo",
+      "74": "settantaquattresimo",
+      "75": "settantacinquesimo",
+      "76": "settantaseiesimo",
+      "77": "settantasettesimo",
+      "78": "settantottesimo",
+      "79": "settantanovesimo",
+      "80": "ottantesimo",
+      "81": "ottantunesimo",
+      "82": "ottantaduesimo",
+      "83": "ottantatreesimo",
+      "84": "ottantaquattresimo",
+      "85": "ottantacinquesimo",
+      "86": "ottantaseiesimo",
+      "87": "ottantasettesimo",
+      "88": "ottantottesimo",
+      "89": "ottantanovesimo",
+      "90": "novantesimo",
+      "91": "novantunesimo",
+      "92": "novantaduesimo",
+      "93": "novantatreesimo",
+      "94": "novantaquattresimo",
+      "95": "novantacinquesimo",
+      "96": "novantaseiesimo",
+      "97": "novantasettesimo",
+      "98": "novantottesimo",
+      "99": "novantanovesimo",
+      "100": "centesimo",
+      "200": "duecentesimo",
+      "300": "trecentesimo",
+      "400": "quattrocentesimo",
+      "500": "cinquecentesimo",
+      "600": "seicentesimo",
+      "700": "settecentesimo",
+      "800": "ottocentesimo",
+      "900": "novecentesimo",
+      "1000": "millesimo"
+    },
+    "unitExceptions": {},
+    "alternativeBase": {
+      "feminine": {
+        "1": "prima",
+        "2": "seconda",
+        "3": "terza",
+        "4": "quarta",
+        "5": "quinta",
+        "6": "sesta",
+        "7": "settima",
+        "8": "ottava",
+        "9": "nona",
+        "10": "decima",
+        "11": "undicesima",
+        "12": "dodicesima",
+        "13": "tredicesima",
+        "14": "quattordicesima",
+        "15": "quindicesima",
+        "16": "sedicesima",
+        "17": "diciassettesima",
+        "18": "diciottesima",
+        "19": "diciannovesima",
+        "20": "ventesima",
+        "21": "ventunesima",
+        "22": "ventiduesima",
+        "23": "ventitreesima",
+        "24": "ventiquattresima",
+        "25": "venticinquesima",
+        "26": "ventiseiesima",
+        "27": "ventisettesima",
+        "28": "ventottesima",
+        "29": "ventinovesima",
+        "30": "trentesima",
+        "31": "trentunesima",
+        "32": "trentaduesima",
+        "33": "trentatreesima",
+        "34": "trentaquattresima",
+        "35": "trentacinquesima",
+        "36": "trentaseiesima",
+        "37": "trentasettesima",
+        "38": "trentottesima",
+        "39": "trentanovesima",
+        "40": "quarantesima",
+        "41": "quarantunesima",
+        "42": "quarantaduesima",
+        "43": "quarantatreesima",
+        "44": "quarantaquattresima",
+        "45": "quarantacinquesima",
+        "46": "quarantaseiesima",
+        "47": "quarantasettesima",
+        "48": "quarantottesima",
+        "49": "quarantanovesima",
+        "50": "cinquantesima",
+        "51": "cinquantunesima",
+        "52": "cinquantaduesima",
+        "53": "cinquantatreesima",
+        "54": "cinquantaquattresima",
+        "55": "cinquantacinquesima",
+        "56": "cinquantaseiesima",
+        "57": "cinquantasettesima",
+        "58": "cinquantottesima",
+        "59": "cinquantanovesima",
+        "60": "sessantesima",
+        "61": "sessantunesima",
+        "62": "sessantaduesima",
+        "63": "sessantatreesima",
+        "64": "sessantaquattresima",
+        "65": "sessantacinquesima",
+        "66": "sessantaseiesima",
+        "67": "sessantasettesima",
+        "68": "sessantottesima",
+        "69": "sessantanovesima",
+        "70": "settantesima",
+        "71": "settantunesima",
+        "72": "settantaduesima",
+        "73": "settantatreesima",
+        "74": "settantaquattresima",
+        "75": "settantacinquesima",
+        "76": "settantaseiesima",
+        "77": "settantasettesima",
+        "78": "settantottesima",
+        "79": "settantanovesima",
+        "80": "ottantesima",
+        "81": "ottantunesima",
+        "82": "ottantaduesima",
+        "83": "ottantatreesima",
+        "84": "ottantaquattresima",
+        "85": "ottantacinquesima",
+        "86": "ottantaseiesima",
+        "87": "ottantasettesima",
+        "88": "ottantottesima",
+        "89": "ottantanovesima",
+        "90": "novantesima",
+        "91": "novantunesima",
+        "92": "novantaduesima",
+        "93": "novantatreesima",
+        "94": "novantaquattresima",
+        "95": "novantacinquesima",
+        "96": "novantaseiesima",
+        "97": "novantasettesima",
+        "98": "novantottesima",
+        "99": "novantanovesima",
+        "100": "centesima",
+        "200": "duecentesima",
+        "300": "trecentesima",
+        "400": "quattrocentesima",
+        "500": "cinquecentesima",
+        "600": "seicentesima",
+        "700": "settecentesima",
+        "800": "ottocentesima",
+        "900": "novecentesima",
+        "1000": "millesima"
+      }
+    },
+    "units": [
+      {
+        "singular": "centesimo",
+        "useBaseInstead": true,
+        "useBaseException": [1],
+        "useBaseExceptionWhenNoTrailingNumbers": true
+      },
+      {
+        "singular": "millesimo",
+        "avoidPrefixException": [1]
+      },
+      {
+        "singular": "milionesimo",
+        "plural": "milionesimi"
+      }
+    ]
+  }
+  
+},{}],12:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": "",
@@ -886,14 +1265,22 @@ module.exports={
         "108": "centootto",
         "180": "centottanta",
         "201": "duecentuno",
-        "301": "tre­cent­uno",
-        "401": "quattro­cent­uno",
-        "501": "cinque­cent­uno",
-        "601": "sei­cent­uno",
-        "701": "sette­cent­uno",
-        "801": "otto­cent­uno",
-        "901": "nove­cent­uno"
-    },
+        "301": "trecentuno",
+        "401": "quattrocentuno",
+        "501": "cinquecentuno",
+        "601": "seicentuno",
+        "701": "settecentuno",
+        "801": "ottocentuno",
+        "901": "novecentuno"
+    }, 
+    "alternativeBase": {
+        "feminine": {
+          "1": "una"
+        },
+        "masculine": {
+          "1": "uno"
+        }
+      },
     "unitExceptions": {
         "1": "un"
     },
@@ -945,8 +1332,7 @@ module.exports={
         }
     ]
 }
-
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
   "useLongScale": true,
   "baseSeparator": " e ",
@@ -1053,7 +1439,118 @@ module.exports={
   ]
 }
 
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
+module.exports={
+  "useLongScale": true,
+  "baseSeparator": " ",
+  "unitSeparator": "",
+  "base": {
+    "1": "primeiro",
+    "2": "segundo",
+    "3": "terceiro",
+    "4": "quarto",
+    "5": "quinto",
+    "6": "sexto",
+    "7": "sétimo",
+    "8": "oitavo",
+    "9": "nono",
+    "10": "décimo",
+    "11": "décimo primeiro",
+    "12": "décimo segundo",
+    "13": "décimo terceiro",
+    "14": "décimo quarto",
+    "15": "décimo quinto",
+    "16": "décimo sexto",
+    "17": "décimo sétimo",
+    "18": "décimo oitavo",
+    "19": "décimo nono",
+    "20": "vigésimo",
+    "21": "vigésimo primeiro",
+    "22": "vigésimo segundo",
+    "23": "vigésimo terceiro",
+    "24": "vigésimo quarto",
+    "25": "vigésimo quinto",
+    "26": "vigésimo sexto",
+    "27": "vigésimo sétimo",
+    "28": "vigésimo oitavo",
+    "29": "vigésimo nono",
+    "30": "trigésimo",
+    "40": "quadragésimo",
+    "50": "quinquagésimo",
+    "60": "sexagésimo",
+    "70": "septuagésimo",
+    "80": "octogésimo",
+    "90": "nonagésimo",
+    "100": "centésimo",
+    "200": "ducentésimo",
+    "300": "trecentésimo",
+    "400": "quadrigentésimo",
+    "500": "quingentésimo",
+    "600": "sexcentésimo",
+    "700": "setingentésimo",
+    "800": "octingentésimo",
+    "900": "nongentésimo",
+    "1000": "milésimo"
+  },
+  "unitExceptions": {},
+  "alternativeBase": {
+    "feminine": {
+      "1": "primeira",
+      "2": "segunda",
+      "3": "terceira",
+      "4": "quarta",
+      "5": "quinta",
+      "6": "sexta",
+      "7": "sétima",
+      "8": "oitava",
+      "9": "nona",
+      "10": "décima",
+      "11": "décima primeira",
+      "12": "décima segunda",
+      "13": "décima terceira",
+      "14": "décima quarta",
+      "15": "décima quinta",
+      "16": "décima sexta",
+      "17": "décima sétima",
+      "18": "décima oitava",
+      "19": "décima nona",
+      "20": "vigésima",
+      "21": "vigésima primeira",
+      "22": "vigésima segunda",
+      "23": "vigésima terceira",
+      "24": "vigésima quarta",
+      "25": "vigésima quinta",
+      "26": "vigésima sexta",
+      "27": "vigésima sétima",
+      "28": "vigésima oitava",
+      "29": "vigésima nona",
+      "30": "trigésima",
+      "40": "quadragésima",
+      "50": "quinquagésima",
+      "60": "sexagésima",
+      "70": "septuagésima",
+      "80": "octogésima",
+      "90": "nonagésima",
+      "100": "centésima",
+      "200": "ducentésima",
+      "300": "trecentésima",
+      "400": "quadrigentésima",
+      "500": "quingentésima",
+      "600": "sexcentésima",
+      "700": "setingentésima",
+      "800": "octingentésima",
+      "900": "nongentésima",
+      "1000": "milésima"
+    }
+  },
+  "units": [
+    "centésimo",
+    "milésimo",
+    "milionésimo"
+  ]
+}
+
+},{}],15:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " e ",
@@ -1099,16 +1596,28 @@ module.exports={
     "900": "novecentos",
     "1000": "mil"
   },
+  "alternativeBase": {
+    "feminine": {
+      "1": "uma",
+      "2": "duas",
+      "200": "duzentas",
+      "300": "trezentas",
+      "400": "quatrocentas",
+      "500": "quinhentas",
+      "600": "seiscentas",
+      "700": "setecentas",
+      "800": "oitocentas",
+      "900": "novecentas"
+    }
+  },
   "unitExceptions": {
     "1": "um"
   },
-  "units" : [
+  "units": [
     {
       "singular": "cento",
       "useBaseInstead": true,
-      "useBaseException": [
-        1
-      ],
+      "useBaseException": [1],
       "useBaseExceptionWhenNoTrailingNumbers": true,
       "andException": true
     },
@@ -1172,7 +1681,7 @@ module.exports={
   ]
 }
 
-},{}],13:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports={
     "useLongScale": false,
     "baseSeparator": " ",
@@ -1359,7 +1868,7 @@ module.exports={
     ],
     "unitExceptions": []
 }
-},{}],14:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1412,7 +1921,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],15:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1600,7 +2109,7 @@ module.exports={
   "unitExceptions": []
 }
 
-},{}],16:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 module.exports={
   "useLongScale": false,
   "baseSeparator": " ",
@@ -1651,7 +2160,7 @@ module.exports={
   ],
   "unitExceptions": []
 }
-},{}],17:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 "use strict";
 exports = module.exports = writtenNumber;
 var util = require("./util");
@@ -1673,7 +2182,12 @@ var i18n = {
   enIndian: require("./i18n/en-indian.json"),
   uk: require("./i18n/uk.json"),
   ru: require("./i18n/ru.json"),
-  id: require("./i18n/id.json")
+  id: require("./i18n/id.json"),
+  ordinals: {
+    es: require("./i18n/es-ordinal.json"),
+    pt: require("./i18n/pt-ordinal.json"),
+    it: require("./i18n/it-ordinal.json"),
+  }
 };
 exports.i18n = i18n;
 
@@ -1690,7 +2204,8 @@ for (i = 1; i <= 15; i++) {
 writtenNumber.defaults = {
   noAnd: false,
   alternativeBase: null,
-  lang: "en"
+  lang: "en",
+  asOrdinal: false
 };
 
 /**
@@ -1712,7 +2227,7 @@ function writtenNumber(n, options) {
   n = Math.round(+n);
 
   var language = typeof options.lang === "string"
-    ? i18n[options.lang]
+    ? (options.asOrdinal ? i18n.ordinals : i18n)[options.lang]
     : options.lang;
 
   if (!language) {
@@ -1722,7 +2237,7 @@ function writtenNumber(n, options) {
 
     language = i18n[writtenNumber.defaults.lang];
   }
-  
+
   var scale = language.useLongScale ? longScale : shortScale;
   var units = language.units;
   var unit;
@@ -1740,12 +2255,12 @@ function writtenNumber(n, options) {
   }
 
   var baseCardinals = language.base;
-  var alternativeBaseCardinals = options.alternativeBase 
+  var alternativeBaseCardinals = options.alternativeBase
     ? language.alternativeBase[options.alternativeBase]
     : {};
 
-  if (language.unitExceptions[n]) return language.unitExceptions[n];
   if (alternativeBaseCardinals[n]) return alternativeBaseCardinals[n];
+  if (language.unitExceptions[n]) return language.unitExceptions[n];
   if (baseCardinals[n]) return baseCardinals[n];
   if (n < 100)
     return handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseCardinals, options);
@@ -1807,10 +2322,10 @@ function writtenNumber(n, options) {
       str = unit.plural && (!unit.avoidInNumberPlural || !m)
         ? unit.plural
         : unit.singular;
-      
+
       // Languages with dual
       str = (r === 2 && unit.dual) ? unit.dual : str;
-      
+
       // "restrictedPlural" : use plural only for 3 to 10
       str = (r > 10 && unit.restrictedPlural) ? unit.singular : str;
     }
@@ -1855,11 +2370,11 @@ function writtenNumber(n, options) {
       ret.slice(1)
     );
   }
-  
+
   // Languages that have separators for all cardinals.
   if (language.allSeparator) {
     for (var j = 0; j < ret.length-1; j++) {
-      ret[j] = language.allSeparator + ret[j];      
+      ret[j] = language.allSeparator + ret[j];
     }
   }
   var result = ret.reverse().join(" ");
@@ -1877,7 +2392,7 @@ function handleSmallerThan100(n, language, unit, baseCardinals, alternativeBaseC
   return alternativeBaseCardinals[dec] || baseCardinals[dec];
 }
 
-},{"./i18n/ar.json":1,"./i18n/az.json":2,"./i18n/en-indian.json":3,"./i18n/en.json":4,"./i18n/eo.json":5,"./i18n/es.json":6,"./i18n/fr.json":7,"./i18n/hu.json":8,"./i18n/id.json":9,"./i18n/it.json":10,"./i18n/pt-PT.json":11,"./i18n/pt.json":12,"./i18n/ru.json":13,"./i18n/tr.json":14,"./i18n/uk.json":15,"./i18n/vi.json":16,"./util":18}],18:[function(require,module,exports){
+},{"./i18n/ar.json":1,"./i18n/az.json":2,"./i18n/en-indian.json":3,"./i18n/en.json":4,"./i18n/eo.json":5,"./i18n/es-ordinal.json":6,"./i18n/es.json":7,"./i18n/fr.json":8,"./i18n/hu.json":9,"./i18n/id.json":10,"./i18n/it-ordinal.json":11,"./i18n/it.json":12,"./i18n/pt-PT.json":13,"./i18n/pt-ordinal.json":14,"./i18n/pt.json":15,"./i18n/ru.json":16,"./i18n/tr.json":17,"./i18n/uk.json":18,"./i18n/vi.json":19,"./util":21}],21:[function(require,module,exports){
 "use strict";
 /**
  * Merges a set of default keys with a target object
@@ -1900,5 +2415,5 @@ function defaults(target, defs) {
 }
 exports.defaults = defaults;
 
-},{}]},{},[17])(17)
+},{}]},{},[20])(20)
 });

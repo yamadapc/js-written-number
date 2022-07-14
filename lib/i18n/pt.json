@@ -57,7 +57,9 @@
       "900": "novecentas"
     }
   },
-  "unitExceptions": [],
+  "unitExceptions": {
+    "1": "um"
+  },
   "units": [
     {
       "singular": "cento",
