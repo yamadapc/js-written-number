@@ -103,6 +103,61 @@ describe("written-number", function () {
     });
   });
 
+  // DE cardinal numbers
+  describe("writtenNumber(n, { lang: 'de', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "de";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(1).should.equal("eins");
+      writtenNumber(3).should.equal("drei");
+      writtenNumber(8).should.equal("acht");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("dreizehn");
+      writtenNumber(16).should.equal("sechzehn");
+      writtenNumber(19).should.equal("neunzehn");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("zwanzig");
+      writtenNumber(25).should.equal("fünfundzwanzig");
+      writtenNumber(73).should.equal("dreiundsiebzig");
+      writtenNumber(88).should.equal("achtundachtzig");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(144).should.equal("einhundertvierundvierzig");
+      writtenNumber(200).should.equal("zweihundert");
+      writtenNumber(1234).should.equal("eintausendzweihundertvierunddreißig");
+      writtenNumber(4323).should.equal("viertausenddreihundertdreiundzwanzig");
+      writtenNumber(242).should.equal("zweihundertzweiundvierzig");
+      writtenNumber(2100).should.equal("zweitausendeinhundert");
+      writtenNumber(1100).should.equal("eintausendeinhundert");
+      writtenNumber(1101).should.equal("eintausendeinhunderteins");
+      writtenNumber(2020).should.equal("zweitausendzwanzig");
+      writtenNumber(2000).should.equal("zweitausend");
+      writtenNumber(2003).should.equal("zweitausenddrei");
+      writtenNumber(2013).should.equal("zweitausenddreizehn");
+    });
+
+    it("correctly converts numbers > 1000", function () {
+      writtenNumber(4323000).should.equal(
+        "vier Millionen dreihundertdreiundzwanzigtausend"
+      );
+      writtenNumber(4323055).should.equal(
+        "vier Millionen dreihundertdreiundzwanzigtausendfünfundfünfzig"
+      );
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'es', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "es";
@@ -510,6 +565,179 @@ describe("written-number", function () {
     });
   });
 
+  // DE ordinals, masculine form
+  describe("writtenNumber(n, { lang: 'de', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "de";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("erster");
+      writtenNumber(3).should.equal("dritter");
+      writtenNumber(8).should.equal("achter");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("dreizehnter");
+      writtenNumber(19).should.equal("neunzehnter");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("zwanzigster");
+      writtenNumber(25).should.equal("fünfundzwanzigster");
+      writtenNumber(56).should.equal("sechsundfünfzigster");
+      writtenNumber(88).should.equal("achtundachtzigster");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("hundertster");
+      writtenNumber(200).should.equal("zweihundertster");
+      writtenNumber(900).should.equal("neunhundertster");
+      writtenNumber(1000).should.equal("tausendster");
+    });
+  });
+
+   // DE ordinals, feminine form
+   describe("writtenNumber(n, { lang: 'de', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "de";
+      writtenNumber.defaults.asOrdinal = true;
+      writtenNumber.defaults.alternativeBase = "feminine";
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("erste");
+      writtenNumber(3).should.equal("dritte");
+      writtenNumber(8).should.equal("achte");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("dreizehnte");
+      writtenNumber(19).should.equal("neunzehnte");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("zwanzigste");
+      writtenNumber(25).should.equal("fünfundzwanzigste");
+      writtenNumber(56).should.equal("sechsundfünfzigste");
+      writtenNumber(88).should.equal("achtundachtzigste");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("hundertste");
+      writtenNumber(200).should.equal("zweihundertste");
+      writtenNumber(900).should.equal("neunhundertste");
+      writtenNumber(1000).should.equal("tausendste");
+    });
+  });
+
+    // DE ordinals, neuter form
+    describe("writtenNumber(n, { lang: 'de', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "de";
+      writtenNumber.defaults.asOrdinal = true;
+      writtenNumber.defaults.alternativeBase = "neuter";
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+      writtenNumber.defaults.alternativeBase = null;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("erstes");
+      writtenNumber(3).should.equal("drittes");
+      writtenNumber(8).should.equal("achtes");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("dreizehntes");
+      writtenNumber(19).should.equal("neunzehntes");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("zwanzigstes");
+      writtenNumber(25).should.equal("fünfundzwanzigstes");
+      writtenNumber(56).should.equal("sechsundfünfzigstes");
+      writtenNumber(88).should.equal("achtundachtzigstes");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("hundertstes");
+      writtenNumber(200).should.equal("zweihundertstes");
+      writtenNumber(900).should.equal("neunhundertstes");
+      writtenNumber(1000).should.equal("tausendstes");
+    });
+  });
+
+  // FR ordinals
+    describe("writtenNumber(n, { lang: 'fr', asOrdinal: true, ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "fr";
+      writtenNumber.defaults.asOrdinal = true;
+    });
+
+    after(function () {
+      writtenNumber.defaults.asOrdinal = false;
+    });
+
+    it("correctly converts ordinal numbers < 10", function () {
+      writtenNumber(1).should.equal("premier");
+      writtenNumber(3).should.equal("troisième");
+      writtenNumber(8).should.equal("huitième");
+    });
+
+    it("correctly converts ordinal numbers < 20", function () {
+      writtenNumber(13).should.equal("treizième");
+      writtenNumber(19).should.equal("dix-neuvième");
+    });
+
+    it("correctly converts ordinal numbers < 100", function () {
+      writtenNumber(20).should.equal("vingtième");
+      writtenNumber(25).should.equal("vingt-cinquième");
+      writtenNumber(50).should.equal("cinquantième");
+      writtenNumber(56).should.equal("cinquante-sixième");
+      writtenNumber(60).should.equal("soixantième");
+      writtenNumber(61).should.equal("soixante et unième");
+      writtenNumber(63).should.equal("soixante-troisième");
+      writtenNumber(65).should.equal("soixante-cinquième");
+
+      writtenNumber(70).should.equal("soixante-dixième");
+      writtenNumber(71).should.equal("soixante et onzième");
+      writtenNumber(73).should.equal("soixante-treizième");
+      writtenNumber(75).should.equal("soixante-quinzième");
+
+      writtenNumber(80).should.equal("quatre-vingtième");
+      writtenNumber(81).should.equal("quatre-vingt-unième");
+      writtenNumber(83).should.equal("quatre-vingt-troisième");
+      writtenNumber(85).should.equal("quatre-vingt-cinquième");
+      writtenNumber(88).should.equal("quatre-vingt-huitième");
+
+      writtenNumber(90).should.equal("quatre-vingt-dixième");
+      writtenNumber(91).should.equal("quatre-vingt-onzième");
+      writtenNumber(93).should.equal("quatre-vingt-treizième");
+      writtenNumber(95).should.equal("quatre-vingt-quinzième");
+      writtenNumber(98).should.equal("quatre-vingt-dix-huitième");
+    });
+
+    it("correctly converts ordinal numbers <= 1000", function () {
+      writtenNumber(100).should.equal("centième");
+      writtenNumber(200).should.equal("deux centième");
+      writtenNumber(900).should.equal("neuf centième");
+      writtenNumber(1000).should.equal("millième");
+    });
+  });
+
   describe("writtenNumber(n, { lang: 'fr', ... })", function () {
     before(function () {
       writtenNumber.defaults.lang = "fr";
@@ -536,7 +764,7 @@ describe("written-number", function () {
       writtenNumber(25).should.equal("vingt-cinq");
       writtenNumber(73).should.equal("soixante-treize");
       writtenNumber(80).should.equal("quatre-vingts");
-      writtenNumber(88).should.equal("quatre-vingt-huit");
+      writtenNumber(88).should.equal("quatre-vingts-huit");
       writtenNumber(90).should.equal("quatre-vingt-dix");
       writtenNumber(91).should.equal("quatre-vingt-onze");
     });
@@ -546,6 +774,13 @@ describe("written-number", function () {
       writtenNumber(110).should.equal("cent dix");
       writtenNumber(200).should.equal("deux cents");
       writtenNumber(242).should.equal("deux cent quarante-deux");
+    });
+
+    it("correctly converts french numbers", function () {
+      writtenNumber(2020).should.equal("deux mille vingt");
+      writtenNumber(1999).should.equal("mille neuf cent quatre-vingt-dix-neuf");
+      writtenNumber(1500).should.equal("mille cinq cents");
+      writtenNumber(2008).should.equal("deux mille huit");
     });
 
     it("correctly converts numbers > 1000", function () {

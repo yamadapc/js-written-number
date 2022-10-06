@@ -29,8 +29,13 @@
     "50": "cinquante",
     "60": "soixante",
     "70": "soixante-dix",
-    "80": "quatre-vingt",
+    "80": "quatre-vingts",
     "90": "quatre-vingt-dix"
+  },
+  "alternativeBase": {
+    "feminine": {
+      "1": "une"
+    }
   },
   "units" : [
     {
