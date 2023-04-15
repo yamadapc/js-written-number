@@ -1037,9 +1037,9 @@ describe("written-number", function () {
     it("correctly converts numbers < 1000", function () {
       writtenNumber(200).should.equal("двеста");
       writtenNumber(570).should.equal("петстотин и седемдесет");
-      writtenNumber(241).should.equal("двеста четиредесет и едно");
-      writtenNumber(241, { alternativeBase: "feminine"}).should.equal("двеста четиредесет и една");
-      writtenNumber(241, { alternativeBase: "masculine"}).should.equal("двеста четиредесет и един");
+      writtenNumber(241).should.equal("двеста четиридесет и едно");
+      writtenNumber(241, { alternativeBase: "feminine"}).should.equal("двеста четиридесет и една");
+      writtenNumber(241, { alternativeBase: "masculine"}).should.equal("двеста четиридесет и един");
       writtenNumber(1234).should.equal(
         "хиляда двеста тридесет и четири"
       );
