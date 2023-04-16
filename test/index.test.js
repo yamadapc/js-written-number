@@ -985,4 +985,93 @@ describe("written-number", function () {
       );
     });
   });
+
+  describe("writtenNumber(n, { lang: 'bg', ... })", function () {
+    before(function () {
+      writtenNumber.defaults.lang = "bg";
+    });
+
+    it("gets exposed", function () {
+      should.exist(writtenNumber);
+      writtenNumber.should.be.instanceof(Function);
+    });
+
+    it("negative numbers return \"\"", function () {
+      writtenNumber(-3).should.equal("");
+      writtenNumber(-5).should.equal("");
+    });
+
+    it("doesn't blow up weirdly with invalid input", function () {
+      writtenNumber("asdfasdfasdf").should.equal("");
+      writtenNumber("0.as").should.equal("");
+      writtenNumber("0.123").should.equal("нула");
+      writtenNumber("0.8").should.equal("едно");
+      writtenNumber("2.8").should.equal("три");
+      writtenNumber("asdf.8").should.equal("");
+      writtenNumber("120391938123..").should.equal("");
+      writtenNumber("1000000000.123").should.equal("един милиард");
+      writtenNumber("1/3").should.equal("");
+      writtenNumber(1 / 3).should.equal("нула");
+      writtenNumber("1/2").should.equal("");
+      writtenNumber("1.123/2").should.equal("");
+    });
+
+    it("correctly converts numbers < 10", function () {
+      writtenNumber(1000000000).should.equal("един милиард");
+      writtenNumber(3).should.equal("три");
+      writtenNumber(8).should.equal("осем");
+    });
+
+    it("correctly converts numbers < 20", function () {
+      writtenNumber(13).should.equal("тринадесет");
+      writtenNumber(19).should.equal("деветнадесет");
+    });
+
+    it("correctly converts numbers < 100", function () {
+      writtenNumber(20).should.equal("двадесет");
+      writtenNumber(25).should.equal("двадесет и пет");
+      writtenNumber(88).should.equal("осемдесет и осем");
+      writtenNumber(73).should.equal("седемдесет и три");
+    });
+
+    it("correctly converts numbers < 1000", function () {
+      writtenNumber(200).should.equal("двеста");
+      writtenNumber(570).should.equal("петстотин и седемдесет");
+      writtenNumber(241).should.equal("двеста четиридесет и едно");
+      writtenNumber(241, { alternativeBase: "feminine"}).should.equal("двеста четиридесет и една");
+      writtenNumber(241, { alternativeBase: "masculine"}).should.equal("двеста четиридесет и един");
+      writtenNumber(1234).should.equal(
+        "хиляда двеста тридесет и четири"
+      );
+      writtenNumber(4323).should.equal(
+        "четири хиляди триста двадесет и три"
+      );
+    });
+
+    it("correctly converts numbers > 1000", function () {
+      writtenNumber(4323000).should.equal(
+        "четири милиона триста двадесет и три хиляди"
+      );
+      writtenNumber(4323055).should.equal(
+        "четири милиона триста двадесет и три хиляди петдесет и пет"
+      );
+      writtenNumber(570000).should.equal(
+        "петстотин и седемдесет хиляди"
+      );
+      writtenNumber(1570025).should.equal(
+        "един милион петстотин и седемдесет хиляди двадесет и пет"
+      );
+    });
+
+    it("correctly converts numbers > 1 000 000 000", function () {
+      writtenNumber(1000000000).should.equal("един милиард");
+      writtenNumber(2580000000).should.equal(
+        "два милиарда петстотин и осемдесет милиона"
+      );
+      writtenNumber(1000000000000).should.equal("един трилион");
+      writtenNumber(3627000000000).should.equal(
+        "три трилиона шестстотин двадесет и седем милиарда"
+      );
+    });
+  });
 });
